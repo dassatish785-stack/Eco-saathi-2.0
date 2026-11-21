@@ -1,0 +1,305 @@
+/* ==========================================================================
+   Eco Saathi 2.0 - Premium Modern Sustainability Design System
+   Brand: Eco Saathi · "Your Partner in a Greener Tomorrow"
+   Palette:
+     - Primary Forest Green: #14532D
+     - Secondary Leaf Green: #4D9B59
+     - Sage Green: #A8C5A0
+     - Warm Cream Background: #F7F7ED
+     - Earth Brown Accent: #795548
+     - Dark Text: #26332A
+     - White: #FFFFFF
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  /* Brand Color Tokens */
+  --color-forest: #14532D;
+  --color-forest-dark: #0e3b20;
+  --color-forest-light: #1b6d3c;
+  --color-leaf: #4D9B59;
+  --color-leaf-dark: #3d7c47;
+  --color-leaf-light: #6bb376;
+  --color-sage: #A8C5A0;
+  --color-sage-light: #e8f1e6;
+  --color-cream: #F7F7ED;
+  --color-cream-card: #FFFFFF;
+  --color-cream-tint: #f1f1e3;
+  --color-earth: #795548;
+  --color-earth-light: #8d6e63;
+  --color-darktext: #26332A;
+  --color-darktext-muted: #526356;
+  --color-white: #FFFFFF;
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'DM Sans', 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Surface Shadows */
+  --shadow-subtle: 0 2px 8px -2px rgba(20, 83, 45, 0.06), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 10px 25px -5px rgba(20, 83, 45, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 20px 35px -10px rgba(20, 83, 45, 0.14), 0 10px 15px -5px rgba(0, 0, 0, 0.06);
+}
+
+/* Base Body Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-darktext);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage);
+  border-radius: 9999px;
+  border: 2px solid var(--color-cream);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-leaf);
+}
+
+/* Glassmorphism Navigation */
+.nav-blur {
+  background: rgba(247, 247, 237, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Button Component Styles */
+.btn-forest {
+  background-color: var(--color-forest);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(20, 83, 45, 0.2);
+}
+.btn-forest:hover {
+  background-color: var(--color-leaf-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 83, 45, 0.3);
+}
+
+.btn-leaf {
+  background-color: var(--color-leaf);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(77, 155, 89, 0.25);
+}
+.btn-leaf:hover {
+  background-color: var(--color-forest);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 83, 45, 0.3);
+}
+
+.btn-outline-forest {
+  background-color: transparent;
+  color: var(--color-forest);
+  border: 2px solid var(--color-forest);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-outline-forest:hover {
+  background-color: var(--color-forest);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-outline-leaf {
+  background-color: transparent;
+  color: var(--color-leaf-dark);
+  border: 2px solid var(--color-leaf);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-outline-leaf:hover {
+  background-color: var(--color-leaf);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Modern Organic Cards */
+.card-organic {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(168, 197, 160, 0.4);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-subtle);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card-organic:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-leaf);
+}
+
+.card-sage {
+  background-color: var(--color-sage-light);
+  border: 1px solid var(--color-sage);
+  border-radius: 1.5rem;
+}
+
+/* Product Card Styling */
+.prod-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(168, 197, 160, 0.35);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-subtle);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.prod-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-leaf);
+}
+
+/* Badge System */
+.badge-eco {
+  background-color: var(--color-sage-light);
+  color: var(--color-forest);
+  border: 1px solid var(--color-sage);
+  font-weight: 700;
+}
+
+.badge-craft {
+  background-color: #fdf6ec;
+  color: var(--color-earth);
+  border: 1px solid #ebd09d;
+  font-weight: 700;
+}
+
+.badge-leaf {
+  background-color: rgba(77, 155, 89, 0.12);
+  color: var(--color-leaf-dark);
+  border: 1px solid rgba(77, 155, 89, 0.3);
+  font-weight: 700;
+}
+
+/* Impact Calculator Metric Card */
+.impact-metric-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(168, 197, 160, 0.45);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-subtle);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.impact-metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Chart Container Cards */
+.chart-card {
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(168, 197, 160, 0.4);
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Slider Component for Sustainability Calculator */
+.slider-eco {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #d8e5d5;
+  border-radius: 9999px;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.slider-eco::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: var(--color-forest);
+  border: 3px solid var(--color-sage);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(20, 83, 45, 0.3);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.slider-eco::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: var(--color-leaf);
+}
+.slider-eco::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: var(--color-forest);
+  border: 3px solid var(--color-sage);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(20, 83, 45, 0.3);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+/* Floating AI Chat Assistant Widget */
+.chat-widget-btn {
+  background-color: var(--color-forest);
+  box-shadow: 0 12px 28px -4px rgba(20, 83, 45, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.chat-widget-btn:hover {
+  background-color: var(--color-leaf-dark);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 18px 36px -6px rgba(20, 83, 45, 0.55);
+}
+
+.chat-drawer {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  box-shadow: 0 25px 50px -12px rgba(20, 83, 45, 0.25);
+  border: 1px solid rgba(168, 197, 160, 0.5);
+}
+
+/* Fade in animation */
+.fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Print styles for GST Tax Invoice */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #invoicePrintArea, #invoicePrintArea * {
+    visibility: visible;
+  }
+  #invoicePrintArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+}

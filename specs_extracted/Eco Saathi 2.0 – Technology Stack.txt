@@ -1,0 +1,215 @@
+﻿Eco Saathi 2.0 – Technology Stack
+☐ Version 1.0 · Draft · 15 October 2026 · Companion to the PRD
+1. Purpose and Approach
+This document recommends the technologies for rebuilding ecosaathi.com. The choices follow four principles:
+Fit for a small team: managed services over self-hosted ones wherever possible.
+India-ready: UPI, local payment gateways, local shipping partners, GST invoices and a Mumbai cloud region.
+Fast on mobile: server-rendered pages, image optimisation and a CDN.
+Replaceable parts: each integration (payments, email, WhatsApp, AI) sits behind an adapter, so a provider can be swapped without a rewrite.
+The tools below are recommendations. Final selection depends on the platform decision in section 3 and on budget.
+2. Stack at a Glance
+Layer
+Recommended choice
+Why
+Alternatives
+Storefront (frontend)
+Next.js (React) with TypeScript
+Server rendering for SEO and speed, large ecosystem
+Nuxt, Astro
+Styling and UI
+Tailwind CSS with a small component library
+Fast, consistent design system
+Chakra UI, plain CSS modules
+Commerce engine
+Medusa (open-source, Node.js, headless)
+Full control, built-in carts, orders, discounts and regions
+Shopify (headless), WooCommerce
+Backend services
+Node.js with NestJS or Express, TypeScript
+Same language as the frontend, good for API and webhooks
+Python (FastAPI)
+Database
+PostgreSQL (managed)
+Reliable relational store for orders and customers
+MySQL
+Cache and queues
+Redis
+Sessions, caching, background job queue
+Managed queue service
+Search
+Typesense or Meilisearch
+Fast, typo-tolerant search with filters
+Algolia, Elasticsearch
+File and image storage
+S3-compatible object storage plus CDN
+Cheap, durable media storage
+Cloudinary
+Authentication
+Email OTP and phone OTP, optional Google login
+Fits Indian shoppers who prefer OTP
+Auth0, Clerk
+Payments
+Razorpay (primary), Cashfree (backup)
+UPI, cards, net banking, COD handling, strong India support
+PayU, Stripe (limited in India)
+Shipping
+Shiprocket, with Delhivery as an option
+Multi-courier rates, tracking, pincode checks
+India Post, Shadowfax
+WhatsApp
+WhatsApp Business Platform (Cloud API), directly or through a provider such as Interakt, Gupshup or WATI
+Official API for templates, notifications and chat
+Twilio
+Email (transactional)
+Amazon SES or Resend
+Low cost, good deliverability
+Postmark
+Email (marketing)
+Brevo or Mailchimp
+Newsletters, automations, unsubscribe handling
+Klaviyo
+AI assistant
+Claude API through our own backend, with retrieval over the product catalogue and policy pages
+Strong instruction following, tool use for catalogue and order lookups
+Other LLM providers
+Vector store for retrieval
+pgvector inside PostgreSQL
+One less system to run
+Pinecone, Qdrant
+Analytics
+Google Analytics 4 plus PostHog or Plausible
+Traffic, funnels, behaviour
+Matomo
+Error and performance monitoring
+Sentry, uptime monitor
+Catch errors quickly
+Datadog
+Hosting (frontend)
+Vercel or Cloudflare Pages
+Edge delivery, easy deployments
+Netlify
+Hosting (backend and database)
+AWS Mumbai (ap-south-1) or a similar managed platform
+Low latency in India, data stays in India
+Railway, Render, DigitalOcean Bangalore
+CDN, DNS and firewall
+Cloudflare
+Caching, DDoS protection, WAF
+AWS CloudFront
+Source control and CI/CD
+GitHub with GitHub Actions
+Automated tests and deployments
+GitLab
+Secrets management
+Cloud secrets manager (AWS Secrets Manager or equivalent)
+Keys are not stored in code
+Doppler, Vault
+3. Key Decision: Platform
+The current store runs on Typof, a hosted store builder. Before development starts, the team should confirm whether it allows custom scripts, webhooks, API access and a custom chat widget.
+Option
+Best when
+Trade-offs
+A. Stay on the current platform and customise
+Budget and time are very limited and it supports the needed integrations
+Limited control; chatbot and WhatsApp flows may be restricted
+B. Headless build with Medusa and Next.js (recommended)
+The business wants full control and a custom experience
+Needs developer time and hosting management
+C. Shopify with a custom theme or headless storefront
+The team prefers a managed commerce platform
+Monthly fees and app costs; less backend flexibility
+D. WooCommerce on WordPress
+The team is already comfortable with WordPress
+Plugin sprawl, more security patching, slower without tuning
+Recommendation: Option B for the full Eco Saathi 2.0 scope. Option C is the safer managed alternative if the team cannot maintain servers.
+4. Frontend Details
+Rendering: static generation for content pages and category pages, server rendering for product and search pages, incremental regeneration when products change.
+Performance: image optimisation (WebP or AVIF), lazy loading, font subsetting, code splitting, and a target mobile Largest Contentful Paint under 2.5 seconds.
+SEO: metadata per page, JSON-LD structured data for products and breadcrumbs, XML sitemap, canonical URLs and 301 redirects from existing URLs.
+Progressive Web App: installable on phones, with an offline fallback page.
+Accessibility: semantic HTML, alt text, colour-contrast checks, keyboard navigation.
+Languages: English at launch, with the codebase prepared for Odia and Hindi through an i18n library.
+5. Backend Details
+Pattern: a modular monolith first (commerce engine plus a custom services layer), split into services only when scale demands it.
+API style: REST for the storefront, webhooks for payment, shipping and WhatsApp events.
+Background jobs: queue workers for emails, WhatsApp messages, stock sync, abandoned-cart reminders and invoice generation.
+Invoices: GST-compliant PDF invoices generated on order completion.
+Admin: the commerce engine's admin panel, extended with a chatbot conversation viewer and a corporate leads view.
+6. AI Assistant Stack
+Component
+Choice
+Notes
+Language model
+Claude API, called only from our backend
+The API key is never exposed to the browser
+Knowledge sources
+Product catalogue, shipping and returns policy, care guides, FAQs
+Indexed with pgvector for retrieval
+Tools the assistant can call
+search_products, get_product, check_pincode, get_order_status, create_handoff
+Each tool is read-only except create_handoff and add-to-cart
+Chat widget
+Custom React component with streaming replies
+Product cards and quick-reply buttons
+Conversation storage
+PostgreSQL
+Retention period defined in the Security document
+Guardrails
+System prompt, tool-only access to prices and stock, output checks, rate limits
+Prevents invented prices or policies
+Evaluation
+A test set of 100 or more real customer questions run before each release
+Tracks accuracy and hand-off rate
+7. Integrations Summary
+Integration
+Used for
+Direction
+Razorpay / Cashfree
+Payments, refunds
+Two-way (webhooks)
+Shiprocket / Delhivery
+Rates, labels, tracking
+Two-way (webhooks)
+WhatsApp Cloud API
+Notifications and customer chat
+Two-way
+Amazon SES / Resend
+Transactional email
+Outbound
+Brevo / Mailchimp
+Newsletter and automation
+Outbound, with sync of subscribers
+Google Analytics 4 and PostHog
+Analytics
+Outbound events
+Google Search Console
+SEO monitoring
+Manual and API
+Accounting tool (for example Zoho Books or Tally export)
+Invoices and GST reports
+Outbound, optional
+8. Environments and DevOps
+Environment
+Purpose
+Local
+Developer machines with seeded sample data
+Staging
+Full copy for testing and client review, using payment and WhatsApp sandboxes
+Production
+Live store
+CI/CD: every pull request runs linting, type checks, unit tests and a build; merging to the main branch deploys to staging; production deploys need manual approval.
+Infrastructure as code: Terraform or the platform's configuration files kept in the repository.
+Backups: daily database backups with point-in-time recovery, tested quarterly.
+Monitoring: uptime checks, error alerts, slow-query alerts and a weekly performance report.
+9. Testing Strategy
+Unit tests for pricing, discounts, tax and stock logic.
+Integration tests for checkout, payment webhooks and shipping webhooks.
+End-to-end tests (Playwright) for the main purchase journey on mobile and desktop.
+Chatbot evaluation set, run on every prompt or model change.
+Load test before festival campaigns.
+Lighthouse checks in CI for performance, accessibility and SEO.
+10. Indicative Running Costs
+Costs depend on traffic and vendor pricing, which changes often, so these are categories rather than figures. Verify current prices before budgeting.
+Fixed: hosting, managed database, search, monitoring, domain.
+Per order: payment gateway fee, shipping charges, WhatsApp conversation fees, SMS or OTP fees.
+Usage-based: email sending and AI model usage (controlled through rate limits and caching of common answers).

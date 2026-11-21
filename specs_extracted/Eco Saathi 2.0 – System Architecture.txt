@@ -1,0 +1,192 @@
+﻿Eco Saathi 2.0 – System Architecture
+Version 1.0 · Draft · 15 October 2026 · Companion to the PRD and Technology Stack
+1. Architecture Goals
+Serve fast, SEO-friendly pages to mobile shoppers across India.
+Keep the store reliable during festival traffic spikes.
+Make the AI assistant, WhatsApp and email features part of the core system rather than add-ons.
+Keep each external provider behind an adapter so it can be replaced.
+Start simple (a modular monolith) and split into services only when needed.
+The components named here follow the recommended stack. If the platform decision changes, the layers stay the same and only the products inside them change.
+2. High-Level Layers
+Layer
+What it contains
+Responsibility
+1. Clients
+Mobile and desktop browsers, installable web app, WhatsApp on the customer's phone, email inbox
+Where customers and staff interact
+2. Edge
+Cloudflare (DNS, CDN, firewall, bot protection, rate limiting)
+Fast delivery and first line of defence
+3. Presentation
+Next.js storefront and the chat widget
+Pages, SEO, cart and checkout screens
+4. Application
+Commerce engine (Medusa), custom API services, admin panel
+Catalogue, cart, orders, customers, discounts, business rules
+5. Intelligence
+AI assistant service with retrieval and tool calls
+Product recommendations, FAQ answers, order lookups, hand-off
+6. Messaging
+Notification service with queue workers
+WhatsApp, email and OTP delivery
+7. Data
+PostgreSQL, Redis, search index, object storage
+Persistent data, cache, fast search, media files
+8. External services
+Payment gateway, shipping partners, WhatsApp Cloud API, email providers, Claude API, analytics
+Specialised third-party capabilities
+9. Operations
+CI/CD, monitoring, logging, backups, secrets manager
+Delivery, visibility and recovery
+Requests flow top to bottom: Clients → Edge → Presentation → Application (and Intelligence or Messaging as needed) → Data, with External services called from the Application, Intelligence and Messaging layers only.
+3. Component Descriptions
+3.1 Storefront (Next.js)
+Renders home, category, product, search, cart, checkout, account and content pages.
+Uses static generation for content and category pages and server rendering for product and search pages.
+Talks only to the public API of the application layer; it never talks to the database or to third-party secrets directly.
+3.2 Commerce Engine (Medusa)
+Owns products, variants, prices, inventory, carts, orders, discounts, regions and tax rules.
+Emits events (order placed, order shipped, product updated) that other services listen to.
+Provides the admin panel for staff.
+3.3 Custom API Services
+Service
+Responsibility
+Customer service
+Accounts, addresses, OTP login, consent records (WhatsApp, email)
+Search sync
+Pushes product changes to the search index
+Content service
+Blog posts, impact pages, awards, banners
+Corporate leads service
+Stores enquiries and quotes, notifies the sales team
+Invoice service
+Generates GST invoices as PDF
+Shipping adapter
+Rates, label creation and tracking through Shiprocket or Delhivery
+Payment adapter
+Creates payments, verifies webhooks and handles refunds
+3.4 AI Assistant Service
+Receives a chat message from the widget with a session ID.
+Loads recent conversation history and checks rate limits.
+Retrieves relevant policy and care-guide passages from the vector index.
+Calls the Claude API with a system prompt, the history, the retrieved passages and a fixed list of tools.
+When the model asks for a tool (search_products, get_product, check_pincode, get_order_status, create_handoff), the service runs it against the application layer and returns the result. Prices and stock always come from the tools, never from the model's memory.
+Streams the reply back to the widget and stores the exchange.
+If the customer asks for a human, or the model is unsure, create_handoff sends a summary to the support team over WhatsApp or email.
+3.5 Notification Service
+Subscribes to commerce events and places jobs on a Redis queue.
+Workers pick up jobs and send WhatsApp template messages, transactional emails or OTP messages.
+Checks consent before every marketing message and records delivery status from provider webhooks.
+Retries failed sends with backoff and moves repeated failures to a dead-letter queue for review.
+3.6 Admin Dashboard
+Product and order management (from the commerce engine).
+Extra screens for chatbot conversations, unanswered questions, corporate leads and sales analytics.
+Access limited by role (owner, staff, support).
+4. Key Data Flows
+4.1 Checkout and Order
+Customer reviews the cart; the storefront calls the commerce API to price it and check stock and pincode serviceability.
+Customer enters address and picks a payment method.
+Payment adapter creates a payment with the gateway; the customer pays on the gateway's page or sheet.
+The gateway sends a signed webhook; the adapter verifies the signature and marks the order as paid. The order is never confirmed from the browser's redirect alone.
+The commerce engine emits "order placed"; the notification service sends the confirmation by email and by WhatsApp (if the customer opted in), and the invoice service creates the invoice.
+Staff create the shipment through the shipping adapter; tracking webhooks update the order status and trigger shipping messages.
+4.2 Chat Assistance
+Widget → AI assistant service → (retrieval + tools + Claude API) → reply streamed to widget. A hand-off creates a ticket for the support team and pushes the conversation summary to WhatsApp or email.
+4.3 Catalogue Update
+Staff edit a product in the admin panel → commerce engine saves it → event updates the search index and the vector index → storefront pages are revalidated so the change shows within minutes.
+4.4 Corporate Enquiry
+Form on the storefront → corporate leads service validates and stores it → email to the sales team and an acknowledgement to the customer.
+5. Data Architecture
+5.1 Main Entities
+Entity
+Key fields
+Notes
+Product
+id, title, handle, description, material, use tags, status, SEO fields
+Has variants and images
+Variant
+id, product id, SKU, price, stock, weight
+Price in INR, tax class
+Category
+id, name, type (material or use), parent
+Supports both material and use-based navigation
+Customer
+id, name, email, phone, password-less login, consent flags
+Phone and email are verified
+Address
+id, customer id, line items, pincode, state
+Used for shipping and GST
+Cart and Order
+id, customer or guest id, items, totals, tax, status, payment status
+Immutable price snapshot at order time
+Payment
+id, order id, gateway reference, status, amount
+No card data stored
+Shipment
+id, order id, courier, tracking number, status
+Updated by webhooks
+Review
+id, product id, customer id, rating, text, status
+Moderated before publishing
+Chat session and message
+session id, customer id (optional), messages, tool calls, feedback
+Retention limit applies
+Lead
+id, company, contact, quantity, message, status
+Corporate enquiries
+Consent record
+customer id, channel, purpose, timestamp, source
+Proof of opt-in and opt-out
+Notification log
+id, channel, template, status, provider id
+For audits and debugging
+5.2 Storage Choices
+PostgreSQL: system of record for all entities above, with pgvector for retrieval.
+Redis: sessions, rate-limit counters, job queues and short-lived caches.
+Search index: product search and filters, rebuilt from the database if lost.
+Object storage with CDN: product images, invoices and blog media, with signed URLs for private files such as invoices.
+6. Deployment Architecture
+Frontend: deployed to an edge platform (Vercel or Cloudflare Pages) with automatic previews for each change.
+Backend: containerised services on a managed platform in the Mumbai region, with at least two instances of the main API for availability.
+Database: managed PostgreSQL with automatic failover, daily backups and point-in-time recovery.
+Workers: separate worker containers for queue jobs so heavy tasks never slow down page requests.
+Networking: database and Redis are reachable only from the backend network, not from the internet.
+7. Scalability and Performance
+Concern
+Approach
+Traffic spikes
+CDN caching, static generation, horizontal scaling of the API and workers
+Slow pages
+Image optimisation, caching of category and search results, database indexes
+Search load
+Dedicated search index instead of database queries
+Chat cost and latency
+Streaming replies, caching of common FAQ answers, per-session rate limits
+Message bursts
+Queue with controlled sending rate to respect WhatsApp and email provider limits
+8. Reliability and Failure Handling
+Failure
+Expected behaviour
+Payment gateway down
+Show alternative methods or a retry message; do not create duplicate orders (idempotency keys)
+Missed payment webhook
+Scheduled job reconciles pending payments with the gateway
+WhatsApp provider failure
+Fall back to email and retry later
+AI service or Claude API unavailable
+Widget shows a simple fallback with the WhatsApp and email contact options
+Search index unavailable
+Fall back to basic database search
+Database failure
+Automatic failover; recovery from backup if needed
+9. Observability
+Logging: structured logs with request IDs, with personal data masked.
+Metrics: response times, error rates, queue length, checkout funnel, chatbot answer and hand-off rates.
+Alerts: payment failures above normal, queue backlog, error spikes, certificate expiry, backup failures.
+Tracing: request tracing across storefront, API and external calls for slow-checkout investigations.
+10. Architecture Decisions to Confirm
+Final platform: stay on current platform, headless build (recommended), Shopify or WooCommerce.
+WhatsApp provider: direct Cloud API or a business solution provider.
+Whether the chatbot should be able to place orders itself or only add items to the cart.
+Chat history retention period and customer access to past chats.
+Hosting budget and the team's capacity to run servers.

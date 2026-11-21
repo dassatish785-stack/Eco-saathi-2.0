@@ -1,0 +1,265 @@
+﻿Eco Saathi 2.0 – Security and Privacy Plan
+Version 1.0 · Draft · 15 October 2026 · Companion to the PRD, Technology Stack and System Architecture
+This plan sets the security and privacy requirements for the new store. It is a technical and planning document, not legal advice. The compliance points in section 9 should be confirmed with a qualified lawyer before launch.
+1. Security Goals
+Protect customers' personal and payment information.
+Keep the store available and its orders and prices accurate.
+Stop attackers from abusing the website, admin panel, chatbot or messaging channels.
+Collect only the data needed, and keep it only as long as needed.
+Detect problems early and recover quickly.
+2. Data We Handle
+Data
+Examples
+Sensitivity
+Protection level
+Identity and contact
+Name, phone, email, addresses
+High (personal data)
+Encrypted, access-controlled, retention limits
+Order data
+Items, totals, shipment details
+Medium
+Access-controlled, backed up
+Payment data
+Gateway reference and status only
+High
+Card and UPI details are never stored by us
+Credentials
+Staff passwords, API keys, webhook secrets
+Critical
+Secrets manager, strong hashing, rotation
+Chat conversations
+Messages, tool calls, feedback
+High (may contain personal details)
+Masked in logs, retention limit, restricted viewing
+Consent records
+Opt-in and opt-out with timestamps
+High (legal proof)
+Kept as audit records
+Business data
+Prices, leads, sales reports
+Medium
+Role-based access
+The store should not ask for Aadhaar, PAN or other government ID numbers unless a clear legal need arises (for example, a corporate invoice that requires a GST number).
+3. Main Threats and Controls
+Threat
+Example
+Key controls
+Account takeover
+OTP abuse, stolen staff password
+OTP rate limits and expiry, multi-factor authentication for staff, login alerts, session timeout
+Injection and web attacks
+SQL injection, cross-site scripting, request forgery
+Parameterised queries, output encoding, Content Security Policy, anti-forgery tokens, framework defaults kept on
+Payment fraud
+Fake payment confirmation, price tampering
+Prices calculated on the server only, confirmation only from signature-verified gateway webhooks, idempotency keys
+Bots and abuse
+Scraping, fake orders, coupon abuse, OTP flooding
+Cloudflare bot protection, rate limits per IP and per phone, CAPTCHA on risky forms
+Data leak
+Misconfigured database or storage, leaked keys
+Private network for databases, private storage with signed URLs, secret scanning in the code repository
+Admin misuse
+Staff exporting data or changing prices wrongly
+Role-based access, audit logs, approval for sensitive actions
+Supply-chain attack
+Malicious package or plugin
+Dependency scanning, locked versions, minimal plugins, review of new packages
+Denial of service
+Traffic floods during campaigns
+CDN caching, WAF, auto-scaling, rate limits
+Chatbot abuse
+Prompt injection, data extraction, cost abuse
+See section 6
+Messaging abuse
+Spam, phishing in the store's name
+Approved templates, sender authentication, consent checks
+4. Application Security Controls
+4.1 Authentication and Sessions
+Customers log in with phone or email OTP; OTPs are short-lived, single-use and rate-limited.
+Staff accounts require strong passwords plus multi-factor authentication, and use individual accounts only (no shared logins).
+Passwords, where used, are hashed with a modern algorithm such as Argon2id or bcrypt.
+Sessions use secure, HttpOnly, SameSite cookies, expire after inactivity and are revoked on logout or password change.
+4.2 Authorisation
+Role
+Catalogue
+Orders
+Customer data
+Refunds
+Settings and users
+Chat logs
+Owner
+Full
+Full
+Full
+Approve
+Full
+Full
+Staff
+Edit
+Process
+Limited (shipping details only)
+Request
+None
+None
+Support
+View
+View and update status
+Limited
+Request
+None
+Own tickets
+Developer
+None in production by default
+None
+None
+None
+Infrastructure only, time-limited
+Masked only
+Every request is checked on the server for the user's role. Customers can only see their own orders, addresses and chats.
+4.3 Input and Output Handling
+Validate all inputs on the server (type, length, format), including file uploads (allowed types and sizes, malware scan, stored outside the web root).
+Encode output and sanitise any rich text from the blog editor.
+Send security headers: Content-Security-Policy, Strict-Transport-Security, X-Content-Type-Options, Referrer-Policy and frame protection.
+4.4 API Security
+Public APIs are rate-limited; admin APIs are not reachable from the open internet except through authenticated sessions.
+Webhooks from payment, shipping and WhatsApp providers are accepted only with valid signatures and from expected sources, and are processed idempotently.
+Error messages shown to users never reveal system details.
+5. Payment Security
+Card, UPI and net-banking details are entered on the payment gateway's hosted page or secure fields, so they never touch our servers. This keeps the store's PCI DSS scope small; the exact questionnaire level should be confirmed with the gateway.
+Only the gateway reference, status and amount are stored.
+The order total is recalculated on the server at payment time; client-side values are never trusted.
+A scheduled job compares paid orders against the gateway's records to catch missed or fake confirmations.
+Refunds require an authorised role and are logged.
+6. AI Assistant Security
+Risk
+Control
+Prompt injection (a user, or text in a product review, tries to override instructions)
+Treat all customer text and retrieved content as untrusted data; keep rules in the system prompt; the model can only use a fixed list of tools; review text is excluded from the retrieval index unless moderated
+Data exposure (asking about someone else's order)
+Order tools require verified OTP for the order's phone or email and return only that customer's data
+Unsafe actions
+Tools are mostly read-only; add-to-cart and hand-off are the only actions; no refund, price change or payment tools
+False claims (invented prices, stock, policies, eco-claims)
+Prices and stock come only from tools; policy answers come from approved content; unsure answers lead to hand-off
+Secret leakage
+The Claude API key lives only in the backend secrets manager; the system prompt contains no secrets
+Cost abuse
+Per-session and per-IP rate limits, maximum message length, daily spending alerts
+Personal data in logs and prompts
+Mask phone numbers and emails in logs; send the model only the data needed for the question
+Harmful output
+Output checks for off-topic or inappropriate content, user feedback buttons and a review queue for poorly rated chats
+Regression
+The chatbot test set includes attack examples (jailbreaks, data-extraction attempts) and is run before every release
+Customers should see a short notice that they are chatting with an AI assistant, with a link to the privacy policy and an easy way to reach a human.
+7. WhatsApp and Email Security
+Use only the official WhatsApp Business Platform with approved message templates; never use unofficial automation tools.
+Store the access tokens in the secrets manager and rotate them on a schedule or after staff changes.
+Send marketing only to customers who have opted in, and honour opt-outs immediately.
+For email, set up SPF, DKIM and DMARC for the domain to prevent spoofing and improve deliverability.
+Never ask customers for OTPs, passwords or card details over chat or email, and say this in the templates.
+Links in messages point only to the official domain.
+8. Infrastructure Security
+Area
+Control
+Network
+Database, Redis and search are on a private network; only the API and workers can reach them
+Encryption in transit
+HTTPS everywhere with TLS 1.2 or higher, automatic certificate renewal, HSTS
+Encryption at rest
+Managed database, storage and backups encrypted
+Secrets
+Stored in a secrets manager; never in code, chat or screenshots; rotated regularly; secret scanning on every commit
+Access to servers
+Least-privilege cloud roles, multi-factor authentication for all cloud accounts, time-limited production access, audit logs
+Patching
+Automated dependency and operating-system updates; critical fixes applied promptly
+Backups
+Daily automated backups with point-in-time recovery, stored in a separate account or region, restore tested every quarter
+Environments
+Staging uses test or anonymised data, never a copy of real customer data
+Logging
+Central logs with personal data masked, kept for a defined period, and protected from tampering
+Domain
+Registrar lock, multi-factor authentication on the registrar and DNS accounts, DNSSEC where supported
+9. Privacy and Compliance (India)
+The store serves customers in India, so the points below should be reviewed with legal counsel before launch. Rules change, so verify the current text and any rules issued under it.
+Area
+What to do
+Digital Personal Data Protection Act, 2023
+Give a clear notice of what data is collected and why; get consent for each purpose (orders, WhatsApp, marketing, chatbot storage); let customers view, correct and delete their data and withdraw consent; name a contact for grievances; protect data with reasonable safeguards; keep data only as long as needed
+Children's data
+The store is for adults; do not knowingly collect children's data, and add a line to the privacy policy
+CERT-In directions
+Be ready to report certain cyber incidents to CERT-In within the required time (currently six hours for specified incident types); keep logs for the period required
+Consumer protection and e-commerce rules
+Show seller details, prices with taxes, delivery and returns policy, and a grievance contact; keep eco-claims truthful and supported
+GST
+Issue compliant invoices; store invoice data for the legal period
+WhatsApp and email rules
+Follow WhatsApp's business policy and opt-in rules; include unsubscribe in marketing email; respect telecom do-not-disturb rules for SMS
+Third-party processors
+Sign data processing terms with the gateway, email, WhatsApp and AI providers; record where data is processed
+9.1 Suggested Retention Periods (to be confirmed)
+Data
+Suggested retention
+Order and invoice records
+As required by tax law (commonly several years)
+Customer accounts
+Until deletion is requested or after a long period of inactivity
+Chat transcripts
+90 days, then deleted or anonymised, unless linked to a support ticket
+OTP and security logs
+6–12 months, or longer if the law requires
+Marketing consent records
+For as long as the consent relationship lasts, plus a period for proof
+Abandoned carts
+30 days
+10. Monitoring and Incident Response
+10.1 Monitoring
+Alerts for repeated failed logins, unusual order or refund patterns, large data exports, new admin users, webhook signature failures and error spikes.
+Weekly review of security alerts and dependency vulnerabilities.
+10.2 Incident Response Steps
+Detect and confirm: an alert or report is verified and an incident lead is named.
+Contain: disable compromised accounts, rotate keys and secrets, block malicious traffic, and take affected features offline if needed.
+Assess: find what data and which customers are affected, and how long it was exposed.
+Notify: report to CERT-In and other authorities where required, and inform affected customers and the board or owner as the law and the privacy policy require.
+Recover: restore from clean backups, patch the cause, and monitor closely.
+Learn: write a short post-incident review with actions and owners.
+Keep an emergency contact list (owner, developer, hosting provider, payment gateway, WhatsApp provider, legal adviser) in a secure place.
+11. Security Testing and Governance
+Activity
+When
+Automated dependency and secret scanning
+Every code change
+Code review with a security checklist (OWASP Top 10)
+Every pull request
+Penetration test by an independent party
+Before launch and then yearly or after major changes
+Chatbot attack test set
+Every release that touches the assistant
+Access review (staff, cloud, admin users)
+Quarterly
+Backup restore test
+Quarterly
+Incident drill
+Yearly
+Security training for staff (phishing, passwords, handling customer data)
+At onboarding and yearly
+12. Pre-Launch Security Checklist
+☐ Multi-factor authentication enabled for all staff, cloud, domain and payment accounts
+☐ Server-side price and total calculation verified with tests
+☐ Payment and shipping webhooks verify signatures and are idempotent
+☐ Databases and search are not reachable from the internet
+☐ Secrets are in the secrets manager; no secrets in the repository history
+☐ Security headers and CSP active; TLS grade checked
+☐ Rate limits and bot protection active on login, OTP, checkout, chat and forms
+☐ Role permissions tested for each role
+☐ Chatbot cannot reach any customer data without verification; attack tests passed
+☐ Consent flows, privacy policy and data deletion process in place
+☐ SPF, DKIM and DMARC configured; WhatsApp templates approved
+☐ Backups running and a restore tested
+☐ Independent penetration test completed and critical findings fixed
+☐ Incident response plan and contact list shared with the team

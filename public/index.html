@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Saathi | Your Partner in a Greener Tomorrow</title>
+  <meta name="description" content="Eco Saathi is a purpose-driven sustainability platform and social enterprise promoting plastic-free bamboo, neem wood, Mayurbhanj sabai grass, and circular organic living essentials handcrafted in Odisha, India." />
+  <meta property="og:title" content="Eco Saathi - Your Partner in a Greener Tomorrow" />
+  <meta property="og:description" content="Small Steps. Big Impact. A Greener Future. Explore sustainable, plastic-free solutions handcrafted with love." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Favicon Standalone Icon (Minimal Leaf + Circular Sustainability) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings) & DM Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js for Sustainability Impact Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- Custom Modern Sustainability Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#14532D',
+              dark: '#0e3b20',
+              light: '#1b6d3c'
+            },
+            leaf: {
+              DEFAULT: '#4D9B59',
+              dark: '#3d7c47',
+              light: '#6bb376'
+            },
+            sage: {
+              DEFAULT: '#A8C5A0',
+              dark: '#8eb385',
+              light: '#e8f1e6'
+            },
+            cream: {
+              DEFAULT: '#F7F7ED',
+              card: '#FFFFFF',
+              tint: '#f1f1e3'
+            },
+            earth: {
+              DEFAULT: '#795548',
+              light: '#8d6e63'
+            },
+            darktext: {
+              DEFAULT: '#26332A',
+              muted: '#526356'
+            },
+            eco: {
+              50: '#f2f8f4',
+              100: '#e8f1e6',
+              200: '#c5e0d0',
+              300: '#A8C5A0',
+              400: '#6bb376',
+              500: '#4D9B59',
+              600: '#3d7c47',
+              700: '#2a5b45',
+              800: '#1b6d3c',
+              900: '#14532D',
+              950: '#0e3b20'
+            }
+          },
+          fontFamily: {
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-[#F7F7ED] text-[#26332A] min-h-screen flex flex-col antialiased selection:bg-[#A8C5A0]/40 selection:text-[#14532D]">
+
+  <!-- ============================================================== -->
+  <!-- 1. TOP ANNOUNCEMENT BAR                                         -->
+  <!-- ============================================================== -->
+  <div class="bg-[#14532D] text-[#F7F7ED] text-[11px] sm:text-xs py-2 px-4 text-center font-medium flex items-center justify-center space-x-3 overflow-hidden border-b border-[#1b6d3c]">
+    <span class="bg-[#4D9B59] text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-full shadow-sm">Verified Mission</span>
+    <span class="truncate">🌿 Carbon Neutral · BPA-Free · 100% Natural · Empowering Odisha Artisans · Free Shipping over ₹499</span>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- 2. MAIN NAVIGATION HEADER                                       -->
+  <!-- ============================================================== -->
+  <header class="sticky top-0 z-40 nav-blur border-b border-[#A8C5A0]/30 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+        
+        <!-- Redesigned Eco Saathi Logo (Left) -->
+        <a href="#home" class="flex items-center space-x-3 flex-shrink-0 group py-1">
+          <!-- Standalone Symbol: Minimal Leaf + Circular Sustainability Loop -->
+          <div class="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-[#14532D] via-[#1b6d3c] to-[#4D9B59] p-0.5 shadow-md group-hover:scale-105 transition duration-200">
+            <div class="w-full h-full bg-[#FFFFFF] rounded-[14px] flex items-center justify-center">
+              <svg class="h-7 w-7" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circular sustainability cycle arcs -->
+                <path d="M22 4C31.941 4 40 12.059 40 22C40 25.86 38.78 29.43 36.7 32.38" stroke="#14532D" stroke-width="3" stroke-linecap="round"/>
+                <path d="M22 40C12.059 40 4 31.941 4 22C4 18.14 5.22 14.57 7.3 11.62" stroke="#4D9B59" stroke-width="3" stroke-linecap="round"/>
+                <path d="M34 33.5L37 32L39 35" stroke="#14532D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 10.5L7 12L5 9" stroke="#4D9B59" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Central Leaf forming nature harmony -->
+                <path d="M22 10C15 14 14 24 22 34C30 24 29 14 22 10Z" fill="url(#ecoLeafGradNav)" stroke="#14532D" stroke-width="1.5"/>
+                <path d="M22 14V30" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.95"/>
+                <path d="M22 20L25.5 17.5" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+                <path d="M22 24L18.5 21.5" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+                <circle cx="22" cy="7" r="2.2" fill="#4D9B59"/>
+                <defs>
+                  <linearGradient id="ecoLeafGradNav" x1="15" y1="12" x2="29" y2="32" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#4D9B59"/>
+                    <stop offset="1" stop-color="#14532D"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="font-heading font-extrabold text-2xl tracking-tight text-[#14532D] leading-none">
+              Eco <span class="text-[#4D9B59]">Saathi</span>
+            </div>
+            <span class="text-[9px] block font-semibold uppercase tracking-widest text-[#795548] mt-0.5">Your Partner in a Greener Tomorrow</span>
+          </div>
+        </a>
+
+        <!-- Search Bar with Instant Typo Tolerance (FR-03) -->
+        <div class="hidden xl:flex flex-1 max-w-sm relative">
+          <input
+            id="navbarSearchInput"
+            type="text"
+            placeholder="Search bamboo, neem wood, loofah, gifts..."
+            class="w-full bg-[#FFFFFF] text-[#26332A] placeholder-[#526356]/60 text-xs pl-10 pr-4 py-2.5 rounded-full border border-[#A8C5A0]/40 focus:outline-none focus:ring-2 focus:ring-[#4D9B59] focus:border-[#4D9B59] transition shadow-sm"
+          />
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-[#526356] text-xs"></i>
+        </div>
+
+        <!-- Navigation Links (Required by Prompt Section 5) -->
+        <nav class="hidden lg:flex items-center space-x-6 text-xs font-bold text-[#26332A]">
+          <a href="#home" class="hover:text-[#4D9B59] transition">Home</a>
+          <a href="#about" class="hover:text-[#4D9B59] transition">About Us</a>
+          <a href="#initiatives" class="hover:text-[#4D9B59] transition">Our Initiatives</a>
+
+          <!-- Solutions / Catalog Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center space-x-1 hover:text-[#4D9B59] py-2">
+              <span class="text-[#14532D]">Eco Solutions</span>
+              <i class="fa-solid fa-chevron-down text-[10px]"></i>
+            </button>
+            <div class="absolute left-0 mt-1 w-60 bg-[#FFFFFF] rounded-2xl shadow-xl border border-[#A8C5A0]/30 p-2 hidden group-hover:block fade-in">
+              <div class="px-3 py-1.5 text-[10px] font-bold uppercase text-[#795548] tracking-wider">Browse by Need</div>
+              <div id="useCategoryDropdown" class="space-y-1 mb-2">
+                <!-- Dynamically populated -->
+              </div>
+              <div class="border-t border-[#A8C5A0]/20 pt-1.5 px-3 py-1 text-[10px] font-bold uppercase text-[#795548] tracking-wider">Browse by Material</div>
+              <div id="materialCategoryDropdown" class="space-y-1">
+                <!-- Dynamically populated -->
+              </div>
+              <div class="border-t border-[#A8C5A0]/20 pt-2 mt-2">
+                <a href="#shop" class="block text-center text-xs font-bold text-[#14532D] hover:text-[#4D9B59] py-1 bg-[#F7F7ED] rounded-xl">View Full 60+ Item Catalog →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resources (Sustainability & LCA) -->
+          <a href="#sustainability" class="hover:text-[#4D9B59] transition">Resources</a>
+
+          <!-- Sustainability Impact Calculator -->
+          <a href="#impact" class="text-[#14532D] hover:text-[#4D9B59] flex items-center space-x-1 transition">
+            <i class="fa-solid fa-scale-balanced text-[#4D9B59]"></i>
+            <span>Impact</span>
+          </a>
+
+          <!-- Contact / Corporate -->
+          <a href="#corporate" class="hover:text-[#4D9B59] transition">Contact</a>
+        </nav>
+
+        <!-- Right Utilities & Prominent "Join Us" CTA Button -->
+        <div class="flex items-center space-x-3">
+          <!-- WhatsApp Contact Button -->
+          <a href="https://wa.me/917978739732?text=Hi%20Eco%20Saathi%2C%20I%20have%20an%20enquiry%20regarding%20sustainable%20living" target="_blank" class="hidden sm:flex items-center space-x-1.5 text-xs text-[#14532D] font-semibold bg-[#FFFFFF] hover:bg-[#A8C5A0]/20 px-3 py-2 rounded-full border border-[#A8C5A0]/40 transition shadow-sm" title="Message Eco Saathi on WhatsApp">
+            <i class="fa-brands fa-whatsapp text-[#4D9B59] text-sm"></i>
+            <span>WhatsApp</span>
+          </a>
+
+          <!-- User Account -->
+          <a href="#account" class="w-10 h-10 rounded-full bg-[#FFFFFF] hover:bg-[#A8C5A0]/20 text-[#26332A] flex items-center justify-center border border-[#A8C5A0]/40 transition shadow-sm" title="My Account & Orders">
+            <i class="fa-regular fa-user text-sm"></i>
+          </a>
+
+          <!-- Cart Drawer Button -->
+          <button onclick="App.openCartDrawer()" class="relative w-10 h-10 rounded-full bg-[#FFFFFF] hover:bg-[#A8C5A0]/20 text-[#14532D] flex items-center justify-center border border-[#A8C5A0]/40 shadow-sm transition">
+            <i class="fa-solid fa-bag-shopping text-sm"></i>
+            <span class="cart-count-badge absolute -top-1 -right-1 bg-[#4D9B59] text-white font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-white shadow hidden">
+              0
+            </span>
+          </button>
+
+          <!-- Prominent "Join Us" Button (Section 5) -->
+          <a href="#shop" class="btn-forest hidden md:inline-flex items-center space-x-1.5 text-xs px-5 py-2.5 rounded-full">
+            <i class="fa-solid fa-seedling text-[#A8C5A0]"></i>
+            <span>Join Us</span>
+          </a>
+
+          <!-- Mobile Nav Toggle -->
+          <button onclick="document.getElementById('mobileNavDrawer').classList.toggle('hidden')" class="lg:hidden w-10 h-10 rounded-full bg-[#FFFFFF] text-[#14532D] flex items-center justify-center border border-[#A8C5A0]/40">
+            <i class="fa-solid fa-bars text-sm"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileNavDrawer" class="lg:hidden hidden bg-[#FFFFFF] border-b border-[#A8C5A0]/40 px-6 py-5 space-y-3 fade-in">
+      <div class="relative mb-3">
+        <input
+          type="text"
+          placeholder="Search products..."
+          onkeyup="if(event.key==='Enter'){ App.state.filters.search=this.value; window.location.hash='shop'; }"
+          class="w-full bg-[#F7F7ED] text-[#26332A] text-xs pl-9 pr-3 py-2 rounded-full border border-[#A8C5A0]/40"
+        />
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-[#526356] text-xs"></i>
+      </div>
+      <a href="#home" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="block py-1 text-sm font-bold text-[#14532D]">Home</a>
+      <a href="#about" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="block py-1 text-sm font-bold text-[#26332A]">About Us</a>
+      <a href="#initiatives" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="block py-1 text-sm font-bold text-[#26332A]">Our Initiatives</a>
+      <a href="#shop" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="block py-1 text-sm font-bold text-[#26332A]">Eco Solutions (Shop)</a>
+      <a href="#impact" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="block py-1 text-sm font-bold text-[#14532D]">Sustainability Impact</a>
+      <a href="#sustainability" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="block py-1 text-sm font-bold text-[#26332A]">Resources</a>
+      <a href="#awards" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="block py-1 text-sm font-bold text-[#26332A]">Awards & Recognitions</a>
+      <a href="#corporate" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="block py-1 text-sm font-bold text-[#26332A]">Contact & Corporate</a>
+      <div class="pt-2">
+        <a href="#shop" onclick="document.getElementById('mobileNavDrawer').classList.add('hidden')" class="btn-forest w-full text-center py-2.5 rounded-full text-xs block">
+          Join the Movement
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================== -->
+  <!-- VIEW 1: HOME PAGE REDESIGN (Sections 5 & 6)                     -->
+  <!-- ============================================================== -->
+  <main id="viewHome" class="view-section flex-1">
+    
+    <!-- 1. HERO SECTION (Section 5) -->
+    <section class="relative bg-gradient-to-b from-[#F7F7ED] via-[#FFFFFF] to-[#F7F7ED] py-16 sm:py-24 overflow-hidden border-b border-[#A8C5A0]/20">
+      <!-- Subtle organic background curves -->
+      <div class="absolute -top-32 -right-32 w-96 h-96 bg-[#A8C5A0]/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-[#4D9B59]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Copy & CTAs -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center space-x-2 bg-[#e8f1e6] border border-[#A8C5A0] px-4 py-1.5 rounded-full text-xs text-[#14532D] font-bold">
+              <i class="fa-solid fa-leaf text-[#4D9B59]"></i>
+              <span>Eco Saathi · Your Partner in a Greener Tomorrow</span>
+            </div>
+
+            <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#14532D] leading-[1.15] tracking-tight">
+              Small Steps. <span class="text-[#4D9B59]">Big Impact.</span><br/>
+              <span class="text-[#26332A]">A Greener Future.</span>
+            </h1>
+
+            <p class="text-[#526356] text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Join the movement towards a cleaner, greener and more sustainable planet. Every action matters, and every individual can make a difference.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3">
+              <a href="#shop" class="btn-forest px-8 py-4 rounded-full text-sm inline-flex items-center space-x-2.5">
+                <span>Explore Eco Solutions</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+              <a href="#impact" class="btn-outline-leaf px-7 py-3.5 rounded-full text-sm inline-flex items-center space-x-2">
+                <i class="fa-solid fa-chart-line text-[#4D9B59]"></i>
+                <span>Join the Movement</span>
+              </a>
+            </div>
+
+            <!-- Trust Bar Highlights -->
+            <div class="pt-6 border-t border-[#A8C5A0]/20 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-[#526356] font-semibold">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-shield-halved text-[#4D9B59]"></i>
+                <span>100% Plastic-Free</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-people-carry-box text-[#4D9B59]"></i>
+                <span>Artisan Fair-Trade</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-truck-fast text-[#4D9B59]"></i>
+                <span>Carbon-Neutral Delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Environmental Hero Photography -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md rounded-3xl overflow-hidden shadow-2xl border-4 border-[#FFFFFF] group">
+              <!-- Beautiful environmental hero image (Lush greenery & nature) -->
+              <img 
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=80" 
+                alt="Eco Saathi - Sustainable Green Tomorrow" 
+                class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition duration-700" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#14532D]/90 via-[#14532D]/20 to-transparent flex items-end p-6">
+                <div class="text-white space-y-1">
+                  <span class="inline-block bg-[#4D9B59] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">
+                    Circular Odisha Craft
+                  </span>
+                  <h4 class="text-xl font-bold font-heading">Handcrafted for Earth</h4>
+                  <p class="text-xs text-[#F7F7ED]/90">Sustainable Bamboo, Neem Wood & Mayurbhanj Sabai Grass</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Floating Achievement Pill -->
+            <div class="absolute -bottom-5 -left-4 sm:-left-6 bg-[#FFFFFF] rounded-2xl p-4 shadow-xl border border-[#A8C5A0]/40 flex items-center space-x-3.5 max-w-xs">
+              <div class="w-11 h-11 rounded-xl bg-[#e8f1e6] text-[#14532D] flex items-center justify-center text-xl flex-shrink-0">
+                <i class="fa-solid fa-award text-[#4D9B59]"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-[#14532D]">Top 21 Startups in India</div>
+                <div class="text-[11px] text-[#526356]">Visited by Hon'ble PM Narendra Modi</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ECO SAATHI SECTION (Section 6) -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 relative">
+          <div class="rounded-3xl overflow-hidden shadow-xl border border-[#A8C5A0]/30 relative">
+            <img 
+              src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=800&q=80" 
+              alt="Together We Make a Difference" 
+              class="w-full aspect-[4/3] object-cover" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#14532D]/70 via-transparent to-transparent flex items-end p-6">
+              <span class="text-white font-bold text-sm">Empowering 120+ Rural Families in Odisha</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center space-x-2 bg-[#e8f1e6] border border-[#A8C5A0] px-3.5 py-1 rounded-full text-xs text-[#14532D] font-bold">
+            <i class="fa-solid fa-users text-[#4D9B59]"></i>
+            <span>About Eco Saathi</span>
+          </div>
+
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-[#14532D] leading-tight">
+            Together, We Can Make a Difference.
+          </h2>
+
+          <p class="text-[#526356] text-sm sm:text-base leading-relaxed">
+            In Hindi and Odia, <em>Saathi</em> means a loyal companion or trusted friend. <strong>Eco Saathi</strong> was founded on the belief that everyday sustainability shouldn’t feel like an overwhelming sacrifice or an overpriced luxury.
+          </p>
+
+          <p class="text-[#526356] text-sm leading-relaxed">
+            We partner directly with indigenous artisans, tribal women’s self-help groups (SHGs), and green agroforestry farmers across Odisha to replace disposable fossil plastics with purposeful, beautiful essentials carved from bamboo, neem wood, riverbank sabai grass, and circular crop residue.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-[#FFFFFF] border border-[#A8C5A0]/30 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-[#e8f1e6] text-[#14532D] flex items-center justify-center text-sm font-bold mb-2">
+                <i class="fa-solid fa-leaf text-[#4D9B59]"></i>
+              </div>
+              <h4 class="font-bold text-[#14532D] text-xs">Community-Driven</h4>
+              <p class="text-[11px] text-[#526356] mt-0.5">Grassroots social enterprise empowering tribal craft clusters.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-[#FFFFFF] border border-[#A8C5A0]/30 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-[#e8f1e6] text-[#14532D] flex items-center justify-center text-sm font-bold mb-2">
+                <i class="fa-solid fa-ban text-[#4D9B59]"></i>
+              </div>
+              <h4 class="font-bold text-[#14532D] text-xs">Zero Fossil Plastic</h4>
+              <p class="text-[11px] text-[#526356] mt-0.5">100% natural, non-toxic, and backyard compostable.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-[#FFFFFF] border border-[#A8C5A0]/30 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-[#e8f1e6] text-[#14532D] flex items-center justify-center text-sm font-bold mb-2">
+                <i class="fa-solid fa-hand-holding-heart text-[#4D9B59]"></i>
+              </div>
+              <h4 class="font-bold text-[#14532D] text-xs">Fair Ethical Wages</h4>
+              <p class="text-[11px] text-[#526356] mt-0.5">Direct compensation with zero middleman exploitation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. OUR MISSION SECTION (Section 6) -->
+    <section class="py-20 bg-[#FFFFFF] border-y border-[#A8C5A0]/25">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <span class="inline-flex items-center space-x-1.5 bg-[#e8f1e6] border border-[#A8C5A0] px-3.5 py-1 rounded-full text-xs text-[#14532D] font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-compass text-[#4D9B59]"></i>
+            <span>Our Guiding Purpose</span>
+          </span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-[#14532D]">
+            Making Sustainability a Way of Life.
+          </h2>
+          <p class="text-[#526356] text-xs sm:text-sm leading-relaxed">
+            We are dedicated to building an accessible bridge between ancient indigenous wisdom and modern urban households, fostering environmental stewardship in every home.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Pillar 1: Environmental Awareness -->
+          <div class="card-organic p-8 text-center space-y-4 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-2xl bg-[#e8f1e6] text-[#14532D] flex items-center justify-center text-2xl shadow-sm">
+              <i class="fa-solid fa-earth-americas text-[#4D9B59]"></i>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-[#14532D]">Environmental Awareness</h3>
+            <p class="text-xs text-[#526356] leading-relaxed">
+              We empower consumers through transparent Life Cycle Assessment (LCA) data, educating families about the real plastic and carbon footprints behind their everyday items.
+            </p>
+          </div>
+
+          <!-- Pillar 2: Responsible Practices -->
+          <div class="card-organic p-8 text-center space-y-4 flex flex-col items-center border-[#4D9B59]/40 bg-[#F7F7ED]/50">
+            <div class="w-16 h-16 rounded-2xl bg-[#14532D] text-white flex items-center justify-center text-2xl shadow-sm">
+              <i class="fa-solid fa-recycle text-[#A8C5A0]"></i>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-[#14532D]">Responsible Practices</h3>
+            <p class="text-xs text-[#526356] leading-relaxed">
+              From harvesting fast-regenerating bamboo to repurposing agricultural crop residue, our circular production methods respect seasonal regenerative ecological cycles.
+            </p>
+          </div>
+
+          <!-- Pillar 3: Sustainable Living -->
+          <div class="card-organic p-8 text-center space-y-4 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-2xl bg-[#e8f1e6] text-[#14532D] flex items-center justify-center text-2xl shadow-sm">
+              <i class="fa-solid fa-spa text-[#4D9B59]"></i>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-[#14532D]">Sustainable Living</h3>
+            <p class="text-xs text-[#526356] leading-relaxed">
+              Crafting premium, durable products designed for longevity. Every toothbrush, flask, bag, and bath bar provides a zero-waste habit upgrade without sacrificing comfort.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. OUR INITIATIVES SECTION (Section 6) -->
+    <section id="initiatives" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="inline-flex items-center space-x-1.5 bg-[#e8f1e6] border border-[#A8C5A0] px-3 py-1 rounded-full text-xs text-[#14532D] font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-handshake-angle text-[#4D9B59]"></i>
+            <span>Active Community Programs</span>
+          </span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-[#14532D] mt-2">
+            Our Key Initiatives
+          </h2>
+          <p class="text-[#526356] text-xs sm:text-sm mt-1">Driving tangible, measured impact across rural ecology and modern living.</p>
+        </div>
+        <a href="#about" class="text-xs font-bold text-[#14532D] hover:text-[#4D9B59] flex items-center space-x-1 transition">
+          <span>Read our Story & Team</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Initiative 1: Artisan Empowerment -->
+        <div class="card-organic overflow-hidden flex flex-col group">
+          <div class="h-44 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" 
+              alt="Artisan Empowerment" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+            />
+            <span class="absolute top-3 left-3 bg-[#14532D] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Rural Empowerment</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h4 class="font-heading font-bold text-base text-[#14532D]">Tribal Women SHGs</h4>
+              <p class="text-xs text-[#526356] mt-1.5 leading-relaxed">
+                Empowering over 200 indigenous women weavers in Mayurbhanj and Kendrapara through ethical direct market access for Sabai grass crafts.
+              </p>
+            </div>
+            <a href="#shop" class="text-xs font-bold text-[#4D9B59] hover:text-[#14532D] flex items-center space-x-1">
+              <span>Explore Crafts</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Initiative 2: Zero-Waste Personal Care -->
+        <div class="card-organic overflow-hidden flex flex-col group">
+          <div class="h-44 overflow-hidden relative">
+            <img 
+              src="https://typof.co/stores/5638/iOU0b9MUj8Sbme65.webp" 
+              alt="Zero-Waste Personal Care" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+            />
+            <span class="absolute top-3 left-3 bg-[#4D9B59] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Plastic Swaps</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h4 class="font-heading font-bold text-base text-[#14532D]">Plastic-Free Daily Living</h4>
+              <p class="text-xs text-[#526356] mt-1.5 leading-relaxed">
+                Ditching disposable bathroom plastics with bamboo toothbrushes, cold-process herbal soaps, plant loofahs, and neem wood combs.
+              </p>
+            </div>
+            <a href="#shop" class="text-xs font-bold text-[#4D9B59] hover:text-[#14532D] flex items-center space-x-1">
+              <span>View Oral & Body</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Initiative 3: Circular Agro-Waste -->
+        <div class="card-organic overflow-hidden flex flex-col group">
+          <div class="h-44 overflow-hidden relative">
+            <img 
+              src="https://typof.co/stores/5638/uTHAdQXrknymRLhM.webp" 
+              alt="Circular Agro-Waste" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+            />
+            <span class="absolute top-3 left-3 bg-[#795548] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Clean Air</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h4 class="font-heading font-bold text-base text-[#14532D]">Crop Residue Upcycling</h4>
+              <p class="text-xs text-[#526356] mt-1.5 leading-relaxed">
+                Repurposing farm wheat straw and agricultural husks into biodegradable composites, preventing crop burning and seasonal air pollution.
+              </p>
+            </div>
+            <a href="#sustainability" class="text-xs font-bold text-[#4D9B59] hover:text-[#14532D] flex items-center space-x-1">
+              <span>Learn Science</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Initiative 4: Corporate Decarbonization -->
+        <div class="card-organic overflow-hidden flex flex-col group">
+          <div class="h-44 overflow-hidden relative">
+            <img 
+              src="https://typof.co/stores/5638/tDOo6HJXxssKm5nQ.webp" 
+              alt="Corporate Decarbonization" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+            />
+            <span class="absolute top-3 left-3 bg-[#14532D] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">B2B Solutions</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h4 class="font-heading font-bold text-base text-[#14532D]">Green Enterprise Gifting</h4>
+              <p class="text-xs text-[#526356] mt-1.5 leading-relaxed">
+                Partnering with luxury hotel chains and corporate enterprises for plastic-free amenities, laser-engraved bamboo bottles, and ESG gifts.
+              </p>
+            </div>
+            <a href="#corporate" class="text-xs font-bold text-[#4D9B59] hover:text-[#14532D] flex items-center space-x-1">
+              <span>Corporate Quotes</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHY ECO SAATHI SECTION (Section 6) -->
+    <section class="py-20 bg-[#FFFFFF] border-y border-[#A8C5A0]/25">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <span class="inline-flex items-center space-x-1.5 bg-[#e8f1e6] border border-[#A8C5A0] px-3.5 py-1 rounded-full text-xs text-[#14532D] font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-circle-check text-[#4D9B59]"></i>
+            <span>The Eco Saathi Advantage</span>
+          </span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-[#14532D]">
+            Why Choose Eco Saathi?
+          </h2>
+          <p class="text-[#526356] text-xs sm:text-sm leading-relaxed">
+            We hold ourselves to authentic, verifiable standards so that your transition to green living is genuinely impactful, safe, and trustworthy.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card-organic p-6 space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-[#e8f1e6] text-[#14532D] flex items-center justify-center text-xl">
+              <i class="fa-solid fa-leaf text-[#4D9B59]"></i>
+            </div>
+            <h4 class="font-heading font-bold text-base text-[#14532D]">100% Plastic-Free</h4>
+            <p class="text-xs text-[#526356] leading-relaxed">
+              Zero petrochemical plastics, BPA, or microplastic shedding. Naturally seasoned bamboo, pure wood, and wild organic fibers.
+            </p>
+          </div>
+
+          <div class="card-organic p-6 space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-[#e8f1e6] text-[#14532D] flex items-center justify-center text-xl">
+              <i class="fa-solid fa-hand-holding-dollar text-[#4D9B59]"></i>
+            </div>
+            <h4 class="font-heading font-bold text-base text-[#14532D]">Direct Artisan Livelihoods</h4>
+            <p class="text-xs text-[#526356] leading-relaxed">
+              Every purchase directly finances indigenous artisan households in Mayurbhanj and coastal Odisha with fair, living wages.
+            </p>
+          </div>
+
+          <div class="card-organic p-6 space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-[#e8f1e6] text-[#14532D] flex items-center justify-center text-xl">
+              <i class="fa-solid fa-scale-balanced text-[#4D9B59]"></i>
+            </div>
+            <h4 class="font-heading font-bold text-base text-[#14532D]">Verified Scientific Data</h4>
+            <p class="text-xs text-[#526356] leading-relaxed">
+              We never fabricate savings. Our Life Cycle Assessment (LCA) calculators use verified peer-reviewed emission factors.
+            </p>
+          </div>
+
+          <div class="card-organic p-6 space-y-3">
+            <div class="w-12 h-12 rounded-xl bg-[#e8f1e6] text-[#14532D] flex items-center justify-center text-xl">
+              <i class="fa-solid fa-box-open text-[#4D9B59]"></i>
+            </div>
+            <h4 class="font-heading font-bold text-base text-[#14532D]">Zero-Plastic Delivery</h4>
+            <p class="text-xs text-[#526356] leading-relaxed">
+              Orders are packaged strictly in biodegradable recycled kraft cartons, paper water-activated tape, and natural jute twine.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. VERIFIED IMPACT SECTION (Section 6) -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-[#14532D] via-[#1b6d3c] to-[#0e3b20] rounded-3xl p-8 sm:p-14 text-white shadow-xl relative overflow-hidden">
+        <div class="max-w-3xl mb-10 space-y-3">
+          <span class="bg-[#4D9B59] text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm inline-block">
+            Verified Environmental Metrics
+          </span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
+            Measuring Our Collective Footprint.
+          </h2>
+          <p class="text-[#F7F7ED]/80 text-xs sm:text-sm leading-relaxed">
+            Together with our conscious customers across India, here is the tangible environmental impact achieved to date:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="bg-white/10 p-5 rounded-2xl border border-white/15">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#F7F7ED]">42,850+</div>
+            <div class="text-xs text-[#A8C5A0] mt-1.5 font-medium">Single-Use Plastics Replaced</div>
+          </div>
+          <div class="bg-white/10 p-5 rounded-2xl border border-white/15">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#F7F7ED]">12,400+</div>
+            <div class="text-xs text-[#A8C5A0] mt-1.5 font-medium">Artisan Hours Empowered</div>
+          </div>
+          <div class="bg-white/10 p-5 rounded-2xl border border-white/15">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#F7F7ED]">3,180 kg</div>
+            <div class="text-xs text-[#A8C5A0] mt-1.5 font-medium">Plastic Diverted from Landfills</div>
+          </div>
+          <div class="bg-white/10 p-5 rounded-2xl border border-white/15">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#F7F7ED]">19,000+</div>
+            <div class="text-xs text-[#A8C5A0] mt-1.5 font-medium">Pincodes Serviceable Pan-India</div>
+          </div>
+        </div>
+
+        <!-- Interactive Calculator CTA -->
+        <div class="mt-10 pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center space-x-3 text-left">
+            <div class="w-10 h-10 rounded-xl bg-white/20 text-[#A8C5A0] flex items-center justify-center text-lg flex-shrink-0">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Want to calculate your personal plastic footprint?</div>
+              <div class="text-xs text-[#F7F7ED]/70">Explore product-wise CO₂e and plastic diversion in real-time.</div>
+            </div>
+          </div>
+          <a href="#impact" class="bg-[#F7F7ED] hover:bg-[#FFFFFF] text-[#14532D] font-black text-xs px-6 py-3 rounded-full shadow-lg transition flex items-center space-x-2 flex-shrink-0">
+            <span>Open Impact Calculator</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. STARTUP MAHAKUMBH NATIONAL SPOTLIGHT -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#FFFFFF] rounded-3xl p-8 sm:p-12 border border-[#A8C5A0]/30 shadow-md">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center space-x-2 bg-[#e8f1e6] text-[#14532D] font-bold text-xs uppercase px-3 py-1 rounded-full">
+              <i class="fa-solid fa-trophy text-[#4D9B59]"></i>
+              <span>National Startup Mahakumbh 2024</span>
+            </div>
+            <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-[#14532D] leading-tight">
+              Hon'ble Prime Minister Shri Narendra Modi Visited Eco Saathi
+            </h2>
+            <p class="text-[#526356] text-xs sm:text-sm leading-relaxed">
+              Selected among the <strong>top 21 startups nationwide (out of 1,500+)</strong> at Startup Mahakumbh held at Bharat Mandapam, New Delhi. Eco Saathi was recognized for pioneering Odisha's circular bamboo, neem, and agro-waste models for modern households.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-1 text-xs">
+              <span class="bg-[#F7F7ED] text-[#14532D] font-semibold px-3 py-1 rounded-full border border-[#A8C5A0]/40">Startup India DPIIT</span>
+              <span class="bg-[#F7F7ED] text-[#14532D] font-semibold px-3 py-1 rounded-full border border-[#A8C5A0]/40">Startup Odisha</span>
+              <span class="bg-[#F7F7ED] text-[#14532D] font-semibold px-3 py-1 rounded-full border border-[#A8C5A0]/40">MSME Udyam</span>
+            </div>
+          </div>
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="rounded-2xl overflow-hidden shadow-xl border-4 border-[#F7F7ED]">
+              <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/G7M79ieV.png" alt="PM Modi visits Eco Saathi stall" class="w-full h-auto object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. HOSPITALITY & RETAIL CLIENTS STRIP -->
+    <section class="py-8 bg-[#F7F7ED] border-b border-[#A8C5A0]/25">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-[#795548] mb-6">Trusted by India's Leading Hospitality & Retail Brands</p>
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 opacity-80">
+          <div class="bg-[#FFFFFF] px-4 py-2 rounded-xl shadow-sm border border-[#A8C5A0]/30 flex items-center space-x-2">
+            <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/moe2N0QN.png" alt="Swosti Premium" class="h-7 object-contain" />
+            <span class="text-xs font-bold text-[#14532D]">Swosti Premium</span>
+          </div>
+          <div class="bg-[#FFFFFF] px-4 py-2 rounded-xl shadow-sm border border-[#A8C5A0]/30 flex items-center space-x-2">
+            <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/9HfAso7Z.png" alt="Lyfe Hotels" class="h-7 object-contain" />
+            <span class="text-xs font-bold text-[#14532D]">Lyfe Hotels</span>
+          </div>
+          <div class="bg-[#FFFFFF] px-4 py-2 rounded-xl shadow-sm border border-[#A8C5A0]/30 flex items-center space-x-2">
+            <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/Bsw1qsHS.png" alt="Swosti Grand" class="h-7 object-contain" />
+            <span class="text-xs font-bold text-[#14532D]">Swosti Grand</span>
+          </div>
+          <div class="bg-[#FFFFFF] px-4 py-2 rounded-xl shadow-sm border border-[#A8C5A0]/30 flex items-center space-x-2">
+            <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/3I4iEJHT.png" alt="Sri Sri Tattva" class="h-7 object-contain" />
+            <span class="text-xs font-bold text-[#14532D]">Sri Sri Tattva</span>
+          </div>
+          <div class="bg-[#FFFFFF] px-4 py-2 rounded-xl shadow-sm border border-[#A8C5A0]/30 flex items-center space-x-2">
+            <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/AXx8cU08.png" alt="Nova Grocery" class="h-7 object-contain" />
+            <span class="text-xs font-bold text-[#14532D]">Nova Grocery</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FEATURED ECO SOLUTIONS (Product Grid) -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="inline-flex items-center space-x-1.5 bg-[#e8f1e6] border border-[#A8C5A0] px-3 py-1 rounded-full text-xs text-[#14532D] font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-basket-shopping text-[#4D9B59]"></i>
+            <span>Curated Everyday Alternatives</span>
+          </span>
+          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-[#14532D] mt-2">
+            Featured Eco Solutions
+          </h2>
+          <p class="text-[#526356] text-xs sm:text-sm mt-1">Handcrafted with care by rural artisan clusters in Odisha.</p>
+        </div>
+        <a href="#shop" class="btn-outline-forest px-5 py-2.5 rounded-full text-xs inline-flex items-center space-x-1.5">
+          <span>Explore All 60+ Products</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <div id="homeFeaturedProducts" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Dynamically populated via App.renderHomeFeatured() -->
+      </div>
+    </section>
+
+    <!-- 10. CUSTOM GIFT BOX HAMPER STUDIO PROMO -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-[#14532D] via-[#1b6d3c] to-[#0e3b20] rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
+          <div class="space-y-4">
+            <span class="bg-[#4D9B59] text-white text-xs font-bold uppercase px-3 py-1 rounded-full">Artisan Gifting</span>
+            <h3 class="font-heading text-2xl sm:text-4xl font-extrabold leading-tight text-white">
+              Create Your Custom Sustainable Gift Hamper
+            </h3>
+            <p class="text-[#F7F7ED]/80 text-xs sm:text-sm leading-relaxed">
+              Select an authentic handwoven Mayurbhanj Sabai keepsake box or recycled kraft box, choose 3 or more sustainable essentials, and add a personalized handwritten note.
+            </p>
+            <div class="pt-2">
+              <a href="#bundle" class="bg-[#F7F7ED] hover:bg-white text-[#14532D] font-black px-6 py-3 rounded-full text-xs inline-flex items-center space-x-2 shadow-lg transition">
+                <span>Start Hamper Studio</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80" alt="Eco Gift Hamper" class="rounded-2xl max-h-64 object-cover shadow-2xl border-2 border-white/20" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. WORDS FROM OUR LOVEABLE CUSTOMERS -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#A8C5A0]/25">
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <span class="inline-flex items-center space-x-1.5 bg-[#e8f1e6] border border-[#A8C5A0] px-3.5 py-1 rounded-full text-xs text-[#14532D] font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-heart text-[#4D9B59]"></i>
+          <span>Real Customer Feedback</span>
+        </span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-[#14532D]">
+          Words from Our Loveable Customers
+        </h2>
+        <p class="text-[#526356] text-xs sm:text-sm leading-relaxed">
+          Hear how everyday households across India have embraced plastic-free habits with Eco Saathi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Review 1: Anuska Mandal -->
+        <div class="card-organic p-6 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="text-amber-500 text-sm">★★★★★</div>
+            <p class="text-xs text-[#26332A] leading-relaxed italic">
+              "Honestly love Eco Saathi! Not only the products are amazing but so is the service! I ordered a pair of neem wood pocket comb and they are super cute and handy. The packaging is carefully done, the products are brilliant, both eco-friendly and sustainable. Go for it!!!"
+            </p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 mt-4 border-t border-[#A8C5A0]/20">
+            <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/6lwc68Xv.jpeg" alt="Anuska Mandal" class="w-10 h-10 rounded-full object-cover border border-[#4D9B59]/40" />
+            <div>
+              <div class="text-xs font-bold text-[#14532D]">Anuska Mandal</div>
+              <div class="text-[10px] text-[#4D9B59] font-semibold">Verified Buyer · Odisha</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: Deblina Ghosh -->
+        <div class="card-organic p-6 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="text-amber-500 text-sm">★★★★★</div>
+            <p class="text-xs text-[#26332A] leading-relaxed italic">
+              "If you’re looking to reduce your plastic-waste and be more eco-conscious with your self-care routine, these EcoSaathi products can give you a solid choice. I have bought their toothbrush, comb and loofah. All are made up of natural and organic materials."
+            </p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 mt-4 border-t border-[#A8C5A0]/20">
+            <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/usj9Wvy4.png" alt="Deblina Ghosh" class="w-10 h-10 rounded-full object-cover border border-[#4D9B59]/40" />
+            <div>
+              <div class="text-xs font-bold text-[#14532D]">Deblina Ghosh</div>
+              <div class="text-[10px] text-[#4D9B59] font-semibold">Verified Buyer · West Bengal</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3: Satyabrata Mohanty -->
+        <div class="card-organic p-6 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="text-amber-500 text-sm">★★★★★</div>
+            <p class="text-xs text-[#26332A] leading-relaxed italic">
+              "Excellent Products. Best way to connect with nature. Recommended for all who want to be free from plastic. Delivery was swift to Bhubaneswar within 24 hours."
+            </p>
+          </div>
+          <div class="flex items-center space-x-3 pt-4 mt-4 border-t border-[#A8C5A0]/20">
+            <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/WnPFpF40.jpeg" alt="Satyabrata Mohanty" class="w-10 h-10 rounded-full object-cover border border-[#4D9B59]/40" />
+            <div>
+              <div class="text-xs font-bold text-[#14532D]">Satyabrata Mohanty</div>
+              <div class="text-[10px] text-[#4D9B59] font-semibold">Verified Buyer · Bhubaneswar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. CALL TO ACTION SECTION (Section 6) -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#14532D] text-white rounded-3xl p-10 sm:p-16 text-center shadow-xl space-y-6 relative overflow-hidden">
+        <div class="max-w-2xl mx-auto space-y-3">
+          <span class="bg-[#4D9B59] text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-sm inline-block">
+            Start Your Journey Today
+          </span>
+          <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white">
+            Be a Part of the Change.
+          </h2>
+          <p class="text-[#F7F7ED]/85 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto">
+            Every small action contributes to a healthier planet. Start your sustainability journey with Eco Saathi.
+          </p>
+        </div>
+        <div class="pt-2">
+          <a href="#shop" class="bg-[#4D9B59] hover:bg-[#3d7c47] text-white font-black text-sm px-8 py-4 rounded-full shadow-lg transition inline-flex items-center space-x-2">
+            <span>Get Started</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- PRESERVED EXISTING VIEWS (Clean Modern Layouts & Backend Hooks) -->
+  <!-- ============================================================== -->
+<main id="viewShop" class="view-section flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 hidden">
+    <div class="flex flex-col md:flex-row items-baseline justify-between mb-8 pb-4 border-b border-stone-200 gap-4">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-stone-900">Sustainable Catalog</h1>
+        <p id="productsCountText" class="text-xs text-stone-500 mt-1">Showing 37 handcrafted items</p>
+      </div>
+
+      <!-- Sort Controls (FR-02) -->
+      <div class="flex items-center space-x-3 text-xs">
+        <label class="text-stone-500 font-semibold">Sort by:</label>
+        <select onchange="App.setFilter('sort', this.value)" class="bg-white border border-stone-300 rounded-xl px-3 py-2 text-stone-800 font-medium focus:outline-none focus:ring-2 focus:ring-emerald-700">
+          <option value="featured">Featured & Bestsellers</option>
+          <option value="price_asc">Price: Low to High</option>
+          <option value="price_desc">Price: High to Low</option>
+          <option value="rating">Customer Rating</option>
+          <option value="newest">Newest Arrivals</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Left Filters Sidebar (FR-02) -->
+      <aside class="lg:col-span-3 space-y-6">
+        <div class="bg-white p-6 rounded-3xl border border-stone-200 shadow-sm space-y-6">
+          <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+            <h3 class="font-bold text-xs uppercase tracking-wider text-stone-900">Filters</h3>
+            <button onclick="App.clearFilters()" class="text-[11px] text-emerald-800 font-bold hover:underline">Reset</button>
+          </div>
+
+          <!-- Material Filter -->
+          <div>
+            <h4 class="text-xs font-bold text-stone-700 mb-2">Material</h4>
+            <div id="shopMaterialFilters" class="space-y-2">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+
+          <!-- Need/Use Filter -->
+          <div class="pt-4 border-t border-stone-100">
+            <h4 class="text-xs font-bold text-stone-700 mb-2">Use Category</h4>
+            <div id="shopUseFilters" class="space-y-2">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+
+          <!-- Price Brackets -->
+          <div class="pt-4 border-t border-stone-100">
+            <h4 class="text-xs font-bold text-stone-700 mb-2">Price Budget</h4>
+            <div class="space-y-2 text-sm text-stone-700">
+              <label class="flex items-center space-x-2 cursor-pointer text-xs">
+                <input type="radio" name="priceBracket" value="" checked onchange="App.setFilter('max_price', '')" class="text-emerald-700 focus:ring-emerald-600">
+                <span>Any Budget</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer text-xs">
+                <input type="radio" name="priceBracket" value="250" onchange="App.setFilter('max_price', 250)" class="text-emerald-700 focus:ring-emerald-600">
+                <span>Under ₹250</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer text-xs">
+                <input type="radio" name="priceBracket" value="500" onchange="App.setFilter('max_price', 500)" class="text-emerald-700 focus:ring-emerald-600">
+                <span>Under ₹500</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer text-xs">
+                <input type="radio" name="priceBracket" value="1000" onchange="App.setFilter('max_price', 1000)" class="text-emerald-700 focus:ring-emerald-600">
+                <span>Under ₹1,000</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Products Grid -->
+      <div class="lg:col-span-9">
+        <div id="shopProductsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+<main id="viewProduct" class="view-section flex-1 hidden">
+    <!-- Populated by App.loadProductDetail(handle) -->
+  </main>
+
+<main id="viewBundle" class="view-section flex-1 hidden">
+    <!-- Populated by App.initBundleBuilder() -->
+  </main>
+
+<main id="viewCheckout" class="view-section flex-1 hidden">
+    <!-- Populated by App.renderCheckoutScreen() -->
+  </main>
+
+<main id="viewOrderSuccess" class="view-section flex-1 hidden">
+    <!-- Populated by App.loadOrderConfirmation(orderNumber) -->
+  </main>
+
+<main id="viewCorporate" class="view-section flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hidden">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="badge-craft text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Corporate & B2B Solutions</span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-stone-900 mt-2">Sustainable Corporate Gifting Handcrafted in Odisha</h1>
+      <p class="text-stone-600 text-sm mt-3">
+        Delight your employees, executive clients, and event delegates with thoughtful zero-waste gifts. Complete with laser company logo engraving and full GST input tax credit (ITC) compliance.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <!-- Left: B2B Features & Discounts -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm">
+          <h3 class="text-lg font-bold text-stone-900 mb-4">Why Partner with Eco Saathi for Corporate Hampers?</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="p-3 bg-stone-50 rounded-2xl border border-stone-200">
+              <div class="font-bold text-emerald-900 flex items-center space-x-1.5 mb-1">
+                <i class="fa-solid fa-certificate text-amber-600"></i>
+                <span>Laser Logo Engraving</span>
+              </div>
+              <p class="text-stone-600">Engrave your corporate emblem cleanly on bamboo bottles, organizers and pens.</p>
+            </div>
+            <div class="p-3 bg-stone-50 rounded-2xl border border-stone-200">
+              <div class="font-bold text-emerald-900 flex items-center space-x-1.5 mb-1">
+                <i class="fa-solid fa-percent text-emerald-700"></i>
+                <span>Tiered Bulk Discounts</span>
+              </div>
+              <p class="text-stone-600">Enjoy 15% to 35% savings on bulk orders (Minimum Order Quantity: 25 hampers).</p>
+            </div>
+            <div class="p-3 bg-stone-50 rounded-2xl border border-stone-200">
+              <div class="font-bold text-emerald-900 flex items-center space-x-1.5 mb-1">
+                <i class="fa-solid fa-file-invoice text-emerald-700"></i>
+                <span>GST Input Tax Credit</span>
+              </div>
+              <p class="text-stone-600">Receive tax-compliant 5%/12%/18% GST invoices for seamless business claiming.</p>
+            </div>
+            <div class="p-3 bg-stone-50 rounded-2xl border border-stone-200">
+              <div class="font-bold text-emerald-900 flex items-center space-x-1.5 mb-1">
+                <i class="fa-solid fa-people-roof text-amber-700"></i>
+                <span>Direct Social Impact</span>
+              </div>
+              <p class="text-stone-600">Empower rural women SHGs and tribal artisan families in Odisha.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tiered Pricing Table -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm">
+          <h4 class="text-sm font-bold text-stone-900 mb-3">Bulk Tier Discounts</h4>
+          <table class="w-full text-xs text-left">
+            <thead>
+              <tr class="border-b border-stone-200 text-stone-400">
+                <th class="py-2">Quantity</th>
+                <th class="py-2">Discount</th>
+                <th class="py-2">Turnaround Time</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-100 font-medium">
+              <tr><td class="py-2.5">25 – 49 Units</td><td class="py-2.5 text-emerald-800 font-bold">10% OFF</td><td class="py-2.5 text-stone-500">3-4 Days</td></tr>
+              <tr><td class="py-2.5">50 – 99 Units</td><td class="py-2.5 text-emerald-800 font-bold">15% OFF</td><td class="py-2.5 text-stone-500">4-5 Days</td></tr>
+              <tr><td class="py-2.5">100 – 249 Units</td><td class="py-2.5 text-emerald-800 font-bold">25% OFF</td><td class="py-2.5 text-stone-500">5-7 Days</td></tr>
+              <tr><td class="py-2.5">250+ Units</td><td class="py-2.5 text-emerald-800 font-bold">35% OFF</td><td class="py-2.5 text-stone-500">7-10 Days</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Right: Quote Request Form (FR-27) -->
+      <div class="lg:col-span-5">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-xl">
+          <h3 class="text-base font-bold text-stone-900 mb-1">Request a Corporate Quote</h3>
+          <p class="text-xs text-stone-500 mb-4">Our sales team will prepare a custom proposal within 24 hours.</p>
+
+          <form id="corporateEnquiryForm" onsubmit="App.submitCorporateForm(event)" class="space-y-3 text-xs">
+            <div>
+              <label class="block font-bold text-stone-700 mb-1">Company / Organization *</label>
+              <input id="corpCompany" required placeholder="e.g. Tata Consultancy Services" class="w-full p-2.5 border border-stone-300 rounded-xl" />
+            </div>
+            <div>
+              <label class="block font-bold text-stone-700 mb-1">Contact Person *</label>
+              <input id="corpContact" required placeholder="e.g. Ramesh Nayak" class="w-full p-2.5 border border-stone-300 rounded-xl" />
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block font-bold text-stone-700 mb-1">Work Email *</label>
+                <input id="corpEmail" required type="email" placeholder="ramesh@company.com" class="w-full p-2.5 border border-stone-300 rounded-xl" />
+              </div>
+              <div>
+                <label class="block font-bold text-stone-700 mb-1">Phone Number *</label>
+                <input id="corpPhone" required maxlength="10" placeholder="9876543210" class="w-full p-2.5 border border-stone-300 rounded-xl" />
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block font-bold text-stone-700 mb-1">Estimated Units *</label>
+                <input id="corpQty" required type="number" min="25" value="50" class="w-full p-2.5 border border-stone-300 rounded-xl" />
+              </div>
+              <div>
+                <label class="block font-bold text-stone-700 mb-1">Target Budget / Hamper</label>
+                <input id="corpBudget" type="number" placeholder="₹750" class="w-full p-2.5 border border-stone-300 rounded-xl" />
+              </div>
+            </div>
+            <div>
+              <label class="block font-bold text-stone-700 mb-1">Customization Requirements</label>
+              <textarea id="corpNotes" rows="3" placeholder="Logo engraving on bamboo, custom greeting cards, delivery date..." class="w-full p-2.5 border border-stone-300 rounded-xl"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold py-3 rounded-xl shadow-lg transition">
+              Submit Corporate Enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<main id="viewAccount" class="view-section flex-1 hidden">
+    <!-- Populated by App.renderAccountScreen() -->
+  </main>
+
+<main id="viewImpact" class="view-section flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 hidden">
+    <!-- Hero Header -->
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-3">
+        <i class="fa-solid fa-leaf text-emerald-700"></i>
+        <span>Science-Backed Life Cycle Assessment (LCA)</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-5xl font-black text-stone-900 leading-tight">
+        Sustainability Impact Calculator & Dashboard
+      </h1>
+      <p class="text-stone-600 text-xs sm:text-sm mt-3 leading-relaxed">
+        Quantify the exact plastic waste diverted from landfills and net greenhouse gas emissions ($\text{CO}_2\text{e}$) prevented by choosing handcrafted Odisha alternatives over conventional fossil-fuel plastics.
+      </p>
+    </div>
+
+    <!-- Navigation Pills for Sections -->
+    <div class="flex flex-wrap justify-center gap-2 mb-10 border-b border-stone-200 pb-4">
+      <button onclick="App.switchImpactTab('calculator')" id="impactTabBtn_calculator" class="px-5 py-2 rounded-2xl text-xs font-bold transition bg-emerald-800 text-white shadow-sm flex items-center space-x-1.5">
+        <i class="fa-solid fa-calculator"></i>
+        <span>Impact Calculator</span>
+      </button>
+      <button onclick="App.switchImpactTab('dashboard')" id="impactTabBtn_dashboard" class="px-5 py-2 rounded-2xl text-xs font-bold transition bg-stone-100 text-stone-700 hover:bg-stone-200 flex items-center space-x-1.5">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Sustainability Dashboard</span>
+      </button>
+      <button onclick="App.switchImpactTab('matrix')" id="impactTabBtn_matrix" class="px-5 py-2 rounded-2xl text-xs font-bold transition bg-stone-100 text-stone-700 hover:bg-stone-200 flex items-center space-x-1.5">
+        <i class="fa-solid fa-table-list"></i>
+        <span>Product Impact Matrix</span>
+      </button>
+      <button onclick="App.switchImpactTab('methodology')" id="impactTabBtn_methodology" class="px-5 py-2 rounded-2xl text-xs font-bold transition bg-stone-100 text-stone-700 hover:bg-stone-200 flex items-center space-x-1.5">
+        <i class="fa-solid fa-book-open"></i>
+        <span>LCA Methodology & Citations</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: INTERACTIVE CO2 & PLASTIC SAVING CALCULATOR -->
+    <div id="impactSection_calculator" class="space-y-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Product Comparison Selector & Quantity Input -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-6">
+            <div class="flex items-center justify-between pb-4 border-b border-stone-100">
+              <div>
+                <h3 class="text-base font-extrabold text-stone-900 flex items-center space-x-2">
+                  <span class="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center text-xs">1</span>
+                  <span>Select Product Comparison</span>
+                </h3>
+                <p class="text-xs text-stone-500 mt-0.5">Choose an everyday plastic item to see the verified Eco Saathi replacement</p>
+              </div>
+            </div>
+
+            <!-- Comparison Selector Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="impactComparisonCards">
+              <!-- Comparison 1: Toothbrush -->
+              <div onclick="App.selectImpactComparison('toothbrush', this)" class="comparison-card active p-4 rounded-2xl border-2 border-emerald-800 bg-emerald-50/50 cursor-pointer transition flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-white border border-stone-200 overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=200&q=80" alt="Bamboo Toothbrush" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">Oral Care</span>
+                  <div class="text-xs font-bold text-stone-900 truncate">Plastic Toothbrush → Bamboo</div>
+                  <div class="text-[11px] text-stone-500">20g plastic / brush</div>
+                </div>
+              </div>
+
+              <!-- Comparison 2: Comb -->
+              <div onclick="App.selectImpactComparison('comb', this)" class="comparison-card p-4 rounded-2xl border-2 border-stone-200 hover:border-emerald-600 bg-white cursor-pointer transition flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-white border border-stone-200 overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=200&q=80" alt="Neem Wood Comb" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">Personal Care</span>
+                  <div class="text-xs font-bold text-stone-900 truncate">Plastic Comb → Neem Wood</div>
+                  <div class="text-[11px] text-stone-500">36g plastic / comb</div>
+                </div>
+              </div>
+
+              <!-- Comparison 3: Shopping Bag -->
+              <div onclick="App.selectImpactComparison('shopping_bag', this)" class="comparison-card p-4 rounded-2xl border-2 border-stone-200 hover:border-emerald-600 bg-white cursor-pointer transition flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-white border border-stone-200 overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=200&q=80" alt="Jute Bag" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">Kitchen & Daily</span>
+                  <div class="text-xs font-bold text-stone-900 truncate">Plastic Poly Bag → Jute Tote</div>
+                  <div class="text-[11px] text-stone-500">8.5g plastic / bag</div>
+                </div>
+              </div>
+
+              <!-- Comparison 4: Water Bottle -->
+              <div onclick="App.selectImpactComparison('water_bottle', this)" class="comparison-card p-4 rounded-2xl border-2 border-stone-200 hover:border-emerald-600 bg-white cursor-pointer transition flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-white border border-stone-200 overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=200&q=80" alt="Bamboo Bottle" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">Hydration</span>
+                  <div class="text-xs font-bold text-stone-900 truncate">PET Bottle → Bamboo Flask</div>
+                  <div class="text-[11px] text-stone-500">19g plastic / bottle</div>
+                </div>
+              </div>
+
+              <!-- Comparison 5: Unverified Sample (Data not available demo) -->
+              <div onclick="App.selectImpactComparison('custom_unverified_sample', this)" class="comparison-card sm:col-span-2 p-3 rounded-2xl border border-dashed border-stone-300 hover:border-stone-400 bg-stone-50/60 cursor-pointer transition flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-stone-200 text-stone-500 flex items-center justify-center text-sm flex-shrink-0">
+                  <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-xs font-bold text-stone-800">Synthetic Acrylic Mat → Sabai Placemats</span>
+                    <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Pending Certification</span>
+                  </div>
+                  <p class="text-[11px] text-stone-500">Test non-fabricated fallback: displays "Data not available" instead of inventing figures.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Quantity & Usage Controls -->
+            <div class="pt-6 border-t border-stone-100 space-y-5">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-base font-extrabold text-stone-900 flex items-center space-x-2">
+                    <span class="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center text-xs">2</span>
+                    <span>Set Number of Items Replaced</span>
+                  </h3>
+                  <p class="text-xs text-stone-500 mt-0.5">Adjust slider or type the total conventional items you plan to replace</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <input
+                    id="calcQuantityInput"
+                    type="number"
+                    min="1"
+                    max="1000"
+                    value="4"
+                    oninput="App.onQuantityInput(this.value)"
+                    class="w-20 text-center font-extrabold text-sm text-emerald-950 bg-stone-50 border border-stone-300 rounded-xl p-2 focus:ring-2 focus:ring-emerald-700"
+                  />
+                  <span id="calcUnitLabel" class="text-xs font-semibold text-stone-600">brushes</span>
+                </div>
+              </div>
+
+              <!-- Interactive Range Slider -->
+              <div>
+                <input
+                  id="calcQuantitySlider"
+                  type="range"
+                  min="1"
+                  max="500"
+                  value="4"
+                  oninput="App.onQuantitySlider(this.value)"
+                  class="slider-eco"
+                />
+                <div class="flex justify-between text-[11px] text-stone-400 mt-1 font-medium">
+                  <span>1 item</span>
+                  <span>100 items</span>
+                  <span>250 items</span>
+                  <span>500 items</span>
+                </div>
+              </div>
+
+              <!-- Quick Presets -->
+              <div class="flex flex-wrap items-center gap-2 pt-2">
+                <span class="text-xs font-bold text-stone-500 mr-1">Quick Presets:</span>
+                <button type="button" onclick="App.applyCalcPreset(1)" class="preset-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-stone-100 hover:bg-emerald-100 hover:text-emerald-900 transition">Single (1)</button>
+                <button type="button" onclick="App.applyCalcPreset(4)" class="preset-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-stone-100 hover:bg-emerald-100 hover:text-emerald-900 transition">1 Person / 1 Year</button>
+                <button type="button" onclick="App.applyCalcPreset(16)" class="preset-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-stone-100 hover:bg-emerald-100 hover:text-emerald-900 transition">Family of 4 / 1 Year</button>
+                <button type="button" onclick="App.applyCalcPreset(100)" class="preset-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-stone-100 hover:bg-emerald-100 hover:text-emerald-900 transition">100 Items</button>
+              </div>
+
+              <!-- Household Multiplier -->
+              <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+                <div>
+                  <label class="text-xs font-bold text-stone-800">Household Members Multiplier:</label>
+                  <p class="text-[11px] text-stone-500">Calculate total environmental savings for your entire family</p>
+                </div>
+                <div class="flex space-x-1.5" id="householdSizeButtons">
+                  <button type="button" onclick="App.setHouseholdSize(1, this)" class="hh-btn px-3 py-1 rounded-xl text-xs font-bold bg-emerald-800 text-white">1x</button>
+                  <button type="button" onclick="App.setHouseholdSize(2, this)" class="hh-btn px-3 py-1 rounded-xl text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200">2x</button>
+                  <button type="button" onclick="App.setHouseholdSize(4, this)" class="hh-btn px-3 py-1 rounded-xl text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200">4x</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real-time Live Calculation Results Card -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-gradient-to-br from-white via-emerald-50/30 to-stone-50 rounded-3xl p-6 sm:p-8 border border-emerald-200 shadow-lg space-y-6 sticky top-24">
+            <div class="flex items-center justify-between pb-3 border-b border-emerald-100">
+              <span class="badge-eco text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full">Environmental Savings</span>
+              <span id="calcDataStatusBadge" class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center space-x-1">
+                <i class="fa-solid fa-circle-check text-[9px]"></i>
+                <span>Verified LCA Data</span>
+              </span>
+            </div>
+
+            <!-- Normal Results Container -->
+            <div id="calcResultsNormal" class="space-y-5">
+              <!-- Result 1: Plastic Avoided -->
+              <div class="bg-white p-5 rounded-2xl border border-emerald-100 shadow-sm">
+                <div class="flex items-center justify-between text-xs text-stone-500 mb-1">
+                  <span class="font-bold uppercase tracking-wider text-emerald-950 flex items-center space-x-1.5">
+                    <i class="fa-solid fa-shield-virus text-emerald-700"></i>
+                    <span>Plastic Avoided</span>
+                  </span>
+                  <span id="calcPlasticEqLabel" class="text-[11px] text-stone-400">Formula: Weight × Items</span>
+                </div>
+                <div class="flex items-baseline space-x-2">
+                  <span id="calcPlasticMain" class="text-3xl sm:text-4xl font-black text-emerald-950">80</span>
+                  <span id="calcPlasticUnit" class="text-sm font-bold text-stone-600">grams (0.08 kg)</span>
+                </div>
+                <div id="calcPlasticFormula" class="mt-2 text-[11px] text-stone-600 bg-stone-50 p-2 rounded-lg border border-stone-200 font-mono">
+                  20.0g plastic/item × 4 replacements = 80.0g plastic avoided
+                </div>
+              </div>
+
+              <!-- Result 2: Net CO2e Avoided -->
+              <div class="bg-white p-5 rounded-2xl border border-emerald-100 shadow-sm">
+                <div class="flex items-center justify-between text-xs text-stone-500 mb-1">
+                  <span class="font-bold uppercase tracking-wider text-emerald-950 flex items-center space-x-1.5">
+                    <i class="fa-solid fa-cloud-arrow-down text-emerald-700"></i>
+                    <span>Estimated Net CO₂e Avoided</span>
+                  </span>
+                  <span class="text-[11px] text-stone-400">Lifecycle differential</span>
+                </div>
+                <div class="flex items-baseline space-x-2">
+                  <span id="calcCo2Main" class="text-3xl sm:text-4xl font-black text-emerald-950">0.244</span>
+                  <span id="calcCo2Unit" class="text-sm font-bold text-stone-600">kg CO₂e (244 g)</span>
+                </div>
+                <div id="calcCo2Formula" class="mt-2 text-[11px] text-stone-600 bg-stone-50 p-2 rounded-lg border border-stone-200 font-mono">
+                  (0.088 kg - 0.027 kg) × 4 replacements = 0.244 kg net CO₂e avoided
+                </div>
+              </div>
+
+              <!-- Tangible Equivalencies -->
+              <div class="bg-emerald-900 text-white p-5 rounded-2xl space-y-3 shadow-inner">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-amber-300 flex items-center space-x-1.5">
+                  <i class="fa-solid fa-earth-americas"></i>
+                  <span>Real-World Environmental Equivalents</span>
+                </h4>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                  <div class="p-2 bg-emerald-800/80 rounded-xl border border-emerald-700/60">
+                    <div id="calcEqDriving" class="text-lg font-black text-white">1.3 km</div>
+                    <div class="text-[10px] text-emerald-200 mt-0.5 leading-tight">Car Driving Avoided</div>
+                  </div>
+                  <div class="p-2 bg-emerald-800/80 rounded-xl border border-emerald-700/60">
+                    <div id="calcEqTree" class="text-lg font-black text-white">4.1 days</div>
+                    <div class="text-[10px] text-emerald-200 mt-0.5 leading-tight">Tree Carbon Absorption</div>
+                  </div>
+                  <div class="p-2 bg-emerald-800/80 rounded-xl border border-emerald-700/60">
+                    <div id="calcEqBottles" class="text-lg font-black text-white">4.2</div>
+                    <div class="text-[10px] text-emerald-200 mt-0.5 leading-tight">PET Bottles Equiv. Diverted</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Verified Data Source Citation -->
+              <div class="p-3 bg-stone-100 rounded-xl border border-stone-200 text-xs space-y-1">
+                <div class="font-bold text-stone-900 flex items-center space-x-1.5">
+                  <i class="fa-solid fa-quote-left text-emerald-700"></i>
+                  <span id="calcCitationSource">Source: Nature British Dental Journal (BDJ) 2020</span>
+                </div>
+                <p id="calcCitationText" class="text-[11px] text-stone-500 italic leading-snug">
+                  Lyne, A., et al. (2020). Combining life cycle assessment and circularity for a toothbrush. BDJ 229, 646–652.
+                </p>
+              </div>
+
+              <!-- CTA to Buy Sustainable Alternative -->
+              <div class="pt-2">
+                <button
+                  id="calcAddToCartBtn"
+                  onclick="App.addCalculatedProductToCart()"
+                  class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-xl flex items-center justify-center space-x-2 transition"
+                >
+                  <i class="fa-solid fa-bag-shopping text-sm text-amber-300"></i>
+                  <span id="calcAddToCartBtnLabel">Switch to Bamboo Toothbrush (₹99)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- "Data not available" Fallback Container (Displayed when unverified product is picked) -->
+            <div id="calcResultsUnavailable" class="hidden py-8 px-4 text-center space-y-4">
+              <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-extrabold text-stone-900">Data not available</h4>
+                <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                  Independent peer-reviewed life-cycle inventory data for this natural artisan craft is currently in evaluation with state agroforestry authorities.
+                </p>
+                <div class="mt-4 p-3 bg-stone-100 rounded-xl text-left text-[11px] text-stone-500">
+                  <strong>Eco Saathi Transparency Policy:</strong> We do not fabricate environmental savings or lifecycle emission numbers when empirical testing is incomplete.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Cumulative Multi-Product Household Blueprint Studio -->
+      <div class="bg-gradient-to-r from-emerald-950 via-emerald-900 to-teal-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl">
+        <div class="max-w-3xl mb-8">
+          <span class="bg-amber-400 text-stone-950 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full">Annual Household Footprint</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold mt-2">The Complete Eco Saathi 1-Year Household Transition</h3>
+          <p class="text-emerald-200 text-xs sm:text-sm mt-1">What happens if a typical Indian household replaces toothbrushes, hair combs, shopping bags, and travel bottles with natural Odisha crafts for one full year?</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+          <div class="bg-emerald-900/80 p-4 rounded-2xl border border-emerald-700/50">
+            <div class="text-xs text-emerald-300 font-semibold">Plastic Diverted / Year</div>
+            <div class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">5,046 g</div>
+            <div class="text-[11px] text-emerald-200 mt-1">5.05 kg of non-biodegradable polymers</div>
+          </div>
+          <div class="bg-emerald-900/80 p-4 rounded-2xl border border-emerald-700/50">
+            <div class="text-xs text-emerald-300 font-semibold">Net CO₂e Avoided / Year</div>
+            <div class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">20.5 kg</div>
+            <div class="text-[11px] text-emerald-200 mt-1">Equivalent to 107 km of car driving</div>
+          </div>
+          <div class="bg-emerald-900/80 p-4 rounded-2xl border border-emerald-700/50">
+            <div class="text-xs text-emerald-300 font-semibold">Plastic Bottles Equivalent</div>
+            <div class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">265 bottles</div>
+            <div class="text-[11px] text-emerald-200 mt-1">Kept out of riverways & landfills</div>
+          </div>
+          <div class="bg-emerald-900/80 p-4 rounded-2xl border border-emerald-700/50">
+            <div class="text-xs text-emerald-300 font-semibold">Artisan Fair Wages</div>
+            <div class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">18 hours</div>
+            <div class="text-[11px] text-emerald-200 mt-1">Direct support to rural Odisha SHGs</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-emerald-800">
+          <div class="text-xs text-emerald-200">
+            Bundle all 4 sustainable essentials into a curated starter kit with single-click checkout.
+          </div>
+          <a href="#bundle" class="bg-amber-400 hover:bg-amber-500 text-stone-950 font-extrabold px-6 py-3 rounded-xl text-xs transition shadow-lg flex items-center space-x-1.5">
+            <span>Build Your Sustainable Kit</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: SUSTAINABILITY DASHBOARD & INTERACTIVE CHARTS -->
+    <div id="impactSection_dashboard" class="space-y-10 hidden">
+      <!-- 4 Grand Metric Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="impact-metric-card p-6 rounded-3xl shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg mb-3">
+            <i class="fa-solid fa-recycle"></i>
+          </div>
+          <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Total Plastic Avoided</div>
+          <div id="dashTotalPlastic" class="text-2xl sm:text-3xl font-black text-emerald-950 mt-1">3,180 kg</div>
+          <div class="text-[11px] text-emerald-700 font-medium mt-1">↑ Combined orders & verified baseline</div>
+        </div>
+
+        <div class="impact-metric-card p-6 rounded-3xl shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg mb-3">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Estimated CO₂e Avoided</div>
+          <div id="dashTotalCo2" class="text-2xl sm:text-3xl font-black text-emerald-950 mt-1">12.5 tons</div>
+          <div class="text-[11px] text-emerald-700 font-medium mt-1">12,450 kg net greenhouse emissions offset</div>
+        </div>
+
+        <div class="impact-metric-card p-6 rounded-3xl shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-3">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Product Replacements</div>
+          <div id="dashTotalReplacements" class="text-2xl sm:text-3xl font-black text-stone-900 mt-1">42,850+</div>
+          <div class="text-[11px] text-stone-500 font-medium mt-1">Single-use plastic items substituted</div>
+        </div>
+
+        <div class="impact-metric-card p-6 rounded-3xl shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center text-lg mb-3">
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Tree Absorption Equiv.</div>
+          <div id="dashTreeEquivalent" class="text-2xl sm:text-3xl font-black text-stone-900 mt-1">572 trees</div>
+          <div class="text-[11px] text-teal-700 font-medium mt-1">Carbon sequestered for 10 full years</div>
+        </div>
+      </div>
+
+      <!-- Interactive Chart.js Visualizations -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Chart 1: Plastic Avoidance by Category (Doughnut) -->
+        <div class="lg:col-span-5 chart-card p-6 sm:p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-sm font-extrabold text-stone-900">Plastic Diverted by Category</h3>
+              <span class="badge-eco text-[10px] font-bold px-2 py-0.5 rounded-full">Share of Weight</span>
+            </div>
+            <p class="text-xs text-stone-500 mb-4">Proportion of plastic waste prevented across oral care, bags, bottles and personal grooming.</p>
+          </div>
+          <div class="relative h-64 sm:h-72 flex items-center justify-center">
+            <canvas id="chartCategoryDoughnut"></canvas>
+          </div>
+          <div class="pt-4 border-t border-stone-100 text-[11px] text-stone-500 text-center">
+            Highest plastic volume savings achieved via reusable Jute grocery totes & insulated flasks.
+          </div>
+        </div>
+
+        <!-- Chart 2: Lifecycle Emissions Comparison (Bar Chart) -->
+        <div class="lg:col-span-7 chart-card p-6 sm:p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-sm font-extrabold text-stone-900">Lifecycle Carbon Footprint: Conventional vs. Eco Saathi</h3>
+              <span class="bg-stone-100 text-stone-700 text-[10px] font-bold px-2 py-0.5 rounded-full">kg CO₂e per unit</span>
+            </div>
+            <p class="text-xs text-stone-500 mb-4">Comparing cradle-to-grave emissions of conventional plastic items against handcrafted sustainable counterparts.</p>
+          </div>
+          <div class="relative h-64 sm:h-72">
+            <canvas id="chartLifecycleBar"></canvas>
+          </div>
+          <div class="pt-4 border-t border-stone-100 text-[11px] text-stone-500 text-center">
+            Odisha artisan products reduce lifecycle emissions by 68% to 95% per equivalent use.
+          </div>
+        </div>
+
+        <!-- Chart 3: Monthly Cumulative Trajectory (Area / Line Chart) -->
+        <div class="lg:col-span-12 chart-card p-6 sm:p-7">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-2">
+            <div>
+              <h3 class="text-sm font-extrabold text-stone-900">Cumulative Sustainability Growth Trajectory (Monthly)</h3>
+              <p class="text-xs text-stone-500">Track cumulative kg of plastic prevented and kg of CO₂e offset over recent months.</p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="inline-block w-3 h-3 rounded-full bg-emerald-700"></span>
+              <span class="text-xs text-stone-600 font-semibold mr-3">Plastic Avoided (kg)</span>
+              <span class="inline-block w-3 h-3 rounded-full bg-teal-500"></span>
+              <span class="text-xs text-stone-600 font-semibold">CO₂e Offset (kg)</span>
+            </div>
+          </div>
+          <div class="relative h-72 sm:h-80">
+            <canvas id="chartMonthlyTrajectory"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: PRODUCT-WISE ENVIRONMENTAL IMPACT MATRIX -->
+    <div id="impactSection_matrix" class="space-y-6 hidden">
+      <div class="bg-white rounded-3xl border border-stone-200 shadow-sm overflow-hidden">
+        <div class="p-6 border-b border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h3 class="text-base font-extrabold text-stone-900">Product-Wise Environmental Impact Matrix</h3>
+            <p class="text-xs text-stone-500 mt-0.5">Empirical plastic weight, lifecycle emission factors and verified citations for every product pair</p>
+          </div>
+          <span class="badge-eco text-xs font-bold px-3 py-1 rounded-full uppercase">ISO 14040/14044 Aligned</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-stone-50 text-stone-600 font-bold border-b border-stone-200">
+              <tr>
+                <th class="py-3.5 px-4">Eco Saathi Sustainable Item</th>
+                <th class="py-3.5 px-4">Conventional Plastic Item</th>
+                <th class="py-3.5 px-4">Plastic Weight</th>
+                <th class="py-3.5 px-4">Conventional CO₂e</th>
+                <th class="py-3.5 px-4">Sustainable CO₂e</th>
+                <th class="py-3.5 px-4">Net CO₂e Saved</th>
+                <th class="py-3.5 px-4">Assumptions & Lifespan</th>
+                <th class="py-3.5 px-4">Verified Data Source</th>
+              </tr>
+            </thead>
+            <tbody id="impactMatrixTbody" class="divide-y divide-stone-100">
+              <!-- Populated by App.renderImpactMatrix() -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: LCA METHODOLOGY & CITATIONS -->
+    <div id="impactSection_methodology" class="space-y-6 hidden">
+      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-stone-200 shadow-sm space-y-6">
+        <div class="border-b border-stone-100 pb-4">
+          <span class="badge-craft text-xs font-bold px-3 py-1 rounded-full uppercase">Methodology & Transparency</span>
+          <h3 class="text-xl font-extrabold text-stone-900 mt-2">Life Cycle Assessment (LCA) Framework & Formulas</h3>
+          <p class="text-xs text-stone-500 mt-1">Our methodology strictly follows scientific environmental standards to avoid misleading greenwashing claims.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-stone-700 leading-relaxed">
+          <div class="p-5 bg-stone-50 rounded-2xl border border-stone-200 space-y-2">
+            <h4 class="font-extrabold text-emerald-950 text-sm flex items-center space-x-2">
+              <i class="fa-solid fa-calculator text-emerald-700"></i>
+              <span>1. Plastic Avoided Formula</span>
+            </h4>
+            <div class="bg-white p-3 rounded-xl border border-stone-200 font-mono text-[11px] text-emerald-900 font-bold">
+              $\text{Plastic Avoided (g)} = \text{Plastic weight per conventional item (g)} \times \text{Replacements}$
+            </div>
+            <p class="text-stone-600">Calculates the total mass of virgin petrochemical resin (PP, PS, LDPE, PET) prevented from entering waste streams, municipal incinerators, or marine environments.</p>
+          </div>
+
+          <div class="p-5 bg-stone-50 rounded-2xl border border-stone-200 space-y-2">
+            <h4 class="font-extrabold text-emerald-950 text-sm flex items-center space-x-2">
+              <i class="fa-solid fa-calculator text-emerald-700"></i>
+              <span>2. Estimated Net CO₂e Avoided Formula</span>
+            </h4>
+            <div class="bg-white p-3 rounded-xl border border-stone-200 font-mono text-[11px] text-emerald-900 font-bold">
+              $\text{Net CO}_2\text{e Avoided (kg)} = (E_{\text{conv}} - E_{\text{sust}}) \times \text{Equivalent Replacements}$
+            </div>
+            <p class="text-stone-600">Where $E_{\text{conv}}$ is the cradle-to-grave lifecycle emissions factor of the conventional plastic item, and $E_{\text{sust}}$ is the lifecycle emissions of the sustainable alternative amortized over its expected useful service life.</p>
+          </div>
+        </div>
+
+        <!-- Literature Citations List -->
+        <div class="pt-4 border-t border-stone-100 space-y-4">
+          <h4 class="font-extrabold text-stone-900 text-sm">Key Scientific Sources & Literature Citations</h4>
+          <div class="space-y-3 text-xs text-stone-600">
+            <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
+              <strong class="text-stone-900">1. Toothbrush LCA Study:</strong> Lyne, A., Ashley, P., Saget, S., et al. (2020). <em>Combining life cycle assessment and circularity for a toothbrush.</em> Nature - British Dental Journal, 229, 646–652.
+            </div>
+            <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
+              <strong class="text-stone-900">2. Polypropylene (PP) Eco-Profiles:</strong> PlasticsEurope (2021). <em>Eco-profiles and Environmental Product Declarations of the European Plastics Industry for Polypropylene.</em> Brussels, Belgium.
+            </div>
+            <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
+              <strong class="text-stone-900">3. Supermarket Carrier Bags LCA:</strong> UK Environment Agency (2011). <em>Life cycle assessment of supermarket carrier bags: a review of the bags available in 2006.</em> Report SC030292.
+            </div>
+            <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
+              <strong class="text-stone-900">4. Bottled Water Lifecycle Analysis:</strong> Quantis & International Bottled Water Association (2018). <em>Life Cycle Assessment of the U.S. Bottled Water Industry;</em> Gleick, P. H. & Cooley, H. S. (2009). <em>Energy implications of bottled water.</em> Environmental Research Letters, 4(1).
+            </div>
+          </div>
+        </div>
+
+        <!-- Missing Data Notice -->
+        <div class="p-4 bg-amber-50 rounded-2xl border border-amber-200 text-xs text-amber-900 space-y-1">
+          <div class="font-extrabold flex items-center space-x-1.5">
+            <i class="fa-solid fa-triangle-exclamation text-amber-700"></i>
+            <span>Policy on Missing or Uncertified Company Data</span>
+          </div>
+          <p class="leading-relaxed">
+            Where direct empirical factory emission audits are unavailable for traditional Odisha tribal crafts (such as Mayurbhanj Sabai grass or Kendrapara coir products), Eco Saathi displays <strong>"Data not available"</strong> rather than estimating unverified numbers. We are currently collaborating with state agroforestry researchers to certify these regional crafts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- ============================================================== -->
+  <!-- VIEW: AWARDS & RECOGNITION                                     -->
+  <!-- ============================================================== -->
+  <main id="viewAwards" class="view-section flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hidden">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="inline-flex items-center space-x-1.5 bg-[#e8f1e6] border border-[#A8C5A0] text-[#14532D] text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
+        <i class="fa-solid fa-trophy text-[#4D9B59]"></i>
+        <span>Honors & Accreditations</span>
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#14532D] mt-3 font-heading">Awards & Recognitions</h1>
+      <p class="text-[#526356] text-sm mt-3">
+        Every milestone and recognition echoes our deep dedication towards sustainability, empowering rural artisans, and protecting our mother earth.
+      </p>
+    </div>
+
+    <!-- Spotlight: Startup Mahakumbh & PM Modi Visit -->
+    <div class="bg-gradient-to-br from-[#14532D] via-[#1b6d3c] to-[#0e3b20] rounded-3xl p-8 sm:p-12 text-white shadow-2xl mb-12 border border-[#4D9B59]/40">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center space-x-2 bg-[#4D9B59] text-white font-black text-xs px-3.5 py-1 rounded-full uppercase shadow">
+            <i class="fa-solid fa-star text-amber-300"></i>
+            <span>National Top 21 Finalist</span>
+          </div>
+          <h2 class="font-heading text-2xl sm:text-4xl font-bold leading-tight">
+            Hon'ble Prime Minister Shri Narendra Modi Visited Eco Saathi at Startup Mahakumbh 2024
+          </h2>
+          <p class="text-[#F7F7ED]/90 text-xs sm:text-sm leading-relaxed font-light">
+            Selected among the <strong>top 21 startups nationwide (out of 1,500+ participants)</strong> at Startup Mahakumbh, held at Bharat Mandapam, New Delhi. Our founder had the honor of demonstrating Eco Saathi's innovative circular ecosystem — turning bamboo, neem wood, and rural crop residue into functional zero-waste alternatives for urban households.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 text-center text-xs">
+            <div class="bg-white/10 p-3 rounded-2xl border border-white/15">
+              <div class="text-[#A8C5A0] font-black text-lg">Top 21</div>
+              <div class="text-[11px] text-[#F7F7ED]/80">Across India</div>
+            </div>
+            <div class="bg-white/10 p-3 rounded-2xl border border-white/15">
+              <div class="text-[#A8C5A0] font-black text-lg">1,500+</div>
+              <div class="text-[11px] text-[#F7F7ED]/80">Competitors</div>
+            </div>
+            <div class="bg-white/10 p-3 rounded-2xl border border-white/15">
+              <div class="text-[#A8C5A0] font-black text-lg">New Delhi</div>
+              <div class="text-[11px] text-[#F7F7ED]/80">Bharat Mandapam</div>
+            </div>
+            <div class="bg-white/10 p-3 rounded-2xl border border-white/15">
+              <div class="text-[#A8C5A0] font-black text-lg">2024</div>
+              <div class="text-[11px] text-[#F7F7ED]/80">National Stage</div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#A8C5A0]/40">
+            <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/G7M79ieV.png" alt="PM Narendra Modi at Eco Saathi stall" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Official Certifications Showcase -->
+    <div class="bg-[#FFFFFF] rounded-3xl p-8 sm:p-12 border border-[#A8C5A0]/30 shadow-sm mb-12">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="inline-flex items-center space-x-1.5 bg-[#e8f1e6] border border-[#A8C5A0] text-[#14532D] text-xs font-bold px-3 py-1 rounded-full uppercase">
+          <i class="fa-solid fa-shield-check text-[#4D9B59]"></i>
+          <span>Verified Compliance</span>
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-[#14532D] mt-2 font-heading">Government & Ecosystem Certifications</h3>
+        <p class="text-[#526356] text-xs sm:text-sm mt-1">Our products and processes comply with strict national quality and environmental norms.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card-organic p-6 text-center space-y-3">
+          <div class="w-14 h-14 bg-[#e8f1e6] text-[#14532D] rounded-2xl flex items-center justify-center mx-auto text-2xl shadow-sm">
+            <i class="fa-solid fa-building-flag text-[#4D9B59]"></i>
+          </div>
+          <h4 class="font-bold text-[#14532D] text-sm">Startup India (DPIIT)</h4>
+          <p class="text-xs text-[#526356]">Recognized social startup by the Department for Promotion of Industry and Internal Trade, Govt. of India.</p>
+        </div>
+
+        <div class="card-organic p-6 text-center space-y-3">
+          <div class="w-14 h-14 bg-[#e8f1e6] text-[#14532D] rounded-2xl flex items-center justify-center mx-auto text-2xl shadow-sm">
+            <i class="fa-solid fa-tree text-[#4D9B59]"></i>
+          </div>
+          <h4 class="font-bold text-[#14532D] text-sm">Startup Odisha</h4>
+          <p class="text-xs text-[#526356]">Recognized venture under the Startup Odisha mission for empowering state tribal craftsmanship.</p>
+        </div>
+
+        <div class="card-organic p-6 text-center space-y-3">
+          <div class="w-14 h-14 bg-[#e8f1e6] text-[#14532D] rounded-2xl flex items-center justify-center mx-auto text-2xl shadow-sm">
+            <i class="fa-solid fa-certificate text-[#4D9B59]"></i>
+          </div>
+          <h4 class="font-bold text-[#14532D] text-sm">MSME Udyam Registered</h4>
+          <p class="text-xs text-[#526356]">Government of India registered Micro & Small Enterprise driving fair livelihoods in rural clusters.</p>
+        </div>
+
+        <div class="card-organic p-6 text-center space-y-3">
+          <div class="w-14 h-14 bg-[#e8f1e6] text-[#14532D] rounded-2xl flex items-center justify-center mx-auto text-2xl shadow-sm">
+            <i class="fa-solid fa-shield-heart text-[#4D9B59]"></i>
+          </div>
+          <h4 class="font-bold text-[#14532D] text-sm">BPA-Free & 100% Natural</h4>
+          <p class="text-xs text-[#526356]">Completely non-toxic, chemical-free, biodegradable and safe for everyday family wellness.</p>
+        </div>
+      </div>
+
+      <!-- Trophies & Exhibition Visuals -->
+      <div class="mt-10 pt-8 border-t border-[#A8C5A0]/25 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="space-y-3 max-w-xl text-left">
+          <h4 class="text-lg font-bold text-[#14532D] font-heading">State & National Exhibition Displays</h4>
+          <p class="text-xs text-[#526356] leading-relaxed">
+            From the grand pavilions of Pragati Maidan and Bharat Mandapam in New Delhi to Toshali National Crafts Mela in Bhubaneswar, Eco Saathi exhibits Odisha's sustainable craftsmanship across India.
+          </p>
+        </div>
+        <img src="https://s3.ap-south-1.amazonaws.com/typof.co/blog/YyxHK6vK.png" alt="Eco Saathi Trophies and Awards" class="max-h-48 rounded-2xl object-contain shadow-md" />
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- ============================================================== -->
+  <!-- VIEW: WHY SUSTAINABILITY (RESOURCES)                           -->
+  <!-- ============================================================== -->
+  <main id="viewSustainability" class="view-section flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hidden">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="inline-flex items-center space-x-1.5 bg-[#e8f1e6] border border-[#A8C5A0] text-[#14532D] text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
+        <i class="fa-solid fa-leaf text-[#4D9B59]"></i>
+        <span>Our Core Philosophy</span>
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#14532D] mt-3 font-heading">Why Sustainability?</h1>
+      <p class="text-[#526356] text-sm mt-3">
+        Sustainability should not be an expensive luxury or an inconvenient compromise. We are making eco-conscious everyday choices accessible, affordable, and practical for every Indian household.
+      </p>
+    </div>
+
+    <!-- The 4 Renewable Material Pillars -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Bamboo -->
+      <div class="card-organic p-8 space-y-4">
+        <div class="w-12 h-12 bg-[#e8f1e6] text-[#14532D] rounded-2xl flex items-center justify-center text-2xl">
+          <i class="fa-solid fa-tree text-[#4D9B59]"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#14532D] font-heading">Bamboo: Nature's Wonder Grass</h3>
+        <p class="text-xs text-[#526356] leading-relaxed">
+          Water- and energy-efficient bamboo absorbs <strong>40% more CO₂</strong> and produces <strong>35% more oxygen</strong> than an equivalent area of tree forests. Bamboo matures in just 3–4 years without toxic fertilizers, making it the supreme renewable alternative to fossil plastics.
+        </p>
+        <div class="bg-[#F7F7ED] p-3.5 rounded-2xl text-xs text-[#14532D] font-semibold border border-[#A8C5A0]/30">
+          ✦ Used in: Toothbrushes, Flasks, Straws, Earbuds, Facial Tissues, and Stationery.
+        </div>
+      </div>
+
+      <!-- Neem Wood -->
+      <div class="card-organic p-8 space-y-4">
+        <div class="w-12 h-12 bg-[#e8f1e6] text-[#14532D] rounded-2xl flex items-center justify-center text-2xl">
+          <i class="fa-solid fa-spa text-[#4D9B59]"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#14532D] font-heading">Medicinal Neem: Antibacterial Protection</h3>
+        <p class="text-xs text-[#526356] leading-relaxed">
+          Neem trees thrive in semi-arid soils with zero artificial irrigation. Revered for millennia in Ayurveda, neem wood possesses natural antifungal, antibacterial, and anti-static properties that nourish scalps and prevent microplastic leaching into human bodies.
+        </p>
+        <div class="bg-[#F7F7ED] p-3.5 rounded-2xl text-xs text-[#14532D] font-semibold border border-[#A8C5A0]/30">
+          ✦ Used in: Wide-Tooth Detangler Combs, Handle Combs, Shampoo Combs, and Soap Dishes.
+        </div>
+      </div>
+
+      <!-- Crop Residue -->
+      <div class="card-organic p-8 space-y-4">
+        <div class="w-12 h-12 bg-[#e8f1e6] text-[#14532D] rounded-2xl flex items-center justify-center text-2xl">
+          <i class="fa-solid fa-wheat-awn text-[#4D9B59]"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#14532D] font-heading">Crop Residue & Agricultural Biomass</h3>
+        <p class="text-xs text-[#526356] leading-relaxed">
+          By upcycling agricultural straw and husks into durable biocomposites, we directly prevent crop stubble burning — a primary cause of seasonal smog and air pollution across northern and eastern India.
+        </p>
+        <div class="bg-[#F7F7ED] p-3.5 rounded-2xl text-xs text-[#14532D] font-semibold border border-[#A8C5A0]/30">
+          ✦ Used in: Wheat Straw Toothbrushes, Organic Bath Loofahs, and Natural Scrubbers.
+        </div>
+      </div>
+
+      <!-- Sabai Grass & Jute -->
+      <div class="card-organic p-8 space-y-4">
+        <div class="w-12 h-12 bg-[#e8f1e6] text-[#14532D] rounded-2xl flex items-center justify-center text-2xl">
+          <i class="fa-solid fa-basket-shopping text-[#4D9B59]"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#14532D] font-heading">Mayurbhanj Sabai Grass & Golden Jute</h3>
+        <p class="text-xs text-[#526356] leading-relaxed">
+          Known as "Golden Grass", Sabai grows wild along riverbanks in Mayurbhanj, Odisha. Woven by indigenous tribal women's self-help groups (SHGs), Sabai grass and coastal Jute provide durable, 100% biodegradable replacements for plastic packaging and synthetic homeware.
+        </p>
+        <div class="bg-[#F7F7ED] p-3.5 rounded-2xl text-xs text-[#14532D] font-semibold border border-[#A8C5A0]/30">
+          ✦ Used in: Storage Baskets, Planters, Coasters, Dining Mats, and Juco Totes.
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA to Calculator -->
+    <div class="bg-[#14532D] rounded-3xl p-8 sm:p-12 text-white text-center space-y-4 shadow-xl">
+      <h3 class="text-2xl font-bold font-heading">Calculate Your Plastic & Carbon Savings</h3>
+      <p class="text-xs text-[#F7F7ED]/80 max-w-xl mx-auto">
+        Curious how much plastic and CO₂ you can prevent this year by switching your toothbrush or shopping bags? Test our interactive Life Cycle Assessment calculator.
+      </p>
+      <div class="pt-2">
+        <a href="#impact" class="bg-[#4D9B59] hover:bg-[#3d7c47] text-white font-black px-7 py-3 rounded-full text-xs inline-flex items-center space-x-2 transition shadow-lg">
+          <span>Open Impact Calculator & Dashboard</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- ============================================================== -->
+  <!-- VIEW: ABOUT US & LEADERSHIP                                    -->
+  <!-- ============================================================== -->
+  <main id="viewAbout" class="view-section flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 hidden">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="inline-flex items-center space-x-1.5 bg-[#e8f1e6] border border-[#A8C5A0] text-[#14532D] text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
+        <i class="fa-solid fa-heart text-[#4D9B59]"></i>
+        <span>Our Heritage & Mission</span>
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#14532D] mt-3 font-heading">About Eco Saathi</h1>
+      <p class="text-[#526356] text-sm mt-3 leading-relaxed">
+        Founded with the core principle that sustainability should be an everyday choice. We are a purpose-driven social impact startup committed to eliminating single-use plastics through Odisha's indigenous crafts.
+      </p>
+    </div>
+
+    <!-- Story Card -->
+    <div class="card-organic p-8 sm:p-12 mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold text-[#14532D] font-heading">Crafted by Nature. Shaped by Tradition.</h3>
+        <p class="text-xs text-[#526356] leading-relaxed">
+          Headquartered in Bhubaneswar, Odisha, Eco Saathi partners directly with rural artisan cooperatives, tribal women self-help groups, and sustainable agroforestry farmers.
+        </p>
+        <p class="text-xs text-[#526356] leading-relaxed">
+          By eliminating predatory middlemen, we guarantee fair ethical wages, revive dying handcraft techniques, and bring plastic-free personal care, kitchen essentials, and corporate hampers directly to conscious citizens across India.
+        </p>
+        <div class="pt-2 flex flex-wrap gap-4 text-xs font-bold text-[#14532D]">
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-location-dot text-[#795548]"></i>
+            <span>Bhubaneswar, Odisha</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-users text-[#795548]"></i>
+            <span>120+ Rural Artisan Families</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-leaf text-[#795548]"></i>
+            <span>Zero Plastic Policy</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="https://typof.co/stores/5638/2octQ1BBdyDbxzda.webp" alt="Eco Saathi Craft Heritage" class="rounded-2xl shadow-lg border border-[#A8C5A0]/30 w-full object-cover max-h-80" />
+      </div>
+    </div>
+
+    <!-- Leadership & Mentors -->
+    <div class="bg-[#FFFFFF] rounded-3xl p-8 sm:p-12 border border-[#A8C5A0]/30 shadow-sm">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="inline-flex items-center space-x-1.5 bg-[#e8f1e6] border border-[#A8C5A0] text-[#14532D] text-xs font-bold px-3 py-1 rounded-full uppercase">
+          <i class="fa-solid fa-users text-[#4D9B59]"></i>
+          <span>Leadership & Guidance</span>
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-[#14532D] mt-2 font-heading">Meet Our Leadership Team & Mentors</h3>
+        <p class="text-[#526356] text-xs sm:text-sm mt-1">Guided by passionate changemakers, enterprise advisors, and technical leaders.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Ajit Kumar Pallai -->
+        <div class="card-organic p-6 text-center space-y-3">
+          <div class="w-20 h-20 bg-[#14532D] text-white rounded-full flex items-center justify-center mx-auto text-2xl font-heading font-black shadow-md">
+            AP
+          </div>
+          <div>
+            <h4 class="font-bold text-[#14532D] text-base font-heading">Ajit Kumar Pallai</h4>
+            <div class="text-xs text-[#4D9B59] font-bold uppercase tracking-wider mt-0.5">Founder & CEO</div>
+          </div>
+          <p class="text-xs text-[#526356] leading-relaxed">
+            Visionary social entrepreneur spearheading Eco Saathi's mission to decarbonize daily Indian lifestyles and build sustainable rural supply chains across Odisha.
+          </p>
+        </div>
+
+        <!-- Rajaseetharama Sekar -->
+        <div class="card-organic p-6 text-center space-y-3">
+          <div class="w-20 h-20 bg-[#1b6d3c] text-white rounded-full flex items-center justify-center mx-auto text-2xl font-heading font-black shadow-md">
+            RS
+          </div>
+          <div>
+            <h4 class="font-bold text-[#14532D] text-base font-heading">Rajaseetharama Sekar</h4>
+            <div class="text-xs text-[#4D9B59] font-bold uppercase tracking-wider mt-0.5">Technical Mentor</div>
+          </div>
+          <p class="text-xs text-[#526356] leading-relaxed">
+            Advising on scalable sustainable supply-chain technologies, life-cycle carbon tracking systems, and digital platform engineering.
+          </p>
+        </div>
+
+        <!-- Kishore Athota -->
+        <div class="card-organic p-6 text-center space-y-3">
+          <div class="w-20 h-20 bg-[#795548] text-white rounded-full flex items-center justify-center mx-auto text-2xl font-heading font-black shadow-md">
+            KA
+          </div>
+          <div>
+            <h4 class="font-bold text-[#14532D] text-base font-heading">Kishore Athota</h4>
+            <div class="text-xs text-[#4D9B59] font-bold uppercase tracking-wider mt-0.5">Business Advisor</div>
+          </div>
+          <p class="text-xs text-[#526356] leading-relaxed">
+            Strategic advisor driving corporate hospitality partnerships, B2B institutional relationships, and national retail expansion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- ============================================================== -->
+  <!-- DRAWER: CART DRAWER (Modern Slide-Over)                        -->
+  <!-- ============================================================== -->
+  <div id="cartDrawerBackdrop" onclick="App.closeCartDrawer()" class="fixed inset-0 bg-stone-950/60 z-50 backdrop-blur-sm hidden transition-opacity"></div>
+  <aside id="cartDrawer" class="fixed top-0 right-0 w-full sm:w-[460px] h-full bg-[#FFFFFF] z-50 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="p-6 border-b border-[#A8C5A0]/25 flex items-center justify-between bg-[#F7F7ED]/80">
+      <div class="flex items-center space-x-2.5">
+        <div class="w-9 h-9 rounded-xl bg-[#e8f1e6] text-[#14532D] flex items-center justify-center">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div>
+          <h3 class="font-heading text-base font-bold text-[#14532D]">Your Sustainable Cart</h3>
+          <span class="text-[11px] text-[#526356]">Zero Single-Use Plastic Promise</span>
+        </div>
+      </div>
+      <button onclick="App.closeCartDrawer()" class="w-8 h-8 rounded-full hover:bg-stone-200 flex items-center justify-center text-stone-500">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Free Delivery Progress Tracker -->
+    <div class="p-4 bg-[#F7F7ED] border-b border-[#A8C5A0]/20">
+      <div class="flex justify-between text-xs font-semibold text-[#14532D] mb-1.5">
+        <span id="cartDrawerShippingText">Add ₹499 for FREE Delivery</span>
+        <span class="text-[10px] text-[#4D9B59] font-bold">Pan-India</span>
+      </div>
+      <div class="w-full bg-[#A8C5A0]/30 h-2 rounded-full overflow-hidden">
+        <div id="cartDrawerShippingBar" class="bg-[#14532D] h-full rounded-full transition-all duration-300" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div id="cartDrawerItems" class="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-stone-100">
+      <!-- Dynamically populated via App.renderCartDrawer() -->
+    </div>
+
+    <!-- Summary & Checkout Footer -->
+    <div class="p-6 border-t border-[#A8C5A0]/25 bg-[#F7F7ED]/50 space-y-3">
+      <div class="space-y-1.5 text-xs text-[#526356]">
+        <div class="flex justify-between">
+          <span>Subtotal</span>
+          <span id="cartDrawerSubtotal" class="font-bold text-[#26332A]">₹0</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Standard Shipping</span>
+          <span id="cartDrawerShipping" class="font-semibold text-[#26332A]">₹0</span>
+        </div>
+        <div class="flex justify-between text-base font-extrabold text-[#14532D] pt-2 border-t border-[#A8C5A0]/25">
+          <span>Estimated Total</span>
+          <span id="cartDrawerTotal">₹0</span>
+        </div>
+      </div>
+
+      <button
+        onclick="App.closeCartDrawer(); window.location.hash='checkout';"
+        class="btn-forest w-full py-3.5 rounded-full flex items-center justify-center space-x-2 text-xs"
+      >
+        <span>Proceed to Secure Checkout</span>
+        <i class="fa-solid fa-arrow-right text-xs"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============================================================== -->
+  <!-- 7. FOOTER REDESIGN (Section 6)                                  -->
+  <!-- ============================================================== -->
+  <footer class="bg-[#14532D] text-[#F7F7ED] pt-16 pb-12 mt-auto border-t border-[#1b6d3c]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#1b6d3c]">
+        
+        <!-- Brand & Address -->
+        <div class="lg:col-span-2 space-y-4">
+          <!-- Logo & Brand Name -->
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-2xl bg-white p-1 flex items-center justify-center">
+              <svg class="h-6 w-6" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 4C31.941 4 40 12.059 40 22C40 25.86 38.78 29.43 36.7 32.38" stroke="#14532D" stroke-width="3" stroke-linecap="round"/>
+                <path d="M22 40C12.059 40 4 31.941 4 22C4 18.14 5.22 14.57 7.3 11.62" stroke="#4D9B59" stroke-width="3" stroke-linecap="round"/>
+                <path d="M22 10C15 14 14 24 22 34C30 24 29 14 22 10Z" fill="#4D9B59" stroke="#14532D" stroke-width="1.5"/>
+                <path d="M22 14V30" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-heading font-extrabold text-2xl text-white">Eco <span class="text-[#A8C5A0]">Saathi</span></div>
+              <span class="text-[9px] block font-semibold uppercase tracking-widest text-[#A8C5A0]">Your Partner in a Greener Tomorrow</span>
+            </div>
+          </div>
+
+          <p class="text-xs text-[#F7F7ED]/80 max-w-sm leading-relaxed">
+            A purpose-driven companion for the environment, reconnecting modern households with natural Odisha craft heritage. 100% plastic-free, fair-trade, and environmentally conscious.
+          </p>
+
+          <div class="text-xs text-[#A8C5A0] space-y-1.5 pt-2">
+            <p><i class="fa-solid fa-location-dot mr-2 text-[#4D9B59]"></i> Plot No. : K-1/527, Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha - 751003</p>
+            <p><i class="fa-solid fa-phone mr-2 text-[#4D9B59]"></i> +91 9124582882 · WhatsApp: +91 7978739732</p>
+            <p><i class="fa-solid fa-envelope mr-2 text-[#4D9B59]"></i> support@ecosaathi.com · contact@ecosaathi.com</p>
+          </div>
+        </div>
+
+        <!-- Explore Solutions -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-heading">Explore Solutions</h4>
+          <ul class="space-y-2.5 text-xs text-[#F7F7ED]/80">
+            <li><a href="#shop" class="hover:text-[#A8C5A0] transition">Complete 60+ Item Catalog</a></li>
+            <li><a href="#shop/oral-care" class="hover:text-[#A8C5A0] transition">Oral Care Essentials</a></li>
+            <li><a href="#shop/kitchen" class="hover:text-[#A8C5A0] transition">Kitchen & Dining Cookware</a></li>
+            <li><a href="#shop/home-decor" class="hover:text-[#A8C5A0] transition">Home Decor & Planters</a></li>
+            <li><a href="#shop/personal-care" class="hover:text-[#A8C5A0] transition">Organic Soaps & Loofahs</a></li>
+            <li><a href="#bundle" class="hover:text-[#A8C5A0] transition">Custom Hamper Studio</a></li>
+          </ul>
+        </div>
+
+        <!-- Brand & Mission -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-heading">Brand & Mission</h4>
+          <ul class="space-y-2.5 text-xs text-[#F7F7ED]/80">
+            <li><a href="#about" class="hover:text-[#A8C5A0] transition">About Us & Team</a></li>
+            <li><a href="#initiatives" class="hover:text-[#A8C5A0] transition">Our Initiatives</a></li>
+            <li><a href="#sustainability" class="hover:text-[#A8C5A0] transition">Why Sustainability?</a></li>
+            <li><a href="#awards" class="hover:text-[#A8C5A0] transition">Awards & PM Modi Visit</a></li>
+            <li><a href="#impact" class="hover:text-[#A8C5A0] transition">Impact Calculator & LCA</a></li>
+            <li><a href="#corporate" class="hover:text-[#A8C5A0] transition">Corporate & B2B Solutions</a></li>
+          </ul>
+        </div>
+
+        <!-- Trust & Compliance -->
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4 font-heading">Trust & Security</h4>
+          <ul class="space-y-2.5 text-xs text-[#F7F7ED]/80">
+            <li><a href="#account" class="hover:text-[#A8C5A0] transition">DPDP 2023 Consent Portal</a></li>
+            <li><a href="https://wa.me/917978739732" target="_blank" class="hover:text-[#A8C5A0] transition">WhatsApp Artisan Support</a></li>
+            <li><a href="/admin.html" class="hover:text-[#A8C5A0] transition">Staff Admin Dashboard</a></li>
+            <li class="pt-2">
+              <span class="inline-flex items-center space-x-1.5 bg-[#0e3b20] text-[#A8C5A0] text-[10px] px-2.5 py-1 rounded-full border border-[#1b6d3c]">
+                <i class="fa-solid fa-database text-[#4D9B59]"></i>
+                <span>Connected: Neon PostgreSQL</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#A8C5A0]/80 gap-4">
+        <div>
+          <p>© 2026 Eco Saathi Crafts Pvt Ltd. All rights reserved. Handcrafted with love in Bhubaneswar, Odisha.</p>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="text-[10px]">Secured Payments:</span>
+          <img src="https://ecosaathi.com/portal/images/payments.png" alt="Accepted Payment Methods" class="h-4 object-contain" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Storefront Scripts -->
+  <script src="/js/app.js"></script>
+  <!-- Saathi AI Shopping Assistant Widget (FR-15 to FR-21) -->
+  <script src="/js/chat.js"></script>
+</body>
+</html>

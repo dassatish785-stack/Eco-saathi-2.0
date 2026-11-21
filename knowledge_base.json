@@ -1,0 +1,91 @@
+{
+  "brand": {
+    "name": "Eco Saathi",
+    "version": "2.0",
+    "tagline": "Odisha's Sustainable Living Store",
+    "location": "Bhubaneswar, Odisha, India",
+    "pincode": "751024",
+    "email": "support@ecosaathi.com",
+    "phone": "+91 94370 12345",
+    "whatsapp": "+91 94370 12345",
+    "hours": "Monday to Saturday, 9:30 AM – 7:30 PM IST"
+  },
+  "shipping_policy": {
+    "free_threshold": 499,
+    "standard_charge": 60,
+    "cod_available": true,
+    "cod_regions": "Pan-India across 19,000+ serviceable pincodes",
+    "delivery_time_odisha": "1 to 2 business days",
+    "delivery_time_metros": "2 to 3 business days",
+    "delivery_time_rest_of_india": "3 to 5 business days",
+    "shipping_partners": ["Shiprocket", "Delhivery", "India Post Speed Post"]
+  },
+  "returns_policy": {
+    "return_window_days": 7,
+    "eligible_reasons": ["Damaged in transit", "Defective craftsmanship", "Wrong item received", "Missing parts"],
+    "hygiene_exceptions": "Oral care products (toothbrushes, tongue cleaners) and personal care items cannot be returned once package seal is broken unless received damaged.",
+    "process": "Submit return request from My Account with photo proof within 7 days. Return courier pickup is arranged free of charge. Refund is processed within 48 hours of return receipt to original payment method, or bank account for COD orders.",
+    "cancellation": "Orders can be cancelled free of charge prior to dispatch from warehouse."
+  },
+  "materials_and_care": [
+    {
+      "material": "Bamboo",
+      "origin": "Sustainably cultivated native bamboo",
+      "benefits": "Fast-growing grass, anti-bacterial, completely biodegradable, water-resistant",
+      "care": "Keep in a dry, well-ventilated stand. Avoid keeping bristles submerged in water cups. Compost the handle when discarding."
+    },
+    {
+      "material": "Sabai Grass",
+      "origin": "Wild harvested by women artisans of Mayurbhanj, Odisha",
+      "benefits": "Natural high tensile strength, eco-friendly dye colors, long-lasting durability, empowers tribal women SHGs",
+      "care": "Dust with dry soft cloth. Wipe stains with slightly damp sponge and dry immediately in shaded sun. Do not soak."
+    },
+    {
+      "material": "Neem Wood",
+      "origin": "Pruned seasoned medicinal Neem (Azadirachta indica) wood",
+      "benefits": "Naturally anti-fungal, anti-microbial, anti-dandruff for combs, gentle on gums and hair",
+      "care": "Wash with mild soap and dry immediately. Rub a few drops of coconut or mustard oil once a month to retain luster."
+    },
+    {
+      "material": "Jute",
+      "origin": "Natural golden fiber from coastal Odisha and Eastern India",
+      "benefits": "Heavy-duty load bearing, 100% biodegradable, zero carbon footprint",
+      "care": "Spot clean with damp cloth. Air dry. Do not machine wash or bleach."
+    },
+    {
+      "material": "Organic Materials (Coconut Shell, Clay, Loofah)",
+      "origin": "Upcycled coconut farming by-products and natural plant fibers",
+      "benefits": "Zero waste, upcycled, free from synthetic polymers and petrochemicals",
+      "care": "Rinse loofahs thoroughly and hang to dry. Candles: trim wick to 1/4 inch before burning."
+    }
+  ],
+  "corporate_gifting": {
+    "moq": 25,
+    "bulk_discounts": "15% off on 50-99 units, 25% off on 100-249 units, 35% off on 250+ units",
+    "customizations": ["Laser engraving of company logo on bamboo", "Custom branded belly-bands and sleeves", "Handwritten personalized gift notes", "Sabai grass artisan presentation boxes"],
+    "gst_invoice": "Full 18% / 12% / 5% GST Input Tax Credit (ITC) compliant invoice provided with company GSTIN",
+    "turnaround": "3 to 7 business days depending on quantity and branding"
+  },
+  "frequently_asked_questions": [
+    {
+      "question": "How do I know if you deliver to my pincode?",
+      "answer": "We deliver across 19,000+ pincodes across India! You can enter your 6-digit pincode on any product page or in cart to see exact delivery timelines and Cash on Delivery eligibility."
+    },
+    {
+      "question": "Are your products 100% plastic-free?",
+      "answer": "Yes! All Eco Saathi products are crafted from bamboo, sabai grass, jute, neem wood and organic materials. Our packaging is also 100% plastic-free using kraft paper, paper tape, and corrugated cardboard boxes."
+    },
+    {
+      "question": "Where are your products made?",
+      "answer": "Our products are lovingly handcrafted by over 120 artisan families and women self-help groups across Odisha, notably in Mayurbhanj, Khordha, and coastal districts."
+    },
+    {
+      "question": "How does the AI assistant recommend products?",
+      "answer": "Saathi AI recommends products directly from our live catalog based on your specific need, recipient, material preference, or budget. It never invents fake prices or out-of-stock items."
+    },
+    {
+      "question": "Can I get an order invoice with my company's GST number?",
+      "answer": "Yes! Enter your company name and GSTIN during checkout or in the Corporate Gifting portal, and a tax-compliant GST invoice will be automatically generated upon order confirmation."
+    }
+  ]
+}

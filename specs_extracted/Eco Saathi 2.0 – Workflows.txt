@@ -1,0 +1,229 @@
+﻿Eco Saathi 2.0 – Workflows
+Version 1.0 · Draft · 15 October 2026 · Companion to the PRD and System Architecture
+This document describes how customers, staff and systems move through Eco Saathi 2.0, step by step. Each workflow lists who acts, what happens and what the system does automatically.
+1. Customer Shopping Journey
+Step
+Customer action
+System response
+1. Arrive
+Opens the site from search, social media, WhatsApp or an email link
+Fast page load from CDN; analytics records the source
+2. Discover
+Browses by use or material, searches, applies filters, or opens the chat assistant
+Search and filters return results instantly; the assistant can suggest products
+3. Evaluate
+Opens a product page, reads details, impact badge and reviews, views photos
+Shows stock, delivery estimate after pincode entry, and related products
+4. Add to cart
+Chooses a variant and adds to cart
+Cart updates; offers free-shipping progress and "frequently bought together"
+5. Checkout
+Enters address or logs in with OTP, selects shipping and payment
+Validates pincode, calculates tax and shipping, applies coupons
+6. Pay
+Pays by UPI, card, net banking or cash on delivery
+Payment is confirmed only through the gateway's verified webhook
+7. Confirmation
+Sees a confirmation page
+Email and WhatsApp confirmation sent; invoice generated
+8. Track
+Receives shipping updates and tracks the parcel
+Status messages at shipped, out for delivery and delivered
+9. Review
+Gets a review request a few days after delivery
+Review is moderated before it appears
+10. Return
+Requests a return or refund if needed
+Follows the returns workflow in section 6
+2. Account and Login Workflow
+Customer chooses "Login" or reaches it at checkout.
+Enters phone number or email.
+System sends a one-time password (OTP) and applies rate limits.
+Customer enters the OTP; the system creates a session.
+First-time customers are asked for their name and communication preferences (WhatsApp and email opt-ins, shown as separate unticked boxes).
+Guest checkout is still allowed; guests can create an account after ordering using the same phone or email.
+3. Order Lifecycle
+Status
+Triggered by
+Customer message
+Staff action
+Pending payment
+Checkout started
+Reminder if unpaid after a set time
+None
+Paid / Confirmed
+Verified payment webhook, or COD order accepted
+Order confirmation (email and WhatsApp)
+Review order
+Processing
+Staff start packing
+None, or optional "we are packing your order"
+Pick, pack, quality check
+Shipped
+Shipment created, tracking number added
+Shipping message with tracking link
+Hand parcel to courier
+Out for delivery
+Courier webhook
+Delivery-day message
+None
+Delivered
+Courier webhook
+Delivery message and review request (after a few days)
+None
+Cancelled
+Customer or staff request before shipping
+Cancellation and refund message
+Cancel shipment, refund payment
+Return requested
+Customer request
+Acknowledgement
+Review and approve or reject
+Refunded
+Refund processed
+Refund confirmation
+Confirm with payment gateway
+Cash-on-delivery orders that are refused at the door move to "Returned to origin" and the stock is restored once the parcel is received.
+4. AI Assistant Conversation Flow
+4.1 Main Flow
+Greeting: the widget opens with a short welcome and quick buttons such as "Find a gift", "Plastic-free kitchen", "Track my order", "Talk to a person".
+Understand the need: the assistant asks at most one clarifying question (for example, budget or use) before recommending.
+Recommend: it searches the live catalogue and shows up to three product cards with price, stock and an "Add to cart" button.
+Answer questions: for shipping, returns, materials and care it answers only from approved content, and links to the relevant policy page.
+Order status: it asks for the order number and verifies the customer by an OTP sent to the phone or email on the order, then shows the status and tracking link.
+Close: it asks whether the answer helped and offers a thumbs up or down with an optional comment.
+4.2 Hand-Off Rules
+The assistant hands over to a human when:
+the customer asks for a person;
+the question concerns a complaint, damaged item, refund dispute or payment problem;
+it cannot find a reliable answer after two attempts;
+the customer shows frustration, or the topic is outside the store's products and policies.
+On hand-off, the system creates a support ticket with a conversation summary, notifies the support team on WhatsApp or email, and tells the customer the expected response time. Support hours are shown in the widget.
+4.3 Things the Assistant Must Not Do
+Guess prices, stock, delivery dates or policies.
+Share another customer's information.
+Make health, medical or environmental claims beyond those approved by the business.
+Take payments or change an order without a verified customer and confirmation from the customer.
+5. WhatsApp and Email Workflows
+5.1 Trigger Table
+Trigger
+Channel
+Content
+Condition
+Order placed
+Email and WhatsApp
+Confirmation with order summary
+WhatsApp only if opted in
+Shipment created
+Email and WhatsApp
+Tracking link
+Same
+Out for delivery
+WhatsApp
+Delivery-day alert
+Opted in
+Delivered
+Email and WhatsApp
+Delivery note and care tips
+Same
+5 days after delivery
+Email
+Review request
+One reminder only
+Cart abandoned (for example 1 hour and 24 hours)
+Email, optional WhatsApp
+Cart reminder
+Marketing consent required
+Item back in stock
+Email, optional WhatsApp
+Back-in-stock alert
+Customer subscribed to that item
+Newsletter
+Email
+Offers, blog posts, new products
+Marketing consent required
+New customer
+Email
+Welcome message
+Always
+Refund processed
+Email and WhatsApp
+Refund confirmation
+Always
+5.2 Customer-Started WhatsApp Chat
+Customer taps the WhatsApp button, or "Chat about this product" on a product page.
+WhatsApp opens with a pre-filled message that includes the product name and link.
+The support team (or, later, the assistant) replies within the 24-hour customer service window.
+Messages and outcomes are logged against the customer's record where the phone number matches.
+5.3 Consent Handling
+Opt-in boxes are unticked by default and explain what will be sent.
+Every marketing email has an unsubscribe link; WhatsApp supports a "STOP" reply.
+Opt-outs take effect immediately and are stored with a timestamp.
+Order-related messages (confirmation, shipping, refund) are service messages and are separate from marketing.
+6. Returns and Refunds Workflow
+Customer opens the order and selects "Request return or refund" within the policy period.
+Chooses the item and reason, and uploads a photo if the item is damaged or wrong.
+System checks eligibility against the published returns policy and creates a request.
+Support reviews the request, usually within one working day, and approves, rejects (with reason) or asks for more information.
+If approved, a pickup is booked with the courier, or the customer is told how to send the item back.
+When the item is received and checked, the refund is issued to the original payment method, or by bank transfer for cash-on-delivery orders.
+The customer receives a refund confirmation and the stock is updated if the item is resalable.
+7. Corporate Gifting Workflow
+Buyer opens the Corporate Gifting page and submits the enquiry form (company, contact, product interest, quantity, delivery date, customisation needs).
+System stores the lead, sends an acknowledgement email, and notifies the sales team by email and WhatsApp.
+Sales contacts the buyer within one working day, shares a quote and samples if needed.
+Buyer approves the quote; an order is created in the admin panel with bulk pricing and a GST invoice.
+Customisation artwork is approved, production and packing are done, and shipping follows the standard order lifecycle.
+After delivery, the team asks for feedback and a repeat-order opportunity is noted in the lead record.
+8. Staff and Admin Workflows
+8.1 Adding or Updating a Product
+Staff open the admin panel and create or edit a product.
+Fill title, description, material, use tags, price, stock, weight, photos (with alt text) and the eco-impact note.
+Save as draft, preview on a staging link, then publish.
+System updates the search index and refreshes the product page and category pages.
+8.2 Daily Order Handling
+Review new orders and any payment or COD flags.
+Pack items and generate the courier label from the admin panel.
+Mark orders as shipped; customers are notified automatically.
+Check the support inbox, hand-off tickets and returns queue.
+Review low-stock alerts and update inventory.
+8.3 Weekly Review
+Check sales, top and slow products, conversion and abandoned-cart numbers.
+Review chatbot questions that were unanswered or rated poorly, and add the missing content or fix the answer.
+Moderate pending reviews and plan the newsletter.
+9. Content and SEO Workflow
+Draft a blog post or page in the admin editor with a target keyword.
+Add title, meta description, image alt text and internal links to related products.
+Preview, publish, and request indexing in Google Search Console.
+Review search performance monthly and refresh underperforming pages.
+10. Development and Release Workflow
+Stage
+What happens
+Who
+Plan
+Requirement from the PRD is turned into a task with acceptance criteria
+Product owner and developer
+Build
+Developer works on a branch and opens a pull request
+Developer
+Check
+Automated tests, linting and Lighthouse checks run
+CI system
+Review
+Code review by another team member
+Reviewer
+Staging
+Deployed automatically for testing with sandbox payments and messaging
+CI system
+Approval
+Business owner checks the change on staging
+Product owner
+Release
+Manual approval deploys to production, ideally outside peak hours
+Developer or lead
+Monitor
+Watch errors, checkout success and chatbot metrics for 24 hours
+Team
+Roll back
+If checkout or payments fail, revert to the previous version
+Developer or lead

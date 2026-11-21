@@ -1,0 +1,235 @@
+﻿Eco Saathi 2.0 – Product Requirements Document (PRD)
+Version 1.0 · Draft · 15 October 2026 · Website: ecosaathi.com
+1. Overview
+Eco Saathi is a Bhubaneswar-based store selling eco-friendly products made from bamboo, sabai grass, jute, neem wood and organic materials. The current store lists 37 products across five material-based categories and runs on a hosted store-builder platform (Typof). Eco Saathi 2.0 is the redevelopment of this website into a faster, easier-to-use, better-converting store with an AI shopping assistant, WhatsApp and email integration, and a redesigned product experience.
+2. Problem Statement
+An audit of the current Shop page found the following gaps:
+SEO tags are missing or weak: empty meta and Open Graph descriptions, no Twitter card, and generic page titles.
+Products are grouped only by material, so shoppers searching by need (oral care, kitchen, gifting) cannot find items easily. The only collection filter is "Toothbrush".
+No visible product search, sorting, reviews or other trust signals.
+Corporate gifting, a likely high-value channel, is hidden as the last menu item.
+Support depends on a single floating WhatsApp button, with no automated assistance, order updates or email flows.
+Content errors: a truncated menu label ("crisi"), a grammar issue in the cart ("1 items"), duplicate popup markup, and a footer with unreadable contact details.
+The footer promotes cotton bags, but no cotton category exists.
+3. Goals and Success Metrics
+Goal
+Metric
+Target (first 6 months after launch)
+Increase sales
+Conversion rate (orders ÷ sessions)
++30% vs. baseline
+Improve discoverability
+Organic search sessions
++50% vs. baseline
+Reduce support load
+Share of queries resolved by chatbot without a human
+60% or more
+Grow repeat business
+Repeat purchase rate
++20% vs. baseline
+Grow B2B
+Corporate gifting enquiries per month
+3x baseline
+Performance
+Largest Contentful Paint on mobile
+Under 2.5 seconds
+Baselines must be recorded from current analytics before launch. The targets above are proposals to be agreed with the business owner.
+4. Target Users
+Persona
+Description
+Main needs
+Conscious Consumer
+Urban buyer replacing plastic items with sustainable ones, mostly on mobile
+Easy discovery, proof of eco-claims, quick checkout (UPI)
+Gift Buyer
+Buys gifts for festivals, birthdays or weddings
+Gift bundles, budget filters, delivery timelines
+Corporate Buyer
+HR, admin or procurement staff ordering in bulk
+Bulk pricing, customisation, quote request, GST invoice
+Store Admin
+Eco Saathi team managing catalogue and orders
+Simple product editing, order tracking, reports
+5. Scope
+In scope
+Redesigned storefront (home, category, product, cart, checkout, account, content pages)
+Use-based categories, filters, search and sorting
+AI shopping assistant (chatbot)
+WhatsApp integration (customer chat and order notifications)
+Email integration (transactional and marketing)
+Corporate gifting enquiry and quote flow
+Admin dashboard and analytics
+SEO and performance improvements
+Out of scope for version 2.0
+Native mobile apps (a Progressive Web App is planned instead)
+Multi-language catalogue beyond English and Odia (considered for a later release)
+Marketplace or multi-vendor selling
+6. Functional Requirements
+Priority: P0 = launch blocker, P1 = important, P2 = nice to have.
+6.1 Storefront and catalogue
+ID
+Requirement
+Priority
+FR-01
+Use-based categories (Oral Care, Kitchen, Home Decor, Gifting, Personal Care) in addition to material
+P0
+FR-02
+Filters for price, material, use, rating, availability; sort by price, popularity and newest
+P0
+FR-03
+Search bar with suggestions and typo tolerance
+P0
+FR-04
+Product page with multiple images, variants, material and care details, eco-impact badge, reviews and ratings
+P0
+FR-05
+Wishlist for logged-in users
+P1
+FR-06
+"Frequently bought together" and related products
+P1
+FR-07
+Gift bundle builder
+P2
+FR-08
+Awards, certifications and impact counter on home page
+P1
+6.2 Cart, checkout and account
+ID
+Requirement
+Priority
+FR-09
+Guest checkout and account checkout
+P0
+FR-10
+UPI, cards, net banking and cash on delivery (where serviceable)
+P0
+FR-11
+Pincode serviceability and delivery estimate
+P0
+FR-12
+Coupons and free-shipping threshold
+P1
+FR-13
+Order history, tracking link, invoice download (with GST)
+P0
+FR-14
+Returns and refund request form following the published policy
+P1
+6.3 AI shopping assistant
+ID
+Requirement
+Priority
+FR-15
+Chat widget on all pages, usable on mobile
+P0
+FR-16
+Recommend products from the live catalogue based on need and budget, with product cards and add-to-cart
+P0
+FR-17
+Answer questions on shipping, returns, materials and care using approved content only
+P0
+FR-18
+Order status lookup after verifying the customer (order number plus phone or email OTP)
+P1
+FR-19
+Hand over to a human on WhatsApp or email with the conversation summary
+P0
+FR-20
+Never invent prices, stock or policies; say so when unsure
+P0
+FR-21
+Admin view of conversations, unanswered questions and feedback
+P1
+6.4 WhatsApp and email
+ID
+Requirement
+Priority
+FR-22
+WhatsApp opt-in at checkout and in account settings
+P0
+FR-23
+WhatsApp messages for order confirmation, shipped, out for delivery and delivered
+P0
+FR-24
+"Chat about this product" button that passes the product name to WhatsApp
+P1
+FR-25
+Transactional emails: welcome, order confirmation, shipping, refund
+P0
+FR-26
+Marketing emails: newsletter, back-in-stock, abandoned cart, with unsubscribe
+P1
+FR-27
+Corporate enquiry form that emails the sales team and creates a lead record
+P0
+6.5 Admin
+ID
+Requirement
+Priority
+FR-28
+Product, category, price, stock and image management
+P0
+FR-29
+Order management with status updates that trigger customer messages
+P0
+FR-30
+Dashboard: sales, top products, conversion, chatbot metrics
+P1
+FR-31
+Role-based access (owner, staff, support)
+P0
+FR-32
+Blog and content page editor
+P1
+7. Non-Functional Requirements
+Performance: mobile Largest Contentful Paint under 2.5 s; images in WebP or AVIF with lazy loading.
+Availability: 99.5% or better monthly uptime.
+SEO: unique title and meta description per page, structured data (Product, Breadcrumb, Organization), XML sitemap, clean URLs and 301 redirects from old URLs.
+Accessibility: target WCAG 2.1 AA (alt text, contrast, keyboard navigation, readable link text).
+Compatibility: latest two versions of Chrome, Safari, Edge and Firefox; Android and iOS browsers.
+Scalability: handle at least 10x current traffic during festival sales without redesign.
+Security and privacy: as defined in the Security document.
+8. Release Plan
+Phase
+Timing
+Deliverables
+0. Quick fixes
+Week 1
+SEO tags, typo and label fixes, readable footer contacts, analytics baseline
+1. Core store
+Weeks 2–4
+New design system, categories, filters, search, product and checkout pages, trust section, corporate gifting page
+2. Messaging
+Weeks 4–6
+WhatsApp notifications, transactional and marketing email
+3. AI and polish
+Weeks 6–8
+Chatbot, admin dashboard, performance tuning, testing and launch
+Timelines assume a small team and an approved platform decision (see Open Questions).
+9. Risks and Dependencies
+Risk
+Impact
+Mitigation
+Current platform may not allow custom code or APIs
+Blocks chatbot and integrations
+Confirm capabilities early; plan migration if needed
+WhatsApp template approval delays
+Late notifications
+Submit templates in week 1
+Chatbot gives wrong product or policy information
+Customer trust loss
+Answer only from approved catalogue and policy content; human hand-off
+SEO ranking drop during migration
+Traffic loss
+Keep URL map and 301 redirects; monitor Search Console
+Poor product photos and data
+Weak storefront
+Photo and content checklist per product
+10. Open Questions
+Does the current platform support custom scripts, webhooks and APIs, or is migration needed?
+What are current traffic, conversion and order numbers (baseline)?
+Is cash on delivery required, and in which regions?
+Which shipping partners are already in use?
+What bulk pricing and customisation does the corporate gifting offer include?
+Are Odia-language pages required at launch?

@@ -1,0 +1,23 @@
+{
+  "name": "ecosaathi-2.0",
+  "version": "2.0.0",
+  "description": "Eco Saathi 2.0 - High Performance Full Stack Sustainable Living Store with AI Shopping Assistant",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node -e \"require('./db.js').initDatabase()\"",
+    "test": "node test_server.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "sustainability",
+    "handcrafted",
+    "bamboo",
+    "sabai-grass",
+    "neem-wood",
+    "odisha",
+    "ai-assistant"
+  ],
+  "author": "Eco Saathi Team",
+  "license": "ISC"
+}
