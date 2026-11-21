@@ -1,0 +1,196 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-11-06",
+  "methodology": {
+    "framework": "ISO 14040/14044 Life Cycle Assessment (LCA) compliant methodology",
+    "plastic_avoidance_formula": "Plastic Avoided (g) = Plastic weight per conventional item (g) × Number of items replaced",
+    "co2e_avoidance_formula": "Net CO₂e Avoided (kg) = (Conventional product lifecycle emissions − Sustainable alternative lifecycle emissions) × Number of equivalent replacements",
+    "equivalencies": {
+      "car_driving_km_per_kg_co2e": 5.21,
+      "tree_seedling_absorption_kg_co2e_per_year": 21.77,
+      "standard_500ml_pet_bottle_plastic_grams": 19
+    }
+  },
+  "comparisons": [
+    {
+      "id": "toothbrush",
+      "category": "Oral Care",
+      "conventional_product": {
+        "name": "Conventional Plastic Toothbrush",
+        "material": "Fossil-based Polypropylene (PP) handle + Nylon-6 bristles",
+        "plastic_weight_grams": 20,
+        "lifecycle_emissions_kg_co2e": 0.088,
+        "is_reusable": false,
+        "expected_lifespan_days": 90,
+        "annual_usage_units_per_person": 4
+      },
+      "sustainable_product": {
+        "id": "prod_01",
+        "name": "Eco Saathi Biodegradable Bamboo Toothbrush",
+        "handle": "biodegradable-bamboo-toothbrush",
+        "material": "Wild-harvested sustainably grown Moso bamboo handle + charcoal-infused soft bristles",
+        "plastic_weight_grams": 0,
+        "lifecycle_emissions_kg_co2e": 0.027,
+        "is_reusable": false,
+        "expected_lifespan_days": 90,
+        "annual_usage_units_per_person": 4,
+        "price_inr": 99,
+        "image": "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=600&q=80"
+      },
+      "impact_per_unit_replacement": {
+        "plastic_avoided_grams": 20,
+        "net_co2e_avoided_kg": 0.061,
+        "net_co2e_avoided_grams": 61,
+        "data_status": "verified"
+      },
+      "lifetime_assumptions": "Dentists recommend replacing manual toothbrushes every 3 months (4 per year). Replacing 4 plastic toothbrushes per year eliminates 80g of plastic and 244g of CO₂e annually.",
+      "data_source": "Nature - British Dental Journal (BDJ) 2020 & Trinity College Dublin LCA Study",
+      "citation": "Lyne, A., et al. (2020). Combining life cycle assessment and circularity for a toothbrush. British Dental Journal, 229(10), 646–652. doi:10.1038/s41415-020-2270-3",
+      "unit_of_measurement": "toothbrushes replaced"
+    },
+    {
+      "id": "comb",
+      "category": "Personal Care",
+      "conventional_product": {
+        "name": "Conventional Plastic Hair Comb",
+        "material": "Injection-molded Polypropylene (PP) or Polystyrene (PS)",
+        "plastic_weight_grams": 36,
+        "lifecycle_emissions_kg_co2e": 0.095,
+        "is_reusable": true,
+        "expected_lifespan_days": 365,
+        "annual_usage_units_per_person": 1
+      },
+      "sustainable_product": {
+        "id": "prod_22",
+        "name": "Eco Saathi Medicinal Neem Wood Detangler Comb",
+        "handle": "medicinal-neem-wood-detangler-comb",
+        "material": "Seasoned pruned medicinal Azadirachta indica (Neem) timber",
+        "plastic_weight_grams": 0,
+        "lifecycle_emissions_kg_co2e": 0.018,
+        "is_reusable": true,
+        "expected_lifespan_days": 1095,
+        "annual_usage_units_per_person": 0.33,
+        "price_inr": 149,
+        "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80"
+      },
+      "impact_per_unit_replacement": {
+        "plastic_avoided_grams": 36,
+        "net_co2e_avoided_kg": 0.077,
+        "net_co2e_avoided_grams": 77,
+        "data_status": "verified"
+      },
+      "lifetime_assumptions": "A single durable, seasoned neem wood comb lasts 3+ years with simple natural oil conditioning, directly replacing an average of 3 brittle plastic combs that snap or shed microplastics into wastewater.",
+      "data_source": "PlasticsEurope Eco-profile (Polypropylene) & Indian Council of Forestry Research and Education (ICFRE)",
+      "citation": "PlasticsEurope (2021). Eco-profiles and Environmental Product Declarations of the European Plastics Industry - Polypropylene (PP); ICFRE Agroforestry Wood Carbon Assessment.",
+      "unit_of_measurement": "combs replaced"
+    },
+    {
+      "id": "shopping_bag",
+      "category": "Kitchen & Shopping",
+      "conventional_product": {
+        "name": "Single-Use Plastic Carry Bag",
+        "material": "Low-Density Polyethylene (LDPE) / High-Density Polyethylene (HDPE)",
+        "plastic_weight_grams": 8.5,
+        "lifecycle_emissions_kg_co2e": 0.033,
+        "is_reusable": false,
+        "expected_lifespan_days": 1,
+        "annual_usage_units_per_person": 250
+      },
+      "sustainable_product": {
+        "id": "prod_17",
+        "name": "Eco Saathi Heavy-Duty Reusable Jute Market Bag",
+        "handle": "heavy-duty-jute-grocery-bags-pack-of-3",
+        "material": "Natural golden jute fiber woven by coastal Odisha cooperatives",
+        "plastic_weight_grams": 0,
+        "lifecycle_emissions_kg_co2e": 0.0014,
+        "is_reusable": true,
+        "expected_lifespan_days": 730,
+        "annual_usage_units_per_person": 0.0033,
+        "price_inr": 399,
+        "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80"
+      },
+      "impact_per_unit_replacement": {
+        "plastic_avoided_grams": 8.5,
+        "net_co2e_avoided_kg": 0.0316,
+        "net_co2e_avoided_grams": 31.6,
+        "data_status": "verified"
+      },
+      "lifetime_assumptions": "A durable jute market tote has a lifespan of ~300 grocery shopping trips over 2 years. Its embodied manufacturing footprint (0.42 kg CO₂e) amortized over 300 uses equals only 0.0014 kg CO₂e per trip.",
+      "data_source": "UK Environment Agency Report SC030292 & US EPA WARM v15 Database",
+      "citation": "UK Environment Agency (2011). Life cycle assessment of supermarket carrier bags: a review of the bags available in 2006. Bristol; EPA Waste Reduction Model (WARM).",
+      "unit_of_measurement": "plastic bags avoided"
+    },
+    {
+      "id": "water_bottle",
+      "category": "Kitchen & Travel",
+      "conventional_product": {
+        "name": "Single-Use Plastic Bottled Water (500ml)",
+        "material": "Virgin Polyethylene Terephthalate (PET) body + HDPE cap",
+        "plastic_weight_grams": 19,
+        "lifecycle_emissions_kg_co2e": 0.0828,
+        "is_reusable": false,
+        "expected_lifespan_days": 1,
+        "annual_usage_units_per_person": 150
+      },
+      "sustainable_product": {
+        "id": "prod_06",
+        "name": "Eco Saathi Bamboo Insulated Flask Bottle (500ml)",
+        "handle": "bamboo-insulated-flask-bottle",
+        "material": "Double-walled food grade 304 stainless steel interior wrapped in natural polished bamboo shell",
+        "plastic_weight_grams": 0,
+        "lifecycle_emissions_kg_co2e": 0.0028,
+        "is_reusable": true,
+        "expected_lifespan_days": 1095,
+        "annual_usage_units_per_person": 0.001,
+        "price_inr": 899,
+        "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80"
+      },
+      "impact_per_unit_replacement": {
+        "plastic_avoided_grams": 19,
+        "net_co2e_avoided_kg": 0.08,
+        "net_co2e_avoided_grams": 80,
+        "data_status": "verified"
+      },
+      "lifetime_assumptions": "An insulated bamboo-steel bottle replaces approximately 1,000 single-use disposable PET water bottles across 3+ years of daily refills. Embodied flask footprint (2.8 kg CO₂e) amortized over 1,000 refills = 0.0028 kg CO₂e/use.",
+      "data_source": "Quantis & International Bottled Water Association (IBWA) 2018 LCA Study",
+      "citation": "Quantis & IBWA (2018). Life Cycle Assessment of the U.S. Bottled Water Industry; Gleick & Cooley (2009). Energy implications of bottled water. Environmental Research Letters.",
+      "unit_of_measurement": "single-use bottles avoided"
+    },
+    {
+      "id": "custom_unverified_sample",
+      "category": "Artisan Decor",
+      "conventional_product": {
+        "name": "Synthetic Acrylic Table Placemat",
+        "material": "Woven Polyvinyl Chloride (PVC) / Polyester yarn",
+        "plastic_weight_grams": null,
+        "lifecycle_emissions_kg_co2e": null,
+        "is_reusable": true,
+        "expected_lifespan_days": 365,
+        "annual_usage_units_per_person": null
+      },
+      "sustainable_product": {
+        "id": "prod_12",
+        "name": "Eco Saathi Sabai Grass Dining Table Placemats",
+        "handle": "sabai-grass-placemats-coasters-set",
+        "material": "Handwoven wild-harvested Sabai grass with azo-free mineral dyes",
+        "plastic_weight_grams": 0,
+        "lifecycle_emissions_kg_co2e": null,
+        "is_reusable": true,
+        "expected_lifespan_days": 1095,
+        "annual_usage_units_per_person": null,
+        "price_inr": 799,
+        "image": "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80"
+      },
+      "impact_per_unit_replacement": {
+        "plastic_avoided_grams": null,
+        "net_co2e_avoided_kg": null,
+        "net_co2e_avoided_grams": null,
+        "data_status": "Data not available"
+      },
+      "lifetime_assumptions": "Independent peer-reviewed life-cycle inventory data for wild-harvested Sabai grass weaving currently in review with Odisha State Agroforestry Board.",
+      "data_source": "Odisha State Handloom & Handicrafts Directorate (Pending certification)",
+      "citation": "Direct LCA certification pending publication. In accordance with Eco Saathi transparency standards, unverified metrics are labeled 'Data not available'.",
+      "unit_of_measurement": "sets replaced"
+    }
+  ]
+}
