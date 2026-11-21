@@ -1106,543 +1106,194 @@
     <!-- Populated by App.renderAccountScreen() -->
   </main>
 
-<main id="viewImpact" class="view-section flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 hidden">
-    <!-- Hero Header -->
-    <div class="text-center max-w-3xl mx-auto mb-10">
-      <div class="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-3">
-        <i class="fa-solid fa-leaf text-emerald-700"></i>
-        <span>Science-Backed Life Cycle Assessment (LCA)</span>
+<main id="viewImpact" class="view-section flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 hidden">
+    <!-- Header with short message -->
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <div class="inline-flex items-center space-x-2 bg-[#14532D]/10 text-[#14532D] border border-[#14532D]/20 text-xs font-bold px-3.5 py-1.5 rounded-full mb-3">
+        <i class="fa-solid fa-leaf text-[#4D9B59]"></i>
+        <span>Sustainability & Environmental Impact</span>
       </div>
-      <h1 class="font-serif text-3xl sm:text-5xl font-black text-stone-900 leading-tight">
-        Sustainability Impact Calculator & Dashboard
+      <h1 class="font-serif text-3xl sm:text-4xl font-extrabold text-[#1C1917] leading-tight">
+        Sustainability Calculator & Dashboard
       </h1>
-      <p class="text-stone-600 text-xs sm:text-sm mt-3 leading-relaxed">
-        Quantify the exact plastic waste diverted from landfills and net greenhouse gas emissions ($\text{CO}_2\text{e}$) prevented by choosing handcrafted Odisha alternatives over conventional fossil-fuel plastics.
+      <p class="text-[#4D9B59] font-bold text-sm sm:text-base mt-2">
+        "Small changes today, a greener tomorrow!"
+      </p>
+      <p class="text-stone-600 text-xs sm:text-sm mt-1">
+        Calculate how switching everyday plastic essentials to sustainable Odisha crafts helps protect our planet.
       </p>
     </div>
 
-    <!-- Navigation Pills for Sections -->
-    <div class="flex flex-wrap justify-center gap-2 mb-10 border-b border-stone-200 pb-4">
-      <button onclick="App.switchImpactTab('calculator')" id="impactTabBtn_calculator" class="px-5 py-2 rounded-2xl text-xs font-bold transition bg-emerald-800 text-white shadow-sm flex items-center space-x-1.5">
-        <i class="fa-solid fa-calculator"></i>
-        <span>Impact Calculator</span>
-      </button>
-      <button onclick="App.switchImpactTab('dashboard')" id="impactTabBtn_dashboard" class="px-5 py-2 rounded-2xl text-xs font-bold transition bg-stone-100 text-stone-700 hover:bg-stone-200 flex items-center space-x-1.5">
-        <i class="fa-solid fa-chart-pie"></i>
-        <span>Sustainability Dashboard</span>
-      </button>
-      <button onclick="App.switchImpactTab('matrix')" id="impactTabBtn_matrix" class="px-5 py-2 rounded-2xl text-xs font-bold transition bg-stone-100 text-stone-700 hover:bg-stone-200 flex items-center space-x-1.5">
-        <i class="fa-solid fa-table-list"></i>
-        <span>Product Impact Matrix</span>
-      </button>
-      <button onclick="App.switchImpactTab('methodology')" id="impactTabBtn_methodology" class="px-5 py-2 rounded-2xl text-xs font-bold transition bg-stone-100 text-stone-700 hover:bg-stone-200 flex items-center space-x-1.5">
-        <i class="fa-solid fa-book-open"></i>
-        <span>LCA Methodology & Citations</span>
-      </button>
-    </div>
-
-    <!-- TAB 1: INTERACTIVE CO2 & PLASTIC SAVING CALCULATOR -->
-    <div id="impactSection_calculator" class="space-y-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
-        <!-- Left: Product Comparison Selector & Quantity Input -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-6">
-            <div class="flex items-center justify-between pb-4 border-b border-stone-100">
-              <div>
-                <h3 class="text-base font-extrabold text-stone-900 flex items-center space-x-2">
-                  <span class="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center text-xs">1</span>
-                  <span>Select Product Comparison</span>
-                </h3>
-                <p class="text-xs text-stone-500 mt-0.5">Choose an everyday plastic item to see the verified Eco Saathi replacement</p>
-              </div>
-            </div>
-
-            <!-- Comparison Selector Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="impactComparisonCards">
-              <!-- Comparison 1: Toothbrush -->
-              <div onclick="App.selectImpactComparison('toothbrush', this)" class="comparison-card active p-4 rounded-2xl border-2 border-emerald-800 bg-emerald-50/50 cursor-pointer transition flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-xl bg-white border border-stone-200 overflow-hidden flex-shrink-0">
-                  <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=200&q=80" alt="Bamboo Toothbrush" class="w-full h-full object-cover" />
-                </div>
-                <div class="flex-1 min-w-0">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">Oral Care</span>
-                  <div class="text-xs font-bold text-stone-900 truncate">Plastic Toothbrush → Bamboo</div>
-                  <div class="text-[11px] text-stone-500">20g plastic / brush</div>
-                </div>
-              </div>
-
-              <!-- Comparison 2: Comb -->
-              <div onclick="App.selectImpactComparison('comb', this)" class="comparison-card p-4 rounded-2xl border-2 border-stone-200 hover:border-emerald-600 bg-white cursor-pointer transition flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-xl bg-white border border-stone-200 overflow-hidden flex-shrink-0">
-                  <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=200&q=80" alt="Neem Wood Comb" class="w-full h-full object-cover" />
-                </div>
-                <div class="flex-1 min-w-0">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">Personal Care</span>
-                  <div class="text-xs font-bold text-stone-900 truncate">Plastic Comb → Neem Wood</div>
-                  <div class="text-[11px] text-stone-500">36g plastic / comb</div>
-                </div>
-              </div>
-
-              <!-- Comparison 3: Shopping Bag -->
-              <div onclick="App.selectImpactComparison('shopping_bag', this)" class="comparison-card p-4 rounded-2xl border-2 border-stone-200 hover:border-emerald-600 bg-white cursor-pointer transition flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-xl bg-white border border-stone-200 overflow-hidden flex-shrink-0">
-                  <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=200&q=80" alt="Jute Bag" class="w-full h-full object-cover" />
-                </div>
-                <div class="flex-1 min-w-0">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">Kitchen & Daily</span>
-                  <div class="text-xs font-bold text-stone-900 truncate">Plastic Poly Bag → Jute Tote</div>
-                  <div class="text-[11px] text-stone-500">8.5g plastic / bag</div>
-                </div>
-              </div>
-
-              <!-- Comparison 4: Water Bottle -->
-              <div onclick="App.selectImpactComparison('water_bottle', this)" class="comparison-card p-4 rounded-2xl border-2 border-stone-200 hover:border-emerald-600 bg-white cursor-pointer transition flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-xl bg-white border border-stone-200 overflow-hidden flex-shrink-0">
-                  <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=200&q=80" alt="Bamboo Bottle" class="w-full h-full object-cover" />
-                </div>
-                <div class="flex-1 min-w-0">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">Hydration</span>
-                  <div class="text-xs font-bold text-stone-900 truncate">PET Bottle → Bamboo Flask</div>
-                  <div class="text-[11px] text-stone-500">19g plastic / bottle</div>
-                </div>
-              </div>
-
-              <!-- Comparison 5: Unverified Sample (Data not available demo) -->
-              <div onclick="App.selectImpactComparison('custom_unverified_sample', this)" class="comparison-card sm:col-span-2 p-3 rounded-2xl border border-dashed border-stone-300 hover:border-stone-400 bg-stone-50/60 cursor-pointer transition flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-stone-200 text-stone-500 flex items-center justify-center text-sm flex-shrink-0">
-                  <i class="fa-solid fa-circle-question"></i>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-center space-x-2">
-                    <span class="text-xs font-bold text-stone-800">Synthetic Acrylic Mat → Sabai Placemats</span>
-                    <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Pending Certification</span>
-                  </div>
-                  <p class="text-[11px] text-stone-500">Test non-fabricated fallback: displays "Data not available" instead of inventing figures.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 2: Quantity & Usage Controls -->
-            <div class="pt-6 border-t border-stone-100 space-y-5">
-              <div class="flex items-center justify-between">
-                <div>
-                  <h3 class="text-base font-extrabold text-stone-900 flex items-center space-x-2">
-                    <span class="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center text-xs">2</span>
-                    <span>Set Number of Items Replaced</span>
-                  </h3>
-                  <p class="text-xs text-stone-500 mt-0.5">Adjust slider or type the total conventional items you plan to replace</p>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <input
-                    id="calcQuantityInput"
-                    type="number"
-                    min="1"
-                    max="1000"
-                    value="4"
-                    oninput="App.onQuantityInput(this.value)"
-                    class="w-20 text-center font-extrabold text-sm text-emerald-950 bg-stone-50 border border-stone-300 rounded-xl p-2 focus:ring-2 focus:ring-emerald-700"
-                  />
-                  <span id="calcUnitLabel" class="text-xs font-semibold text-stone-600">brushes</span>
-                </div>
-              </div>
-
-              <!-- Interactive Range Slider -->
-              <div>
-                <input
-                  id="calcQuantitySlider"
-                  type="range"
-                  min="1"
-                  max="500"
-                  value="4"
-                  oninput="App.onQuantitySlider(this.value)"
-                  class="slider-eco"
-                />
-                <div class="flex justify-between text-[11px] text-stone-400 mt-1 font-medium">
-                  <span>1 item</span>
-                  <span>100 items</span>
-                  <span>250 items</span>
-                  <span>500 items</span>
-                </div>
-              </div>
-
-              <!-- Quick Presets -->
-              <div class="flex flex-wrap items-center gap-2 pt-2">
-                <span class="text-xs font-bold text-stone-500 mr-1">Quick Presets:</span>
-                <button type="button" onclick="App.applyCalcPreset(1)" class="preset-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-stone-100 hover:bg-emerald-100 hover:text-emerald-900 transition">Single (1)</button>
-                <button type="button" onclick="App.applyCalcPreset(4)" class="preset-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-stone-100 hover:bg-emerald-100 hover:text-emerald-900 transition">1 Person / 1 Year</button>
-                <button type="button" onclick="App.applyCalcPreset(16)" class="preset-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-stone-100 hover:bg-emerald-100 hover:text-emerald-900 transition">Family of 4 / 1 Year</button>
-                <button type="button" onclick="App.applyCalcPreset(100)" class="preset-btn px-3 py-1.5 text-xs font-semibold rounded-xl bg-stone-100 hover:bg-emerald-100 hover:text-emerald-900 transition">100 Items</button>
-              </div>
-
-              <!-- Household Multiplier -->
-              <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
-                <div>
-                  <label class="text-xs font-bold text-stone-800">Household Members Multiplier:</label>
-                  <p class="text-[11px] text-stone-500">Calculate total environmental savings for your entire family</p>
-                </div>
-                <div class="flex space-x-1.5" id="householdSizeButtons">
-                  <button type="button" onclick="App.setHouseholdSize(1, this)" class="hh-btn px-3 py-1 rounded-xl text-xs font-bold bg-emerald-800 text-white">1x</button>
-                  <button type="button" onclick="App.setHouseholdSize(2, this)" class="hh-btn px-3 py-1 rounded-xl text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200">2x</button>
-                  <button type="button" onclick="App.setHouseholdSize(4, this)" class="hh-btn px-3 py-1 rounded-xl text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200">4x</button>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="space-y-10">
+      <!-- 1. SIMPLE CO2 CALCULATOR -->
+      <section class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm">
+        <div class="border-b border-stone-100 pb-4 mb-6">
+          <h2 class="text-xl font-bold text-[#14532D] flex items-center space-x-2">
+            <i class="fa-solid fa-calculator text-[#4D9B59]"></i>
+            <span>Simple CO₂ & Plastic Calculator</span>
+          </h2>
+          <p class="text-xs text-stone-500 mt-1">Choose a plastic product, pick its sustainable alternative, and calculate the savings.</p>
         </div>
 
-        <!-- Right: Real-time Live Calculation Results Card -->
-        <div class="lg:col-span-5 space-y-6">
-          <div class="bg-gradient-to-br from-white via-emerald-50/30 to-stone-50 rounded-3xl p-6 sm:p-8 border border-emerald-200 shadow-lg space-y-6 sticky top-24">
-            <div class="flex items-center justify-between pb-3 border-b border-emerald-100">
-              <span class="badge-eco text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full">Environmental Savings</span>
-              <span id="calcDataStatusBadge" class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center space-x-1">
-                <i class="fa-solid fa-circle-check text-[9px]"></i>
-                <span>Verified LCA Data</span>
-              </span>
-            </div>
-
-            <!-- Normal Results Container -->
-            <div id="calcResultsNormal" class="space-y-5">
-              <!-- Result 1: Plastic Avoided -->
-              <div class="bg-white p-5 rounded-2xl border border-emerald-100 shadow-sm">
-                <div class="flex items-center justify-between text-xs text-stone-500 mb-1">
-                  <span class="font-bold uppercase tracking-wider text-emerald-950 flex items-center space-x-1.5">
-                    <i class="fa-solid fa-shield-virus text-emerald-700"></i>
-                    <span>Plastic Avoided</span>
-                  </span>
-                  <span id="calcPlasticEqLabel" class="text-[11px] text-stone-400">Formula: Weight × Items</span>
-                </div>
-                <div class="flex items-baseline space-x-2">
-                  <span id="calcPlasticMain" class="text-3xl sm:text-4xl font-black text-emerald-950">80</span>
-                  <span id="calcPlasticUnit" class="text-sm font-bold text-stone-600">grams (0.08 kg)</span>
-                </div>
-                <div id="calcPlasticFormula" class="mt-2 text-[11px] text-stone-600 bg-stone-50 p-2 rounded-lg border border-stone-200 font-mono">
-                  20.0g plastic/item × 4 replacements = 80.0g plastic avoided
-                </div>
-              </div>
-
-              <!-- Result 2: Net CO2e Avoided -->
-              <div class="bg-white p-5 rounded-2xl border border-emerald-100 shadow-sm">
-                <div class="flex items-center justify-between text-xs text-stone-500 mb-1">
-                  <span class="font-bold uppercase tracking-wider text-emerald-950 flex items-center space-x-1.5">
-                    <i class="fa-solid fa-cloud-arrow-down text-emerald-700"></i>
-                    <span>Estimated Net CO₂e Avoided</span>
-                  </span>
-                  <span class="text-[11px] text-stone-400">Lifecycle differential</span>
-                </div>
-                <div class="flex items-baseline space-x-2">
-                  <span id="calcCo2Main" class="text-3xl sm:text-4xl font-black text-emerald-950">0.244</span>
-                  <span id="calcCo2Unit" class="text-sm font-bold text-stone-600">kg CO₂e (244 g)</span>
-                </div>
-                <div id="calcCo2Formula" class="mt-2 text-[11px] text-stone-600 bg-stone-50 p-2 rounded-lg border border-stone-200 font-mono">
-                  (0.088 kg - 0.027 kg) × 4 replacements = 0.244 kg net CO₂e avoided
-                </div>
-              </div>
-
-              <!-- Tangible Equivalencies -->
-              <div class="bg-emerald-900 text-white p-5 rounded-2xl space-y-3 shadow-inner">
-                <h4 class="text-xs font-bold uppercase tracking-wider text-amber-300 flex items-center space-x-1.5">
-                  <i class="fa-solid fa-earth-americas"></i>
-                  <span>Real-World Environmental Equivalents</span>
-                </h4>
-                <div class="grid grid-cols-3 gap-2 text-center text-xs">
-                  <div class="p-2 bg-emerald-800/80 rounded-xl border border-emerald-700/60">
-                    <div id="calcEqDriving" class="text-lg font-black text-white">1.3 km</div>
-                    <div class="text-[10px] text-emerald-200 mt-0.5 leading-tight">Car Driving Avoided</div>
-                  </div>
-                  <div class="p-2 bg-emerald-800/80 rounded-xl border border-emerald-700/60">
-                    <div id="calcEqTree" class="text-lg font-black text-white">4.1 days</div>
-                    <div class="text-[10px] text-emerald-200 mt-0.5 leading-tight">Tree Carbon Absorption</div>
-                  </div>
-                  <div class="p-2 bg-emerald-800/80 rounded-xl border border-emerald-700/60">
-                    <div id="calcEqBottles" class="text-lg font-black text-white">4.2</div>
-                    <div class="text-[10px] text-emerald-200 mt-0.5 leading-tight">PET Bottles Equiv. Diverted</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Verified Data Source Citation -->
-              <div class="p-3 bg-stone-100 rounded-xl border border-stone-200 text-xs space-y-1">
-                <div class="font-bold text-stone-900 flex items-center space-x-1.5">
-                  <i class="fa-solid fa-quote-left text-emerald-700"></i>
-                  <span id="calcCitationSource">Source: Nature British Dental Journal (BDJ) 2020</span>
-                </div>
-                <p id="calcCitationText" class="text-[11px] text-stone-500 italic leading-snug">
-                  Lyne, A., et al. (2020). Combining life cycle assessment and circularity for a toothbrush. BDJ 229, 646–652.
-                </p>
-              </div>
-
-              <!-- CTA to Buy Sustainable Alternative -->
-              <div class="pt-2">
-                <button
-                  id="calcAddToCartBtn"
-                  onclick="App.addCalculatedProductToCart()"
-                  class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-xl flex items-center justify-center space-x-2 transition"
-                >
-                  <i class="fa-solid fa-bag-shopping text-sm text-amber-300"></i>
-                  <span id="calcAddToCartBtnLabel">Switch to Bamboo Toothbrush (₹99)</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- "Data not available" Fallback Container (Displayed when unverified product is picked) -->
-            <div id="calcResultsUnavailable" class="hidden py-8 px-4 text-center space-y-4">
-              <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center mx-auto text-2xl">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-              </div>
-              <div>
-                <h4 class="text-base font-extrabold text-stone-900">Data not available</h4>
-                <p class="text-xs text-stone-600 mt-2 leading-relaxed">
-                  Independent peer-reviewed life-cycle inventory data for this natural artisan craft is currently in evaluation with state agroforestry authorities.
-                </p>
-                <div class="mt-4 p-3 bg-stone-100 rounded-xl text-left text-[11px] text-stone-500">
-                  <strong>Eco Saathi Transparency Policy:</strong> We do not fabricate environmental savings or lifecycle emission numbers when empirical testing is incomplete.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Cumulative Multi-Product Household Blueprint Studio -->
-      <div class="bg-gradient-to-r from-emerald-950 via-emerald-900 to-teal-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl">
-        <div class="max-w-3xl mb-8">
-          <span class="bg-amber-400 text-stone-950 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full">Annual Household Footprint</span>
-          <h3 class="font-serif text-2xl sm:text-3xl font-bold mt-2">The Complete Eco Saathi 1-Year Household Transition</h3>
-          <p class="text-emerald-200 text-xs sm:text-sm mt-1">What happens if a typical Indian household replaces toothbrushes, hair combs, shopping bags, and travel bottles with natural Odisha crafts for one full year?</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <div class="bg-emerald-900/80 p-4 rounded-2xl border border-emerald-700/50">
-            <div class="text-xs text-emerald-300 font-semibold">Plastic Diverted / Year</div>
-            <div class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">5,046 g</div>
-            <div class="text-[11px] text-emerald-200 mt-1">5.05 kg of non-biodegradable polymers</div>
-          </div>
-          <div class="bg-emerald-900/80 p-4 rounded-2xl border border-emerald-700/50">
-            <div class="text-xs text-emerald-300 font-semibold">Net CO₂e Avoided / Year</div>
-            <div class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">20.5 kg</div>
-            <div class="text-[11px] text-emerald-200 mt-1">Equivalent to 107 km of car driving</div>
-          </div>
-          <div class="bg-emerald-900/80 p-4 rounded-2xl border border-emerald-700/50">
-            <div class="text-xs text-emerald-300 font-semibold">Plastic Bottles Equivalent</div>
-            <div class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">265 bottles</div>
-            <div class="text-[11px] text-emerald-200 mt-1">Kept out of riverways & landfills</div>
-          </div>
-          <div class="bg-emerald-900/80 p-4 rounded-2xl border border-emerald-700/50">
-            <div class="text-xs text-emerald-300 font-semibold">Artisan Fair Wages</div>
-            <div class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">18 hours</div>
-            <div class="text-[11px] text-emerald-200 mt-1">Direct support to rural Odisha SHGs</div>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-emerald-800">
-          <div class="text-xs text-emerald-200">
-            Bundle all 4 sustainable essentials into a curated starter kit with single-click checkout.
-          </div>
-          <a href="#bundle" class="bg-amber-400 hover:bg-amber-500 text-stone-950 font-extrabold px-6 py-3 rounded-xl text-xs transition shadow-lg flex items-center space-x-1.5">
-            <span>Build Your Sustainable Kit</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 2: SUSTAINABILITY DASHBOARD & INTERACTIVE CHARTS -->
-    <div id="impactSection_dashboard" class="space-y-10 hidden">
-      <!-- 4 Grand Metric Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <div class="impact-metric-card p-6 rounded-3xl shadow-sm">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg mb-3">
-            <i class="fa-solid fa-recycle"></i>
-          </div>
-          <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Total Plastic Avoided</div>
-          <div id="dashTotalPlastic" class="text-2xl sm:text-3xl font-black text-emerald-950 mt-1">3,180 kg</div>
-          <div class="text-[11px] text-emerald-700 font-medium mt-1">↑ Combined orders & verified baseline</div>
-        </div>
-
-        <div class="impact-metric-card p-6 rounded-3xl shadow-sm">
-          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg mb-3">
-            <i class="fa-solid fa-cloud"></i>
-          </div>
-          <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Estimated CO₂e Avoided</div>
-          <div id="dashTotalCo2" class="text-2xl sm:text-3xl font-black text-emerald-950 mt-1">12.5 tons</div>
-          <div class="text-[11px] text-emerald-700 font-medium mt-1">12,450 kg net greenhouse emissions offset</div>
-        </div>
-
-        <div class="impact-metric-card p-6 rounded-3xl shadow-sm">
-          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-3">
-            <i class="fa-solid fa-box-open"></i>
-          </div>
-          <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Product Replacements</div>
-          <div id="dashTotalReplacements" class="text-2xl sm:text-3xl font-black text-stone-900 mt-1">42,850+</div>
-          <div class="text-[11px] text-stone-500 font-medium mt-1">Single-use plastic items substituted</div>
-        </div>
-
-        <div class="impact-metric-card p-6 rounded-3xl shadow-sm">
-          <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center text-lg mb-3">
-            <i class="fa-solid fa-tree"></i>
-          </div>
-          <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Tree Absorption Equiv.</div>
-          <div id="dashTreeEquivalent" class="text-2xl sm:text-3xl font-black text-stone-900 mt-1">572 trees</div>
-          <div class="text-[11px] text-teal-700 font-medium mt-1">Carbon sequestered for 10 full years</div>
-        </div>
-      </div>
-
-      <!-- Interactive Chart.js Visualizations -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <!-- Chart 1: Plastic Avoidance by Category (Doughnut) -->
-        <div class="lg:col-span-5 chart-card p-6 sm:p-7 flex flex-col justify-between">
+        <!-- Inputs: 1. Plastic product, 2. Sustainable alternative, 3. Quantity replaced -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 items-end">
+          <!-- Input 1 -->
           <div>
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-sm font-extrabold text-stone-900">Plastic Diverted by Category</h3>
-              <span class="badge-eco text-[10px] font-bold px-2 py-0.5 rounded-full">Share of Weight</span>
+            <label for="simplePlasticSelect" class="block text-xs font-bold text-[#1C1917] mb-2">
+              1. Select a plastic product
+            </label>
+            <select id="simplePlasticSelect" onchange="App.onSimplePlasticChange()" class="w-full bg-[#F7F7ED] border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#1C1917] font-medium focus:ring-2 focus:ring-[#14532D] focus:outline-none transition">
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+
+          <!-- Input 2 -->
+          <div>
+            <label for="simpleSustainableSelect" class="block text-xs font-bold text-[#1C1917] mb-2">
+              2. Select its sustainable alternative
+            </label>
+            <select id="simpleSustainableSelect" onchange="App.onSimpleSustainableChange()" class="w-full bg-[#F7F7ED] border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#1C1917] font-medium focus:ring-2 focus:ring-[#14532D] focus:outline-none transition">
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+
+          <!-- Input 3 -->
+          <div>
+            <label for="simpleQuantityInput" class="block text-xs font-bold text-[#1C1917] mb-2">
+              3. Enter number of products replaced
+            </label>
+            <div class="relative">
+              <input type="number" id="simpleQuantityInput" min="1" max="10000" value="4" class="w-full bg-[#F7F7ED] border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-[#1C1917] font-bold focus:ring-2 focus:ring-[#14532D] focus:outline-none transition" />
+              <span class="absolute right-3 top-2.5 text-xs text-stone-400 font-medium">units</span>
             </div>
-            <p class="text-xs text-stone-500 mb-4">Proportion of plastic waste prevented across oral care, bags, bottles and personal grooming.</p>
-          </div>
-          <div class="relative h-64 sm:h-72 flex items-center justify-center">
-            <canvas id="chartCategoryDoughnut"></canvas>
-          </div>
-          <div class="pt-4 border-t border-stone-100 text-[11px] text-stone-500 text-center">
-            Highest plastic volume savings achieved via reusable Jute grocery totes & insulated flasks.
           </div>
         </div>
 
-        <!-- Chart 2: Lifecycle Emissions Comparison (Bar Chart) -->
-        <div class="lg:col-span-7 chart-card p-6 sm:p-7 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-sm font-extrabold text-stone-900">Lifecycle Carbon Footprint: Conventional vs. Eco Saathi</h3>
-              <span class="bg-stone-100 text-stone-700 text-[10px] font-bold px-2 py-0.5 rounded-full">kg CO₂e per unit</span>
+        <!-- Input 4: Calculate Button -->
+        <div class="mt-6 flex justify-end">
+          <button id="simpleCalcBtn" onclick="App.runSimpleCalculation()" class="w-full sm:w-auto bg-[#14532D] hover:bg-[#4D9B59] text-white font-bold px-8 py-3 rounded-xl text-sm transition shadow-md flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-calculator"></i>
+            <span>Calculate</span>
+          </button>
+        </div>
+
+        <!-- Calculation Results: Display ONLY Plastic saved & Estimated CO2e reduced -->
+        <div id="simpleCalcResultWrapper" class="mt-8 pt-6 border-t border-stone-100">
+          <div id="simpleCalcResultSuccess" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Metric 1: Plastic Saved -->
+            <div class="bg-[#F7F7ED] p-5 rounded-2xl border border-stone-200">
+              <div class="text-xs font-bold uppercase tracking-wider text-[#14532D] flex items-center space-x-1.5 mb-1">
+                <i class="fa-solid fa-recycle text-[#4D9B59]"></i>
+                <span>Plastic Saved</span>
+              </div>
+              <div class="flex items-baseline space-x-2">
+                <span id="simplePlasticSavedValue" class="text-3xl font-extrabold text-[#14532D]">80</span>
+                <span id="simplePlasticSavedUnit" class="text-sm font-semibold text-stone-600">grams (0.08 kg)</span>
+              </div>
+              <p class="text-[11px] text-stone-500 mt-1">Single-use fossil plastic diverted from landfills and waterways</p>
             </div>
-            <p class="text-xs text-stone-500 mb-4">Comparing cradle-to-grave emissions of conventional plastic items against handcrafted sustainable counterparts.</p>
+
+            <!-- Metric 2: Estimated CO2e Reduced -->
+            <div class="bg-[#F7F7ED] p-5 rounded-2xl border border-stone-200">
+              <div class="text-xs font-bold uppercase tracking-wider text-[#14532D] flex items-center space-x-1.5 mb-1">
+                <i class="fa-solid fa-cloud-arrow-down text-[#4D9B59]"></i>
+                <span>Estimated CO₂e Reduced</span>
+              </div>
+              <div class="flex items-baseline space-x-2">
+                <span id="simpleCo2SavedValue" class="text-3xl font-extrabold text-[#14532D]">0.244</span>
+                <span id="simpleCo2SavedUnit" class="text-sm font-semibold text-stone-600">kg CO₂e</span>
+              </div>
+              <p class="text-[11px] text-stone-500 mt-1">Net greenhouse gas emissions prevented across product lifecycle</p>
+            </div>
+          </div>
+
+          <!-- Fallback when data is unverified / unavailable -->
+          <div id="simpleCalcResultUnavailable" class="hidden bg-amber-50 p-5 rounded-2xl border border-amber-200 text-center">
+            <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-100 text-amber-800 mb-2">
+              <i class="fa-solid fa-circle-exclamation text-lg"></i>
+            </div>
+            <h4 class="text-sm font-bold text-amber-900">Estimate Cannot Be Calculated Yet</h4>
+            <p class="text-xs text-amber-800 mt-1 max-w-lg mx-auto">
+              Verified life-cycle assessment (LCA) data for this handcrafted item is currently in evaluation. Eco Saathi strictly uses verified scientific data and does not invent environmental savings.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. SIMPLE DASHBOARD -->
+      <section class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-100 pb-4">
+          <div>
+            <h2 class="text-xl font-bold text-[#14532D] flex items-center space-x-2">
+              <i class="fa-solid fa-chart-pie text-[#4D9B59]"></i>
+              <span>Sustainability Dashboard</span>
+            </h2>
+            <p class="text-xs text-stone-500 mt-1">Community-wide impact achieved by transitioning to sustainable living.</p>
+          </div>
+          <span class="inline-block bg-[#F7F7ED] text-[#14532D] text-xs font-bold px-3 py-1.5 rounded-full border border-stone-200">
+            "Small changes today, a greener tomorrow!"
+          </span>
+        </div>
+
+        <!-- Four Summary Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Card 1: Total Plastic Saved -->
+          <div class="bg-[#F7F7ED] p-5 rounded-2xl border border-stone-200">
+            <div class="w-9 h-9 rounded-xl bg-white text-[#14532D] flex items-center justify-center text-base mb-3 shadow-xs">
+              <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Total Plastic Saved</div>
+            <div id="simpleDashPlastic" class="text-2xl font-black text-[#14532D] mt-1">3,180 kg</div>
+            <div class="text-[11px] text-[#4D9B59] font-medium mt-1">Diverted from rivers & oceans</div>
+          </div>
+
+          <!-- Card 2: Total CO2e Reduced -->
+          <div class="bg-[#F7F7ED] p-5 rounded-2xl border border-stone-200">
+            <div class="w-9 h-9 rounded-xl bg-white text-[#14532D] flex items-center justify-center text-base mb-3 shadow-xs">
+              <i class="fa-solid fa-smog"></i>
+            </div>
+            <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Total CO₂e Reduced</div>
+            <div id="simpleDashCo2" class="text-2xl font-black text-[#14532D] mt-1">12.5 tons</div>
+            <div class="text-[11px] text-[#4D9B59] font-medium mt-1">Net greenhouse emissions avoided</div>
+          </div>
+
+          <!-- Card 3: Sustainable Products Replaced -->
+          <div class="bg-[#F7F7ED] p-5 rounded-2xl border border-stone-200">
+            <div class="w-9 h-9 rounded-xl bg-white text-[#14532D] flex items-center justify-center text-base mb-3 shadow-xs">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Sustainable Products Replaced</div>
+            <div id="simpleDashReplacements" class="text-2xl font-black text-[#1C1917] mt-1">42,850+</div>
+            <div class="text-[11px] text-stone-500 font-medium mt-1">Single-use plastic items substituted</div>
+          </div>
+
+          <!-- Card 4: Environmental Impact -->
+          <div class="bg-[#F7F7ED] p-5 rounded-2xl border border-stone-200">
+            <div class="w-9 h-9 rounded-xl bg-white text-[#14532D] flex items-center justify-center text-base mb-3 shadow-xs">
+              <i class="fa-solid fa-tree"></i>
+            </div>
+            <div class="text-xs font-bold text-stone-500 uppercase tracking-wider">Environmental Impact</div>
+            <div id="simpleDashImpact" class="text-2xl font-black text-[#1C1917] mt-1">572 Trees</div>
+            <div class="text-[11px] text-[#4D9B59] font-medium mt-1">Equivalent carbon sequestered</div>
+          </div>
+        </div>
+
+        <!-- One Simple Chart -->
+        <div class="bg-[#F7F7ED] p-5 sm:p-6 rounded-2xl border border-stone-200">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-sm font-bold text-[#1C1917]">Plastic Prevented by Material Category</h3>
+              <p class="text-xs text-stone-500">Breakdown of plastic waste prevented (kg) across key sustainable material crafts.</p>
+            </div>
+            <span class="text-[11px] font-semibold text-[#14532D] bg-[#14532D]/10 px-2.5 py-1 rounded-full">
+              Plastic Saved (kg)
+            </span>
           </div>
           <div class="relative h-64 sm:h-72">
-            <canvas id="chartLifecycleBar"></canvas>
-          </div>
-          <div class="pt-4 border-t border-stone-100 text-[11px] text-stone-500 text-center">
-            Odisha artisan products reduce lifecycle emissions by 68% to 95% per equivalent use.
+            <canvas id="simpleImpactChart"></canvas>
           </div>
         </div>
-
-        <!-- Chart 3: Monthly Cumulative Trajectory (Area / Line Chart) -->
-        <div class="lg:col-span-12 chart-card p-6 sm:p-7">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-2">
-            <div>
-              <h3 class="text-sm font-extrabold text-stone-900">Cumulative Sustainability Growth Trajectory (Monthly)</h3>
-              <p class="text-xs text-stone-500">Track cumulative kg of plastic prevented and kg of CO₂e offset over recent months.</p>
-            </div>
-            <div class="flex items-center space-x-2">
-              <span class="inline-block w-3 h-3 rounded-full bg-emerald-700"></span>
-              <span class="text-xs text-stone-600 font-semibold mr-3">Plastic Avoided (kg)</span>
-              <span class="inline-block w-3 h-3 rounded-full bg-teal-500"></span>
-              <span class="text-xs text-stone-600 font-semibold">CO₂e Offset (kg)</span>
-            </div>
-          </div>
-          <div class="relative h-72 sm:h-80">
-            <canvas id="chartMonthlyTrajectory"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 3: PRODUCT-WISE ENVIRONMENTAL IMPACT MATRIX -->
-    <div id="impactSection_matrix" class="space-y-6 hidden">
-      <div class="bg-white rounded-3xl border border-stone-200 shadow-sm overflow-hidden">
-        <div class="p-6 border-b border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <h3 class="text-base font-extrabold text-stone-900">Product-Wise Environmental Impact Matrix</h3>
-            <p class="text-xs text-stone-500 mt-0.5">Empirical plastic weight, lifecycle emission factors and verified citations for every product pair</p>
-          </div>
-          <span class="badge-eco text-xs font-bold px-3 py-1 rounded-full uppercase">ISO 14040/14044 Aligned</span>
-        </div>
-
-        <div class="overflow-x-auto">
-          <table class="w-full text-xs text-left">
-            <thead class="bg-stone-50 text-stone-600 font-bold border-b border-stone-200">
-              <tr>
-                <th class="py-3.5 px-4">Eco Saathi Sustainable Item</th>
-                <th class="py-3.5 px-4">Conventional Plastic Item</th>
-                <th class="py-3.5 px-4">Plastic Weight</th>
-                <th class="py-3.5 px-4">Conventional CO₂e</th>
-                <th class="py-3.5 px-4">Sustainable CO₂e</th>
-                <th class="py-3.5 px-4">Net CO₂e Saved</th>
-                <th class="py-3.5 px-4">Assumptions & Lifespan</th>
-                <th class="py-3.5 px-4">Verified Data Source</th>
-              </tr>
-            </thead>
-            <tbody id="impactMatrixTbody" class="divide-y divide-stone-100">
-              <!-- Populated by App.renderImpactMatrix() -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 4: LCA METHODOLOGY & CITATIONS -->
-    <div id="impactSection_methodology" class="space-y-6 hidden">
-      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-stone-200 shadow-sm space-y-6">
-        <div class="border-b border-stone-100 pb-4">
-          <span class="badge-craft text-xs font-bold px-3 py-1 rounded-full uppercase">Methodology & Transparency</span>
-          <h3 class="text-xl font-extrabold text-stone-900 mt-2">Life Cycle Assessment (LCA) Framework & Formulas</h3>
-          <p class="text-xs text-stone-500 mt-1">Our methodology strictly follows scientific environmental standards to avoid misleading greenwashing claims.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-stone-700 leading-relaxed">
-          <div class="p-5 bg-stone-50 rounded-2xl border border-stone-200 space-y-2">
-            <h4 class="font-extrabold text-emerald-950 text-sm flex items-center space-x-2">
-              <i class="fa-solid fa-calculator text-emerald-700"></i>
-              <span>1. Plastic Avoided Formula</span>
-            </h4>
-            <div class="bg-white p-3 rounded-xl border border-stone-200 font-mono text-[11px] text-emerald-900 font-bold">
-              $\text{Plastic Avoided (g)} = \text{Plastic weight per conventional item (g)} \times \text{Replacements}$
-            </div>
-            <p class="text-stone-600">Calculates the total mass of virgin petrochemical resin (PP, PS, LDPE, PET) prevented from entering waste streams, municipal incinerators, or marine environments.</p>
-          </div>
-
-          <div class="p-5 bg-stone-50 rounded-2xl border border-stone-200 space-y-2">
-            <h4 class="font-extrabold text-emerald-950 text-sm flex items-center space-x-2">
-              <i class="fa-solid fa-calculator text-emerald-700"></i>
-              <span>2. Estimated Net CO₂e Avoided Formula</span>
-            </h4>
-            <div class="bg-white p-3 rounded-xl border border-stone-200 font-mono text-[11px] text-emerald-900 font-bold">
-              $\text{Net CO}_2\text{e Avoided (kg)} = (E_{\text{conv}} - E_{\text{sust}}) \times \text{Equivalent Replacements}$
-            </div>
-            <p class="text-stone-600">Where $E_{\text{conv}}$ is the cradle-to-grave lifecycle emissions factor of the conventional plastic item, and $E_{\text{sust}}$ is the lifecycle emissions of the sustainable alternative amortized over its expected useful service life.</p>
-          </div>
-        </div>
-
-        <!-- Literature Citations List -->
-        <div class="pt-4 border-t border-stone-100 space-y-4">
-          <h4 class="font-extrabold text-stone-900 text-sm">Key Scientific Sources & Literature Citations</h4>
-          <div class="space-y-3 text-xs text-stone-600">
-            <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
-              <strong class="text-stone-900">1. Toothbrush LCA Study:</strong> Lyne, A., Ashley, P., Saget, S., et al. (2020). <em>Combining life cycle assessment and circularity for a toothbrush.</em> Nature - British Dental Journal, 229, 646–652.
-            </div>
-            <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
-              <strong class="text-stone-900">2. Polypropylene (PP) Eco-Profiles:</strong> PlasticsEurope (2021). <em>Eco-profiles and Environmental Product Declarations of the European Plastics Industry for Polypropylene.</em> Brussels, Belgium.
-            </div>
-            <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
-              <strong class="text-stone-900">3. Supermarket Carrier Bags LCA:</strong> UK Environment Agency (2011). <em>Life cycle assessment of supermarket carrier bags: a review of the bags available in 2006.</em> Report SC030292.
-            </div>
-            <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
-              <strong class="text-stone-900">4. Bottled Water Lifecycle Analysis:</strong> Quantis & International Bottled Water Association (2018). <em>Life Cycle Assessment of the U.S. Bottled Water Industry;</em> Gleick, P. H. & Cooley, H. S. (2009). <em>Energy implications of bottled water.</em> Environmental Research Letters, 4(1).
-            </div>
-          </div>
-        </div>
-
-        <!-- Missing Data Notice -->
-        <div class="p-4 bg-amber-50 rounded-2xl border border-amber-200 text-xs text-amber-900 space-y-1">
-          <div class="font-extrabold flex items-center space-x-1.5">
-            <i class="fa-solid fa-triangle-exclamation text-amber-700"></i>
-            <span>Policy on Missing or Uncertified Company Data</span>
-          </div>
-          <p class="leading-relaxed">
-            Where direct empirical factory emission audits are unavailable for traditional Odisha tribal crafts (such as Mayurbhanj Sabai grass or Kendrapara coir products), Eco Saathi displays <strong>"Data not available"</strong> rather than estimating unverified numbers. We are currently collaborating with state agroforestry researchers to certify these regional crafts.
-          </p>
-        </div>
-      </div>
+      </section>
     </div>
   </main>
 
