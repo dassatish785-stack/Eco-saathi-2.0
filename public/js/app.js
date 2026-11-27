@@ -1948,23 +1948,32 @@ const App = {
           label: 'Plastic Prevented (kg)',
           data: [1350, 840, 690, 300],
           backgroundColor: ['#14532D', '#4D9B59', '#A8C5A0', '#2D6A4F'],
-          borderRadius: 10,
-          borderSkipped: false
+          hoverBackgroundColor: ['#0E3B20', '#3D7C47', '#8EB385', '#24543E'],
+          borderRadius: 12,
+          borderSkipped: false,
+          barPercentage: 0.58,
+          categoryPercentage: 0.72
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: {
+          duration: 750,
+          easing: 'easeOutQuart'
+        },
         plugins: {
           legend: { display: false },
           tooltip: {
             backgroundColor: '#14532D',
-            titleFont: { family: 'inherit', size: 12, weight: 'bold' },
-            bodyFont: { family: 'inherit', size: 12 },
-            padding: 10,
-            cornerRadius: 8,
+            titleFont: { family: "'Plus Jakarta Sans', system-ui", size: 13, weight: 'bold' },
+            bodyFont: { family: "'DM Sans', system-ui", size: 12, weight: '500' },
+            padding: { top: 10, bottom: 10, left: 14, right: 14 },
+            cornerRadius: 12,
+            displayColors: false,
             callbacks: {
-              label: (context) => ` ${context.raw.toLocaleString()} kg plastic prevented`
+              title: (items) => items[0]?.label || '',
+              label: (context) => `✓ ${context.raw.toLocaleString()} kg plastic prevented`
             }
           }
         },
@@ -1972,17 +1981,22 @@ const App = {
           x: {
             grid: { display: false },
             ticks: {
-              font: { family: 'inherit', size: 12, weight: '600' },
-              color: '#44403C'
+              font: { family: "'Plus Jakarta Sans', system-ui", size: 12, weight: '700' },
+              color: '#26332A',
+              padding: 8
             }
           },
           y: {
             beginAtZero: true,
-            grid: { color: 'rgba(0, 0, 0, 0.05)' },
+            grid: {
+              color: 'rgba(20, 83, 45, 0.05)',
+              drawBorder: false
+            },
             ticks: {
-              font: { family: 'inherit', size: 11 },
-              color: '#78716C',
-              callback: (v) => v + ' kg'
+              font: { family: "'DM Sans', system-ui", size: 11, weight: '600' },
+              color: '#526356',
+              padding: 8,
+              callback: (v) => v.toLocaleString() + ' kg'
             }
           }
         }
